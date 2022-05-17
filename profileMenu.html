@@ -178,7 +178,7 @@ const chk = document.getElementById('chk');
 	        document.body.classList.toggle('white');        
             });
 
-  //stripe supabase webhooks and
+
   
 
 //func for checking socials in profile my myQuantity
@@ -443,86 +443,7 @@ function getCashy(cashy, input) {
           console.error(error);
         }
       }
-                //copyfunc
-//                 checkoutButton1.addEventListener("click", function () {
-//                 fetch("/api/verifyPayment", {
-//                 method: "POST",
-//                 headers: {
-//             'Content-Type': 'application/json',
-//             body: JSON.stringify(data),
-//           },
-//                 })
-//                 .then(function (response) {
-//                   return response.json();
-//                   const stripe = Stripe(response.publishableKey);
-//                   const { error } = await stripe.redirectToCheckout({
-//                   sessionId: response.sessionId,
-//                 });
-
-//         if (error) {
-//           console.error(error);
-//         }
-//                 })
-//                 .then(function (result) {
-//                   if (result.error) {
-//                     alert(result.error.message);
-//                   }
-//                 })
-//                 .catch(function (error) {
-//                   console.error("Error:", error);
-//                 });
-//                 });
-
-
-// async function handleSubmit(event) {
-//         event.preventDefault();
-//         const response = await fetch('/api/verifyPayment', {
-//           method: 'POST',
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//           body: JSON.stringify(data),
-//         }).then((res) => res.json());
-
-//         const stripe = Stripe(response.publishableKey);
-//         const { error } = await stripe.redirectToCheckout({
-//           sessionId: response.sessionId,
-//         });
-
-//         if (error) {
-//           console.error(error);
-//         }
-//       }
-
-                
-
-                       
-
-    // let users = [];
-    //     const addUser = (ev)=>{
-    //         event.preventDefault();  
-    //         let user = {
-    //             name: document.getElementById('name').value,
-    //             instagram: document.getElementById('instagram').value,
-    //             youtube: document.getElementById('youtube').value,
-    //             twitch: document.getElementById('twitch').value,
-    //             reddit: document.getElementById('reddit').value,
-    //             twitter: document.getElementById('twitter').value,
-    //             // alive: document.getElementById('alive').value, //change this to new func
-    //             region: document.getElementById('region').value,
-    //         }
-    //         users.push(user);
-    //         document.forms[0].reset(); 
-
-    //         localStorage.setItem('User', JSON.stringify(users) );
-    //     }
-    //     document.addEventListener('DOMContentLoaded', ()=>{
-    //         document.getElementById('btn').addEventListener('click', addUser);
-    //     });
-                
-// document.getElementById('btn').addEventListener('click', myFunction());
-// document.getElementById('save-socials').addEventListener('click', checkSocials());
-
+           
                     
 async function handleSubmit(event) {
         event.preventDefault();
@@ -543,12 +464,6 @@ async function handleSubmit(event) {
       }
   
                   </script>
-
-
-
-
-  
-
     
   </div>
 </body>

@@ -1,9 +1,19 @@
 [build]
   command = "# no build command"
-  functions = "/.netlify/functions"
+  functions = "netlify/functions"
   publish = "."
 
 [[redirects]]
   from = '/api/*'
   to = '/.netlify/functions/:splat'
+  status = 200
+
+  [[redirects]]
+  from = '/Home*'
+  to = '/index.html'
+  status = 200
+
+   [[redirects]]
+  from = '/Menu*'
+  to = '/profilemenu'
   status = 200
