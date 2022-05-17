@@ -362,8 +362,8 @@ function getRowOfButtAndAddCash(){
     async function addCash() {
      
         // let storage = 69;
-        const UPDATE_API = process.env.UPDATE_API; 
-        const SUPABASE_UPDATE_CASH = process.env.SUPABASE_UPDATE_CASH;  
+        const UPDATE_API = process.env.UPDATE_API_1 + localStorage.IDTOT + process.env.UPDATE_API_2; 
+        const SUPABASE_UPDATE_CASH = process.env.SUPABASE_UPDATE_CASH_1 + localStorage.IDTOT + process.env.SUPABASE_UPDATE_CASH_2;  
 
         
     const response = await fetch(SUPABASE_UPDATE_CASH); 
