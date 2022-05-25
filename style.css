@@ -1089,7 +1089,7 @@ body.white .flexbox-item-2{
   
 
 .one {
-    background: rgba(94, 85, 85, 0.438);
+    background: rgba(85, 94, 88, 0.726);
     
 }
 .two {
@@ -1100,6 +1100,28 @@ body.white .flexbox-item-2{
     background:rgb(84, 104, 99);
 }
 
-.one, .two, .three {
+.one, .two, .three, .five, .six, .seven, .eight, .nine, .ten{
   width: 100vw;
+  height: 107vh;
+}
+.four {
+  background:rgba(79, 100, 95, 0.836);
+}
+.five {
+  background:rgba(79, 100, 95, 0.589);
+}
+.six {
+  background:rgba(79, 100, 95, 0.315);
+}
+.seven {
+  background:rgba(79, 100, 95, 0.363);
+}
+.eight {
+  background:rgba(79, 100, 95, 0.329);
+}
+.nine {
+  background:rgba(79, 100, 95, 0.267);
+}
+.ten {
+  background:rgba(79, 100, 95, 0.171);
 }

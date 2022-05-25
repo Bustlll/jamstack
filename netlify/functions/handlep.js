@@ -12,8 +12,9 @@ exports.handler = async ({ body, headers }) => {
 
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
-        const module = typeof window !== `undefined` ? require("module") : null;
-        console.log(localStorage.cashy);
+       
+         await patchus();
+      
     }
 
     return {
@@ -30,11 +31,11 @@ exports.handler = async ({ body, headers }) => {
   }
 };
 
-// data: () => ({
-//     showMessage: process.isClient
-//         ? !localStorage.getItem("hideMessage")
-//         : false,
-// })
+data: () => ({
+    showMessage: process.isClient
+        ? !localStorage.getItem("hideMessage")
+        : false,
+})
 
 // data: () => ({
 //     showMessage: !localStorage.getItem("hideMessage"),

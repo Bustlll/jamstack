@@ -388,7 +388,7 @@ const asyncbut = document.getElementById("1-button");
  await patchuss();
 });
 
-        const patchuss = async () => {
+        async function patchuss() {
   const url = '/api/addusapi';
       const result4 = fetch(`${url}`, { method: 'get' })
   .then(response => response.json()) 
