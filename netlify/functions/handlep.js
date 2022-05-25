@@ -12,11 +12,8 @@ exports.handler = async ({ body, headers }) => {
 
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
-        if(window) {
-            console.log(localStorage.cashy)
-          } else {
-            return true 
-          }
+        const module = typeof window !== `undefined` ? require("module") : null;
+        console.log(localStorage.cashy);
     }
 
     return {
