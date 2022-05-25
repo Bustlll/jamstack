@@ -12,7 +12,11 @@ exports.handler = async ({ body, headers }) => {
 
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
-   console.log(localStorage.cashy);
+        if(window) {
+            console.log(localStorage.cashy)
+          } else {
+            return true 
+          }
     }
 
     return {
@@ -28,3 +32,18 @@ exports.handler = async ({ body, headers }) => {
     };
   }
 };
+
+// data: () => ({
+//     showMessage: process.isClient
+//         ? !localStorage.getItem("hideMessage")
+//         : false,
+// })
+
+// data: () => ({
+//     showMessage: !localStorage.getItem("hideMessage"),
+
+//   if(window) {
+//     // use localStorage
+//   } else {
+//     return true 
+//   }
