@@ -18,7 +18,8 @@ exports.handler = async ({event, body, headers }) => {
        
 
       exports.handler = (event, context, callback) => {
-        console.log(event.queryStringParameters.name);
+        event.queryStringParameters.name
+        console.log(event);
         //do something with it
       }
     
