@@ -65,18 +65,31 @@ exports.handler = async ({event, body, headers }) => {
           //   let summed =  Number(10000/100) + stripeEvent.data.object.amount_total/100
           //  console.log(summed);
           
-function selectCash(){
-  const { data, error } = await supabase
-.from('users')
-.select('cash')
-.eq('name', 'ManBear')
-return data;}
-selectCash()
+
+//   const { data, error } = await supabase
+// .from('users')
+// .select('cash')
+// .eq('name', 'ManBear')
+
 
 // const { data, error } = await supabase
 // .from('users')
 // .update({ cash: selectCash() + stripeEvent.data.object.amount_total/100})
 // .eq('name', 'ManBear')
+
+
+const { data: genre_data, error: genre_error } = await supabase
+.from('users')
+.select('cash')
+.eq('name', 'ManBear')
+    const genre_id = genre_data[0].cash; 
+    console.log(genre_id); 
+
+    const { data: book_data, error: book_error } = await supabase
+    .from('users')
+.update({ cash: genre_id + stripeEvent.data.object.amount_total/100})
+.eq('name', 'ManBear')
+console.log(book_data);
 
             
            //call the fetch with supabase_update_cash + name from query + get the cash
