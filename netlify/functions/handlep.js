@@ -17,7 +17,7 @@ exports.handler = async ({event, body, headers }) => {
     
     // Connect to our database 
     const { createClient } = require('@supabase/supabase-js');
-    const supabase = createClient(process.env.DATABASE_URL, process.env.SUPABASE_SERVICE_API_KEY);
+    const supabase = createClient(process.env.SUPABASE_DATABASE, process.env.SUPABASE_SERVICE_API_KEY);
     
     // Our standard serverless handler function
     
