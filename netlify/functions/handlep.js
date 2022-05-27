@@ -16,11 +16,22 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
        
-
-      exports.handler = (event, context, callback) => {
-        event.queryStringParameters.name
-        console.log(event);
-        //do something with it
+      if (location.search) {
+        //there is a querystring beyond `?`
+        // log(location.search);
+        let qs = decodeURIComponent(location.search.substring(1));
+        // log(qs);
+        let params = new Map();
+        let parts = qs.split('&');
+        log({ parts });
+        parts.forEach((part) => {
+          let key = part.split('=')[0];
+          let val = part.split('=')[1];
+          params.set(key, val);
+        });
+    
+        log(params.has('name'));
+        log(params.get('name'));
       }
     
       // function newTime(){
