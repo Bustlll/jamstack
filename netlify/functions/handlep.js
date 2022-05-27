@@ -42,26 +42,33 @@ exports.handler = async ({event, body, headers }) => {
       //        }
       //       ]);
 
-                fetch(process.env.SUPABASE_UPDATE_CASH + "ManBear", { method: 'get' })
-              .then(response => response.json())
-              .then(res => {
-              console.log(res);
-              let summed =  res[0].cash + Number(10000/100);
-            let oldData = {
-                    cash: summed,
-                };
-                console.log(oldData);
-                const SUPABASE_UPDATE_CASH = process.env.SUPABASE_UPDATE_CASH + "ManBear";
-                console.log(SUPABASE_UPDATE_CASH);
+            //     fetch(process.env.SUPABASE_UPDATE_CASH + "ManBear", { method: 'get' })
+            //   .then(response => response.json())
+            //   .then(res => {
+            //   console.log(res);
+            //   let summed =  res[0].cash + Number(10000/100);
+            // let oldData = {
+            //         cash: summed,
+            //     };
+            //     console.log(oldData);
+            //     const SUPABASE_UPDATE_CASH = process.env.SUPABASE_UPDATE_CASH + "ManBear";
+            //     console.log(SUPABASE_UPDATE_CASH);
             
-                  let xhr = new XMLHttpRequest();
-                    xhr.open("PATCH", SUPABASE_UPDATE_CASH);
-                    xhr.setRequestHeader("Accept", "application/json");
-                    xhr.setRequestHeader("Content-Type", "application/json");
-                    xhr.send(JSON. stringify(oldData));
+            //       let xhr = new XMLHttpRequest();
+            //         xhr.open("PATCH", SUPABASE_UPDATE_CASH);
+            //         xhr.setRequestHeader("Accept", "application/json");
+            //         xhr.setRequestHeader("Content-Type", "application/json");
+            //         xhr.send(JSON. stringify(oldData));
            
-            })
-            
+            // })
+            const { data, error } = await supabase
+            .from('users')
+            .select('cash')
+            .eq('users.username', 'ManCow')
+            console.log(data);
+            // let oldData = {
+            //         cash: summed,
+            //     };
            //call the fetch with supabase_update_cash + name from query + get the cash
             //place the cash in a variable and add it to the new cash from query, make it a JSON variable like oldData
             //call another fetch patch and send the oldData variable as JSON
