@@ -73,7 +73,7 @@ exports.handler = async ({event, body, headers }) => {
             const { data, error } = await supabase
             .from('users')
             .select('*, users!inner(*)')
-            .eq('users.name', 'ManBear')
+            .eq('name', 'ManBear')
             console.log(data);
            //call the fetch with supabase_update_cash + name from query + get the cash
             //place the cash in a variable and add it to the new cash from query, make it a JSON variable like oldData
