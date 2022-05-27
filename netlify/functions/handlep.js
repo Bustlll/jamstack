@@ -1,7 +1,9 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 // const queryString = require('query-string');
 const { createClient } = require('@supabase/supabase-js');
-const supabase = createClient(process.env.SUPABASE_DATABASE, process.env.SUPABASE_SERVICE_API_KEY);
+const supabaseUrl = 'https://apeowlwfmtpfbuvblclu.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 exports.handler = async ({event, body, headers }) => {
   try {
