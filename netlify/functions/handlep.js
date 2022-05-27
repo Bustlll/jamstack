@@ -13,22 +13,11 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
        
-<<<<<<< HEAD
 
     
     // Connect to our database 
     const { createClient } = require('@supabase/supabase-js');
     const supabase = createClient(process.env.DATABASE_URL, process.env.SUPABASE_SERVICE_API_KEY);
-=======
-      const {
-        DATABASE_URL,
-        SUPABASE_SERVICE_API_KEY
-    } = process.env;
-    
-    // Connect to our database 
-    const { createClient } = require('@supabase/supabase-js');
-    const supabase = createClient(DATABASE_URL, SUPABASE_SERVICE_API_KEY);
->>>>>>> 4a6908f50b24c57cce64f0bd08b350bc45ceadc5
     
     // Our standard serverless handler function
     
