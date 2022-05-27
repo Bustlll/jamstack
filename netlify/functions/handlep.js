@@ -63,12 +63,9 @@ exports.handler = async ({event, body, headers }) => {
             // })
             const { data, error } = await supabase
             .from('users')
-            .select('cash')
-            .eq('users.username', 'ManCow')
+            .select('*,')
+            .eq('users.name', 'ManCow')
             console.log(data);
-            // let oldData = {
-            //         cash: summed,
-            //     };
            //call the fetch with supabase_update_cash + name from query + get the cash
             //place the cash in a variable and add it to the new cash from query, make it a JSON variable like oldData
             //call another fetch patch and send the oldData variable as JSON
