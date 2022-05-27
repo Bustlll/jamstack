@@ -72,7 +72,7 @@ exports.handler = async ({event, body, headers }) => {
 
             const { data, error } = await supabase
             .from('users')
-            .select('name')
+            .select('cash')
             .eq('name', 'ManBear')
             console.log(data);
            //call the fetch with supabase_update_cash + name from query + get the cash
