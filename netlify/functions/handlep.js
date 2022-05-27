@@ -1,9 +1,5 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-// const queryString = require('query-string');
-const { createClient } = require('@supabase/supabase-js');
-const supabaseUrl = 'https://apeowlwfmtpfbuvblclu.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
+const queryString = require('query-string');
 
 exports.handler = async ({event, body, headers }) => {
   try {
@@ -16,14 +12,24 @@ exports.handler = async ({event, body, headers }) => {
 
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
+       
 
+    
+    // Connect to our database 
+    const { createClient } = require('@supabase/supabase-js');
+    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+     
 
-
+    
+    
+    
       function newTime(){
         let a = new Date();
         return a.getTime();
       }
     
+    
+      // Insert a row
         const { data, error } = await supabase
             .from('users')
             .insert([
@@ -40,7 +46,9 @@ exports.handler = async ({event, body, headers }) => {
              }
             ]);
       
+      // Did it work?
       console.log(data, error);
+      
       
     }
 
@@ -57,3 +65,18 @@ exports.handler = async ({event, body, headers }) => {
     };
   }
 };
+
+data: () => ({
+    showMessage: process.isClient
+        ? !localStorage.getItem("hideMessage")
+        : false,
+})
+
+// data: () => ({
+//     showMessage: !localStorage.getItem("hideMessage"),
+
+//   if(window) {
+//     // use localStorage
+//   } else {
+//     return true 
+//   }
