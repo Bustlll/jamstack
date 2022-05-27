@@ -16,13 +16,7 @@ exports.handler = async ({event, body, headers }) => {
     if (stripeEvent.type === 'checkout.session.completed') {
        
 
-    
-    // Connect to our database 
-
-     
-
-    
-    
+ 
     
       function newTime(){
         let a = new Date();
@@ -46,11 +40,7 @@ exports.handler = async ({event, body, headers }) => {
                 Date: newTime(),
              }
             ]);
-      
-      // Did it work?
-      console.log(data, error);
-      
-      
+   
     }
 
     return {
@@ -67,11 +57,11 @@ exports.handler = async ({event, body, headers }) => {
   }
 };
 
-data: () => ({
-    showMessage: process.isClient
-        ? !localStorage.getItem("hideMessage")
-        : false,
-})
+// data: () => ({
+//     showMessage: process.isClient
+//         ? !localStorage.getItem("hideMessage")
+//         : false,
+// })
 
 // data: () => ({
 //     showMessage: !localStorage.getItem("hideMessage"),
