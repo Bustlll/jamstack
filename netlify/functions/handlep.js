@@ -1,5 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const queryString = require('query-string');
+// const queryString = require('query-string');
+const { createClient } = require('@supabase/supabase-js');
+const supabase = createClient(process.env.SUPABASE_DATABASE, process.env.SUPABASE_SERVICE_API_KEY);
 
 exports.handler = async ({event, body, headers }) => {
   try {
@@ -13,19 +15,6 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
        
-
-    
-    // Connect to our database 
-    const { createClient } = require('@supabase/supabase-js');
-    const supabase = createClient(process.env.SUPABASE_DATABASE, process.env.SUPABASE_SERVICE_API_KEY);
-    
-    // Our standard serverless handler function
-    
-    exports.handler = async event => {
-    
-      
-    
-      // Insert a row
         const { data, error } = await supabase
             .from('users')
             .insert([
@@ -45,13 +34,10 @@ exports.handler = async ({event, body, headers }) => {
               let a = new Date();
               return a.getTime();
             }
-          
-      
-      // Did it work?
       return {
         statusCode: 200,
       }
-    }
+  
       
     }
 
