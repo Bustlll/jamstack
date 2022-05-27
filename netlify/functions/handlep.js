@@ -17,8 +17,8 @@ exports.handler = async ({event, body, headers }) => {
     if (stripeEvent.type === 'checkout.session.completed') {
        
       const { queryStringParameters } = event;
-      const name = queryStringParameters.name
-        ? decodeURIComponent(queryStringParameters.name).split(",")
+      const name = queryStringParameters
+        ? decodeURIComponent(queryStringParameters).split(",")
         : [];
         console.log(name);
         //do something with it
