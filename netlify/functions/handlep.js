@@ -1,8 +1,6 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-import { createClient } from '@supabase/supabase-js'
-
-// Create a single supabase client for interacting with your database 
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
+const { createClient } = require('@supabase/supabase-js');
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 // const queryString = require('query-string');
 
 exports.handler = async ({event, body, headers }) => {
@@ -39,12 +37,12 @@ exports.handler = async ({event, body, headers }) => {
              {
                 cash: 12,
                 name: "ManCOW", 
-                instagram: "ManCOW", 
-                youtube: "ManCOW", 
-                twitch: "ManCOW", 
-                reddit: "ManCOW", 
-                twitter: "ManCOW", 
-                region: "ManCOW", 
+                // instagram: "ManCOW", 
+                // youtube: "ManCOW", 
+                // twitch: "ManCOW", 
+                // reddit: "ManCOW", 
+                // twitter: "ManCOW", 
+                // region: "ManCOW", 
                 // Date: newTime(),
              }
             ]);
