@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const { createClient } = require('@supabase/supabase-js');
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-// const queryString = require('query-string');
+const queryString = require('query-string');
 
 exports.handler = async ({event, body, headers }) => {
   try {
