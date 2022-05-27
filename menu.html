@@ -18,7 +18,7 @@
   
  <!-- Start of navbar space -->
  <nav>
-    <input type="checkbox" id="check">
+  
     <label for="check">
         <i class="hidden-menu" id="hmenu">Menu</i>
     </label>
@@ -26,15 +26,6 @@
     <ul>
         <li><a accesskey="a" href="/index.html">Home</a></li>
         <li><a accesskey="q" href="/menu.html">Menu</a></li>
-
-        <div>
-          <input accesskey="d" type="checkbox" class="checkbox" id="chk"/>
-          <label class="label" for="chk" >
-            <i class="material-symbols-outlined" id="night" >clear_night</i>
-            <i class="material-symbols-outlined" id="day">flare</i>
-              <div class="ball"></div>
-          </label>
-      </div>
         
 
     </ul>
@@ -49,9 +40,7 @@
     <section class="one">
 
     <div class="maincontainer">
-       <div class="maincontainer-rank"></div>
-       <div class="maincontainer-days"></p>
-     </div>   
+      
 
 <section> 
 <div class="maincontainer-rankInfo"> 
@@ -124,15 +113,11 @@
  
 <div class="subcontainer"> 
         <section class="socials">Socials</section>
-          <div class="flexbox-container">
-            <div class="flexbox-item flexbox-item-1">
+    
 
               <p class="addU">Adding YOU <3 to the table</p>
 
-
-  
-
-  <form action="#" name="socials" autocomplete="off" id="socialscheck" >
+  <form action="/menu.html" name="socials" method="POST" autocomplete="off" id="socialscheck" data-netlify="true">
     <div class="form-row">
        <div class="input-data">
           <input type="text" name="name" id="name" placeholder="Name" maxlength="22">
@@ -181,84 +166,13 @@
    
    
 
- </form>  
-  <button type="button" class="btn" id="btn">Save</button> 
- 
+ </form>   
+  <button type="submit" class="btn" id="btn">Save</button>  
 
-            </div>
-
-
-            <div class="flexbox-item flexbox-item-2">
-
-
-
-              
-<div class="addsection">
-  <p class="otehrsAdd">Add $ to your friend's table name</p>
- 
-
-  <form>
- 
-    <div class="dropdown">
-      <button onclick="addUss()" class="dropbtn" id="cashButt">Flip</button>
-      <div class="dropdown-content">
-  <form></form>
-        <form action="/.netlify/functions/checkout", method ="post">
-          <button type="submit" class="btn3" id="1-button" onclick="getDateNow(), {patchuss}, getCashy('cashy', 100)">1$</button>
-         </form>
-         
-         <form action="/.netlify/functions/checkout2">
-          <button type="submit" class="btn3" id="2-button" onclick="getDateNow(); getCashy('cashy', 2000)">20$</button>
-         </form>
   
-         <form action="/.netlify/functions/checkout3">
-          <button type="submit" class="btn3" id="3-button" onclick="getDateNow(); getCashy('cashy', 5000)">50$</button>
-         </form>
-  
-         <form action="/.netlify/functions/checkout4">
-          <button type="submit" class="btn3" id="4-button" onclick="getDateNow(); getCashy('cashy', 10000)">100$</button>
-         </form>
-  
-         <form action="/.netlify/functions/checkout5">
-          <button type="submit" class="btn3" id="5-button" onclick="getDateNow(); getCashy('cashy', 50000)">500$</button>
-         </form>
-  
-         <form action="/.netlify/functions/checkout6">
-          <button type="submit" class="btn3" id="6-button" onclick="getDateNow(); getCashy('cashy', 100000)">1k</button>
-         </form>
-  
-         <form action="/.netlify/functions/checkout7">
-          <button type="submit" class="btn3" id="7-button" onclick="getDateNow(); getCashy('cashy', 1000000)">10k</button>
-         </form>
-  
-         <form action="/.netlify/functions/checkout8">
-          <button type="submit" class="btn3" id="8-button" onclick="getDateNow(); getCashy('cashy', 10000000)">100k</button>
-         </form>
-     
-      </div>
-      <input type="text" id="inputCash"placeholder="Name">
-      
-      <div class="underline"></div>
-    </div>
-
-    
-    
-  
-    
-    
-    </form>
-    
-   
-    
-</div>
 
 
-             
-          
-            
-            </div>
-
-          </div>
+        
            
 
               
@@ -381,40 +295,7 @@ async function handleSubmit(event) {
         let val = document.getElementById('inputCash').value;
         localStorage.setItem("sendcashto", val)
       }
-const asyncbut = document.getElementById("1-button");
 
-      asyncbut.addEventListener('click', async () => {
- 
- await patchuss();
-});
-
-        async function patchuss() {
-  const url = '/api/addusapi';
-      const result4 = fetch(`${url}`, { method: 'get' })
-  .then(response => response.json()) 
-  .then(res => {  
-    const SUPABASE_UPDATE_CASH = res + localStorage.sendcashto;
-   return fetch(SUPABASE_UPDATE_CASH);
-}).then(response => response.json()).then(res => {
-  
-  let summed =  res[0].cash + Number(localStorage.cashy/100);
-let oldData = {
-        cash: summed,
-    };
-fetch(`${url}`, { method: 'get' })
-  .then(response => response.json()) 
-  .then(res => {  
-    const SUPABASE_UPDATE_CASH = res + localStorage.sendcashto;
-
-      let xhr = new XMLHttpRequest();
-        xhr.open("PATCH", SUPABASE_UPDATE_CASH);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.send(JSON. stringify(oldData));
-})
-})
-
-}
 
   
                   </script>
