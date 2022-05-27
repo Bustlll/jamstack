@@ -1,5 +1,9 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const queryString = require('query-string');
+// const queryString = require('query-string');
+const { createClient } = require('@supabase/supabase-js');
+const supabaseUrl = 'https://apeowlwfmtpfbuvblclu.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 exports.handler = async ({event, body, headers }) => {
   try {
@@ -13,10 +17,7 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
 
-const { createClient } = require('@supabase/supabase-js');
-const supabaseUrl = 'https://apeowlwfmtpfbuvblclu.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
+
 
       function newTime(){
         let a = new Date();
