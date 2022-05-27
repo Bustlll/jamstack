@@ -45,12 +45,14 @@ exports.handler = async ({event, body, headers }) => {
                 fetch(process.env.SUPABASE_UPDATE_CASH + "ManBear", { method: 'get' })
               .then(response => response.json())
               .then(res => {
-              
+              console.log(res);
               let summed =  res[0].cash + Number(10000/100);
             let oldData = {
                     cash: summed,
                 };
+                console.log(oldData);
                 const SUPABASE_UPDATE_CASH = process.env.SUPABASE_UPDATE_CASH + "ManBear";
+                console.log(SUPABASE_UPDATE_CASH);
             
                   let xhr = new XMLHttpRequest();
                     xhr.open("PATCH", SUPABASE_UPDATE_CASH);
