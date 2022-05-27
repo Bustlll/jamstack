@@ -1,3 +1,4 @@
+const fetch = require('node-fetch')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const { createClient } = require('@supabase/supabase-js');
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
@@ -18,28 +19,50 @@ exports.handler = async ({event, body, headers }) => {
 
  
     
-      function newTime(){
-        let a = new Date();
-        return a.getTime();
-      }
+      // function newTime(){
+      //   let a = new Date();
+      //   return a.getTime();
+      // }
     
     
-      // Insert a row
-        const { data, error } = await supabase
-            .from('users')
-            .insert([
-             {
-                cash: 12,
-                name: "ManCOW", 
-                instagram: "ManCOW", 
-                youtube: "ManCOW", 
-                twitch: "ManCOW", 
-                reddit: "ManCOW", 
-                twitter: "ManCOW", 
-                region: "ManCOW", 
-                Date: newTime(),
-             }
-            ]);
+      // // Insert a row
+      //   const { data, error } = await supabase
+      //       .from('users')
+      //       .insert([
+      //        {
+      //           cash: 12,
+      //           name: "ManCOW", 
+      //           instagram: "ManCOW", 
+      //           youtube: "ManCOW", 
+      //           twitch: "ManCOW", 
+      //           reddit: "ManCOW", 
+      //           twitter: "ManCOW", 
+      //           region: "ManCOW", 
+      //           Date: newTime(),
+      //        }
+      //       ]);
+
+                fetch(process.env.SUPABASE_UPDATE_CASH + "ManBear", { method: 'get' })
+              .then(response => response.json())
+              .then(res => {
+              
+              let summed =  res[0].cash + Number(10000/100);
+            let oldData = {
+                    cash: summed,
+                };
+                const SUPABASE_UPDATE_CASH = process.env.SUPABASE_UPDATE_CASH + "ManBear";
+            
+                  let xhr = new XMLHttpRequest();
+                    xhr.open("PATCH", SUPABASE_UPDATE_CASH);
+                    xhr.setRequestHeader("Accept", "application/json");
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                    xhr.send(JSON. stringify(oldData));
+           
+            })
+            
+           //call the fetch with supabase_update_cash + name from query + get the cash
+            //place the cash in a variable and add it to the new cash from query, make it a JSON variable like oldData
+            //call another fetch patch and send the oldData variable as JSON
    
     }
 
