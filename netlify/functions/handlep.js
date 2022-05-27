@@ -17,79 +17,47 @@ exports.handler = async ({event, body, headers }) => {
     if (stripeEvent.type === 'checkout.session.completed') {
        
 
- 
+      exports.handler = (event, context, callback) => {
+        console.log(event.queryStringParameters.name);
+        //do something with it
+      }
     
       // function newTime(){
       //   let a = new Date();
       //   return a.getTime();
       // }
     
-    
-      // // Insert a row
-      //   const { data, error } = await supabase
-      //       .from('users')
-      //       .insert([
-      //        {
-      //           cash: 12,
-      //           name: "ManCOW", 
-      //           instagram: "ManCOW", 
-      //           youtube: "ManCOW", 
-      //           twitch: "ManCOW", 
-      //           reddit: "ManCOW", 
-      //           twitter: "ManCOW", 
-      //           region: "ManCOW", 
-      //           Date: newTime(),
-      //        }
-      //       ]);
-
-            //     fetch(process.env.SUPABASE_UPDATE_CASH + "ManBear", { method: 'get' })
-            //   .then(response => response.json())
-            //   .then(res => {
-            //   console.log(res);
-            //   let summed =  res[0].cash + Number(10000/100);
-            // let oldData = {
-            //         cash: summed,
-            //     };
-            //     console.log(oldData);
-            //     const SUPABASE_UPDATE_CASH = process.env.SUPABASE_UPDATE_CASH + "ManBear";
-            //     console.log(SUPABASE_UPDATE_CASH);
-            
-                  // let xhr = new XMLHttpRequest();
-                  //   xhr.open("PATCH", SUPABASE_UPDATE_CASH);
-                  //   xhr.setRequestHeader("Accept", "application/json");
-                  //   xhr.setRequestHeader("Content-Type", "application/json");
-                  //   xhr.send(JSON. stringify(oldData));
-           
-            // })
-          //   console.log(stripeEvent.data.object.amount_total);
-          //   let summed =  Number(10000/100) + stripeEvent.data.object.amount_total/100
-          //  console.log(summed);
-          
-
-//   const { data, error } = await supabase
+//if those parameters are not defined in the query string, ignore them
+//call for adding new user on checkout
+        // const { data, error } = await supabase
+        //     .from('users')
+        //     .insert([
+        //      {
+        //         cash: 12,
+        //         name: "ManCOW", 
+        //         instagram: "ManCOW", 
+        //         youtube: "ManCOW", 
+        //         twitch: "ManCOW", 
+        //         reddit: "ManCOW", 
+        //         twitter: "ManCOW", 
+        //         region: "ManCOW", 
+        //         Date: newTime(),
+        //      }
+        //     ]);
+//if querystring nameforadd is not defined, ignore this part
+//call for updating the cash
+// const { data: genre_data, error: genre_error } = await supabase
 // .from('users')
 // .select('cash')
 // .eq('name', 'ManBear')
+//     const genre_id = genre_data[0].cash; 
+   
 
-
-// const { data, error } = await supabase
+// const { data: book_data, error: book_error } = await supabase
 // .from('users')
-// .update({ cash: selectCash() + stripeEvent.data.object.amount_total/100})
+// .update({ cash: genre_id + stripeEvent.data.object.amount_total/100})
 // .eq('name', 'ManBear')
 
-
-const { data: genre_data, error: genre_error } = await supabase
-.from('users')
-.select('cash')
-.eq('name', 'ManBear')
-    const genre_id = genre_data[0].cash; 
-    console.log(genre_id); 
-
-    const { data: book_data, error: book_error } = await supabase
-    .from('users')
-.update({ cash: genre_id + stripeEvent.data.object.amount_total/100})
-.eq('name', 'ManBear')
-console.log(book_data);
 
             
            //call the fetch with supabase_update_cash + name from query + get the cash
