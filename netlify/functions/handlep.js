@@ -23,11 +23,7 @@ exports.handler = async ({event, body, headers }) => {
     
     exports.handler = async event => {
     
-      function newTime(){
-        let a = new Date();
-        return a.getTime();
-      }
-    
+      
     
       // Insert a row
         const { data, error } = await supabase
@@ -45,9 +41,13 @@ exports.handler = async ({event, body, headers }) => {
                 Date: newTime(),
              }
             ]);
+            function newTime(){
+              let a = new Date();
+              return a.getTime();
+            }
+          
       
       // Did it work?
-      console.log(data, error);
       return {
         statusCode: 200,
       }
@@ -68,18 +68,3 @@ exports.handler = async ({event, body, headers }) => {
     };
   }
 };
-
-data: () => ({
-    showMessage: process.isClient
-        ? !localStorage.getItem("hideMessage")
-        : false,
-})
-
-// data: () => ({
-//     showMessage: !localStorage.getItem("hideMessage"),
-
-//   if(window) {
-//     // use localStorage
-//   } else {
-//     return true 
-//   }
