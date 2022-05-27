@@ -61,20 +61,23 @@ exports.handler = async ({event, body, headers }) => {
                   //   xhr.send(JSON. stringify(oldData));
            
             // })
-            console.log(stripeEvent.data.object.amount_total);
-            let summed =  Number(10000/100) + stripeEvent.data.object.amount_total/100
-           console.log(summed);
-  //           const { data, error } = await supabase
-  // .from('users')
-  // .update({ cash: 12})
-  // .eq('name', 'ManBear')
-  //           console.log(data);
+          //   console.log(stripeEvent.data.object.amount_total);
+          //   let summed =  Number(10000/100) + stripeEvent.data.object.amount_total/100
+          //  console.log(summed);
+          
+function selectCash(){
+  const { data, error } = await supabase
+.from('users')
+.select('cash')
+.eq('name', 'ManBear')
+return data;}
 
-            const { data, error } = await supabase
-            .from('users')
-            .select('cash')
-            .eq('name', 'ManBear')
-            console.log(data);
+const { data, error } = await supabase
+.from('users')
+.update({ cash: selectCash() + stripeEvent.data.object.amount_total/100})
+.eq('name', 'ManBear')
+
+            
            //call the fetch with supabase_update_cash + name from query + get the cash
             //place the cash in a variable and add it to the new cash from query, make it a JSON variable like oldData
             //call another fetch patch and send the oldData variable as JSON
