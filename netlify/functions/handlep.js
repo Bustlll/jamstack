@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const queryString = require('query-string');
 
-
-exports.handler = async ({ body, headers }) => {
+exports.handler = async ({event, body, headers }) => {
   try {
     // check the webhook to make sure it’s valid
     const stripeEvent = stripe.webhooks.constructEvent(
@@ -13,7 +13,48 @@ exports.handler = async ({ body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
        
-         await patchus();
+      const {
+        DATABASE_URL,
+        SUPABASE_SERVICE_API_KEY
+    } = process.env;
+    
+    // Connect to our database 
+    const { createClient } = require('@supabase/supabase-js');
+    const supabase = createClient(DATABASE_URL, SUPABASE_SERVICE_API_KEY);
+    
+    // Our standard serverless handler function
+    
+    exports.handler = async event => {
+    
+      function newTime(){
+        let a = new Date();
+        return a.getTime();
+      }
+    
+    
+      // Insert a row
+        const { data, error } = await supabase
+            .from('users')
+            .insert([
+             {
+                cash: 12,
+                name: "ManCOW", 
+                instagram: "ManCOW", 
+                youtube: "ManCOW", 
+                twitch: "ManCOW", 
+                reddit: "ManCOW", 
+                twitter: "ManCOW", 
+                region: "ManCOW", 
+                Date: newTime(),
+             }
+            ]);
+      
+      // Did it work?
+      console.log(data, error);
+      return {
+        statusCode: 200,
+      }
+    }
       
     }
 
