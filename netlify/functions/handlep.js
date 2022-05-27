@@ -61,10 +61,12 @@ exports.handler = async ({event, body, headers }) => {
             //         xhr.send(JSON. stringify(oldData));
            
             // })
+            console.log(stripeEvent);
+            function addCashy(){1+1}
             const { data, error } = await supabase
-            .from('users')
-            .select('*,')
-            .eq('users.name', 'ManCow')
+  .from('users')
+  .update({ cash: addCashy()})
+  .eq('name', 'ManBear')
             console.log(data);
            //call the fetch with supabase_update_cash + name from query + get the cash
             //place the cash in a variable and add it to the new cash from query, make it a JSON variable like oldData
