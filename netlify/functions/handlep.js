@@ -1,5 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const queryString = require('query-string');
+const { createClient } = require('@supabase/supabase-js');
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+// const queryString = require('query-string');
 
 exports.handler = async ({event, body, headers }) => {
   try {
@@ -16,17 +18,16 @@ exports.handler = async ({event, body, headers }) => {
 
     
     // Connect to our database 
-    const { createClient } = require('@supabase/supabase-js');
-    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+
      
 
     
     
     
-      function newTime(){
-        let a = new Date();
-        return a.getTime();
-      }
+      // function newTime(){
+      //   let a = new Date();
+      //   return a.getTime();
+      // }
     
     
       // Insert a row
@@ -42,7 +43,7 @@ exports.handler = async ({event, body, headers }) => {
                 reddit: "ManCOW", 
                 twitter: "ManCOW", 
                 region: "ManCOW", 
-                Date: newTime(),
+                // Date: newTime(),
              }
             ]);
       
