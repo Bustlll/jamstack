@@ -24,10 +24,10 @@ exports.handler = async ({event, body, headers }) => {
     
     
     
-      // function newTime(){
-      //   let a = new Date();
-      //   return a.getTime();
-      // }
+      function newTime(){
+        let a = new Date();
+        return a.getTime();
+      }
     
     
       // Insert a row
@@ -37,13 +37,13 @@ exports.handler = async ({event, body, headers }) => {
              {
                 cash: 12,
                 name: "ManCOW", 
-                // instagram: "ManCOW", 
-                // youtube: "ManCOW", 
-                // twitch: "ManCOW", 
-                // reddit: "ManCOW", 
-                // twitter: "ManCOW", 
-                // region: "ManCOW", 
-                // Date: newTime(),
+                instagram: "ManCOW", 
+                youtube: "ManCOW", 
+                twitch: "ManCOW", 
+                reddit: "ManCOW", 
+                twitter: "ManCOW", 
+                region: "ManCOW", 
+                Date: newTime(),
              }
             ]);
       
