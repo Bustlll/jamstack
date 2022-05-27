@@ -61,11 +61,11 @@ exports.handler = async ({event, body, headers }) => {
             //         xhr.send(JSON. stringify(oldData));
            
             // })
-            console.log(stripeEvent);
-            function addCashy(){1+1}
+            console.log(stripeEvent.data.object.amount_total);
+            
             const { data, error } = await supabase
   .from('users')
-  .update({ cash: addCashy()})
+  .update({ cash: 12})
   .eq('name', 'ManBear')
             console.log(data);
            //call the fetch with supabase_update_cash + name from query + get the cash
