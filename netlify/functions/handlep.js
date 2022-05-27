@@ -54,19 +54,26 @@ exports.handler = async ({event, body, headers }) => {
             //     const SUPABASE_UPDATE_CASH = process.env.SUPABASE_UPDATE_CASH + "ManBear";
             //     console.log(SUPABASE_UPDATE_CASH);
             
-            //       let xhr = new XMLHttpRequest();
-            //         xhr.open("PATCH", SUPABASE_UPDATE_CASH);
-            //         xhr.setRequestHeader("Accept", "application/json");
-            //         xhr.setRequestHeader("Content-Type", "application/json");
-            //         xhr.send(JSON. stringify(oldData));
+                  // let xhr = new XMLHttpRequest();
+                  //   xhr.open("PATCH", SUPABASE_UPDATE_CASH);
+                  //   xhr.setRequestHeader("Accept", "application/json");
+                  //   xhr.setRequestHeader("Content-Type", "application/json");
+                  //   xhr.send(JSON. stringify(oldData));
            
             // })
             console.log(stripeEvent.data.object.amount_total);
-            
+            let summed =  Number(10000/100) + stripeEvent.data.object.amount_total/100
+           console.log(summed);
+  //           const { data, error } = await supabase
+  // .from('users')
+  // .update({ cash: 12})
+  // .eq('name', 'ManBear')
+  //           console.log(data);
+
             const { data, error } = await supabase
-  .from('users')
-  .update({ cash: 12})
-  .eq('name', 'ManBear')
+            .from('users')
+            .select('*, users!inner(*)')
+            .eq('users.username', 'ManBear')
             console.log(data);
            //call the fetch with supabase_update_cash + name from query + get the cash
             //place the cash in a variable and add it to the new cash from query, make it a JSON variable like oldData
