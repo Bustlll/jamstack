@@ -71,11 +71,12 @@ function selectCash(){
 .select('cash')
 .eq('name', 'ManBear')
 return data;}
+selectCash()
 
-const { data, error } = await supabase
-.from('users')
-.update({ cash: selectCash() + stripeEvent.data.object.amount_total/100})
-.eq('name', 'ManBear')
+// const { data, error } = await supabase
+// .from('users')
+// .update({ cash: selectCash() + stripeEvent.data.object.amount_total/100})
+// .eq('name', 'ManBear')
 
             
            //call the fetch with supabase_update_cash + name from query + get the cash
