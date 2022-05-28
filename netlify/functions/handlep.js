@@ -16,49 +16,49 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
        
-      const { queryStringParameters } = event;
-      const name = queryStringParameters
-        ? decodeURIComponent(queryStringParameters).split(",")
-        : [];
-        console.log(name);
+      // const { queryStringParameters } = event;
+      // const name = queryStringParameters
+      //   ? decodeURIComponent(queryStringParameters).split(",")
+      //   : [];
+      //   console.log(name);
         //do something with it
     
     
-      // function newTime(){
-      //   let a = new Date();
-      //   return a.getTime();
-      // }
+      function newTime(){
+        let a = new Date();
+        return a.getTime();
+      }
     
 //if those parameters are not defined in the query string, ignore them
 //call for adding new user on checkout
-        // const { data, error } = await supabase
-        //     .from('users')
-        //     .insert([
-        //      {
-        //         cash: 12,
-        //         name: "ManCOW", 
-        //         instagram: "ManCOW", 
-        //         youtube: "ManCOW", 
-        //         twitch: "ManCOW", 
-        //         reddit: "ManCOW", 
-        //         twitter: "ManCOW", 
-        //         region: "ManCOW", 
-        //         Date: newTime(),
-        //      }
-        //     ]);
+        const { data, error } = await supabase
+            .from('users')
+            .insert([
+             {
+                cash: 12,
+                name: "ManCOW", 
+                instagram: "ManCOW", 
+                youtube: "ManCOW", 
+                twitch: "ManCOW", 
+                reddit: "ManCOW", 
+                twitter: "ManCOW", 
+                region: "ManCOW", 
+                Date: newTime(),
+             }
+            ]);
 //if querystring nameforadd is not defined, ignore this part
 //call for updating the cash
-// const { data: genre_data, error: genre_error } = await supabase
-// .from('users')
-// .select('cash')
-// .eq('name', 'ManBear')
-//     const genre_id = genre_data[0].cash; 
+const { data: genre_data, error: genre_error } = await supabase
+.from('users')
+.select('cash')
+.eq('name', 'ManBear')
+const genre_id = genre_data[0].cash; 
    
 
-// const { data: book_data, error: book_error } = await supabase
-// .from('users')
-// .update({ cash: genre_id + stripeEvent.data.object.amount_total/100})
-// .eq('name', 'ManBear')
+const { data: book_data, error: book_error } = await supabase
+.from('users')
+.update({ cash: genre_id + stripeEvent.data.object.amount_total/100})
+.eq('name', 'ManBear')
 
 
             
