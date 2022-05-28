@@ -5,7 +5,8 @@ exports.handler = async (event, context) => {
     const { data, error } = await supabase
     .from('users')
     .select()
-    console.log(data);
+    const data2 = JSON.stringify(data);
+    console.log(data2);
   
     return { statusCode: 200 };
 }
