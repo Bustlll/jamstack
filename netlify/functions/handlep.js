@@ -29,8 +29,11 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      const parsed = queryString.parseUrl();
-      console.log(parsed);
+      console.log(location.href);
+      console.log(location.pathname);
+      console.log(location.search);
+      // const parsed = queryString.parseUrl();
+      // console.log(parsed);
       // function newTime(){
       //   let a = new Date();
       //   return a.getTime();
