@@ -30,7 +30,7 @@ const quanti =  `${qt}` * 100;
     ],
     
     mode: "payment",
-    success_url: "https://toxtat.com/api/checkou?name=${name}&instagram=${instagram}&youtube=${youtube}&twitch=${twitch}&reddit=${reddit}&twitter=${twitter}&region=${region}&qt=${qt}",
+    success_url: "https://toxtat.com",
     cancel_url: "https://toxtat.com", 
   })
   return {
