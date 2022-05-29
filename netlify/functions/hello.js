@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
     const { reddit = "Anonymous" } = event.queryStringParameters;
     const { twitter = "Anonymous" } = event.queryStringParameters;
     const { region = "Anonymous" } = event.queryStringParameters;
-    const { quanitty = "1" } = event.queryStringParameters;
+    const { quanitty = 1 } = event.queryStringParameters;
 
 
     return {
@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
       red, ${reddit},
       tw, ${twitter},
       reg, ${region}
-      quant, ${quanitty}
+      quant, ${Number(quanitty)}
       `
 
     };
