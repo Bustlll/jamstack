@@ -16,9 +16,8 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
        
-
-      const querystring = window.location.search;
-      console.log(querystring);
+      event.queryStringParameters.name;
+      console.log(event.queryString.name);
     
       // function newTime(){
       //   let a = new Date();
