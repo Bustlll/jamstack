@@ -29,7 +29,8 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      console.log(queryString);
+      const parsed = queryString.parse(location.search);
+      console.log(parsed);
       // function newTime(){
       //   let a = new Date();
       //   return a.getTime();

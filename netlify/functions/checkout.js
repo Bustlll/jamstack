@@ -21,7 +21,7 @@ const quanti =  `${qt}` * 100;
         price_data: {
           currency: "usd",
           product_data: {
-            name: "Welcome to Toxtat, " + `${name}`,
+            name: "Hello "+`${name}` + ", Welcome to Toxtat ",
           },
           unit_amount: quanti,
         },
