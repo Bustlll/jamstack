@@ -6,6 +6,8 @@ exports.handler = async (event, context) => {
     const { reddit = "Anonymous" } = event.queryStringParameters;
     const { twitter = "Anonymous" } = event.queryStringParameters;
     const { region = "Anonymous" } = event.queryStringParameters;
+    const { quanitty = "1" } = event.queryStringParameters;
+
 
     return {
       statusCode: 200,
@@ -16,7 +18,9 @@ exports.handler = async (event, context) => {
       ig, ${instagram},
       red, ${reddit},
       tw, ${twitter},
-      reg, ${region}`
+      reg, ${region}
+      quant, ${quanitty}
+      `
 
     };
   };
