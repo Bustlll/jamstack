@@ -9,7 +9,7 @@ const queryString = require('query-string');
 
 
 
-exports.handler = async function(event, context){
+exports.handler = async function(event, context, boy, headers){
   const { name = "Anonymous" } = event.queryStringParameters;
   const { qt = "Anonymous" } = event.queryStringParameters;
 const quanti =  `${qt}` * 100;
@@ -40,54 +40,57 @@ const quanti =  `${qt}` * 100;
   })
 
 
-exports.handler = async ({event, body, headers }) => {
 
+async function webhooks(){
 
-
+    await session;
     try {
-      // check the webhook to make sure it’s valid
-      const stripeEvent = stripe.webhooks.constructEvent(
-        body,
-        headers['stripe-signature'],
-        process.env.STRIPE_WEBHOOK_SECRET
-      );
-  
-      // only do stuff if this is a successful Stripe Checkout purchase
-      if (stripeEvent.type === 'checkout.session.completed') {
-        
-        const { name = "Anonymous" } = event.queryStringParameters;
-        const { instagram = "Anonymous" } = event.queryStringParameters;
-        const { youtube = "Anonymous" } = event.queryStringParameters;
-        const { twitch = "Anonymous" } = event.queryStringParameters;
-        const { reddit = "Anonymous" } = event.queryStringParameters;
-        const { twitter = "Anonymous" } = event.queryStringParameters;
-        const { region = "Anonymous" } = event.queryStringParameters;
-        const { qt = "Anonymous" } = event.queryStringParameters;
- console.log( `
- Hello, ${name},
- yt, ${youtube},
- tw, ${twitch},
- ig, ${instagram},
- red, ${reddit},
- tw, ${twitter},
- reg, ${region}
- quant, ${qt}
- `);
+        // check the webhook to make sure it’s valid
+        const stripeEvent = stripe.webhooks.constructEvent(
+          body,
+          headers['stripe-signature'],
+          process.env.STRIPE_WEBHOOK_SECRET
+        );
+    
+        // only do stuff if this is a successful Stripe Checkout purchase
+        if (stripeEvent.type === 'checkout.session.completed') {
+          
+          const { name = "Anonymous" } = event.queryStringParameters;
+          const { instagram = "Anonymous" } = event.queryStringParameters;
+          const { youtube = "Anonymous" } = event.queryStringParameters;
+          const { twitch = "Anonymous" } = event.queryStringParameters;
+          const { reddit = "Anonymous" } = event.queryStringParameters;
+          const { twitter = "Anonymous" } = event.queryStringParameters;
+          const { region = "Anonymous" } = event.queryStringParameters;
+          const { qt = "Anonymous" } = event.queryStringParameters;
+   console.log( `
+   Hello, ${name},
+   yt, ${youtube},
+   tw, ${twitch},
+   ig, ${instagram},
+   red, ${reddit},
+   tw, ${twitter},
+   reg, ${region}
+   quant, ${qt}
+   `);
+        }
+    
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ received: true }),
+        };
+      } catch (err) {
+        console.log(`Stripe webhook failed with ${err}`);
+    
+        return {
+          statusCode: 400,
+          body: `Webhook Error: ${err.message}`,
+        };
       }
-  
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ received: true }),
-      };
-    } catch (err) {
-      console.log(`Stripe webhook failed with ${err}`);
-  
-      return {
-        statusCode: 400,
-        body: `Webhook Error: ${err.message}`,
-      };
-    }
-  };
+}
+webhooks();
+   
+
   
   return {
     statusCode: 303,
