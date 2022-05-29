@@ -29,10 +29,13 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      console.log(HTML.queryString(body));
+   
       
-  
-
+      const data = querystring.parse(event.body);
+      const lolly = {
+        data: data
+    };
+console.log(lolly);
   
 
      
