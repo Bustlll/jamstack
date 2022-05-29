@@ -37,7 +37,7 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      const url = new URL('https://toxtat.com/?name=${name}&instagram=${instagram}&youtube=${youtube}&twitch=${twitch}&reddit=${reddit}&twitter=${twitter}&region=${region}&qt=${qt}');
+      const url = new URL('https://toxtat.com/?name='+`${name}`+'&instagram='`${instagram}`+'&youtube='+`${youtube}`+'&twitch='+`${twitch}`+'&reddit='+`${reddit}`+'&twitter='+`${twitter}`+'&region='+`${region}`+'&qt='+`${qt}`);
       const parseParams = (querystring) => {
 
         // parse query string
