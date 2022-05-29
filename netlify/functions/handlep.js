@@ -29,12 +29,18 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      const params = new URLSearchParams(window.location.search)
-      console.log(params);
-      // console.log(location.pathname);
-      // console.log(location.search);
-      // const parsed = queryString.parseUrl();
-      // console.log(parsed);
+      const url = "https://toxtat.com/api/checkout?name=${name}&instagram=${instagram}&youtube=${youtube}&twitch=${twitch}&reddit=${reddit}&twitter=${twitter}&region=${region}&qt=${qt}"
+      const result = fetch(`${url}`, { method: 'get' })
+  .then(response => response.json()) 
+  .then(res => {
+    console.log(res);
+
+  })
+
+     
+  
+
+
       // function newTime(){
       //   let a = new Date();
       //   return a.getTime();
