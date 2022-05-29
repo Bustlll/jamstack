@@ -29,16 +29,11 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      const url = "https://toxtat.com/api/checkout?name=${name}&instagram=${instagram}&youtube=${youtube}&twitch=${twitch}&reddit=${reddit}&twitter=${twitter}&region=${region}&qt=${qt}"
-      const result = fetch(`${url}`, { method: 'get' })
-  .then(response => response.json()) 
-  .then(res => {
-    const { name = "Anonymous" } = event.queryStringParameters;
-
-console.log(  `${name} `);
+      HTML.render(<h1>Helloo</h1>);
+      
   
 
-  })
+  
 
      
   
