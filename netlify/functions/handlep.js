@@ -23,9 +23,9 @@ exports.handler = async ({event, body, headers }) => {
 // location.search;
 // console.log(location.search);
 
-  event.queryStringParameters.name
-  let a =  event.queryStringParameters.name;
-  console.log(a);
+  // event.queryStringParameters.name
+  // let a =  event.queryStringParameters.name;
+  // console.log(a);
   //do something with it
 
     
