@@ -27,7 +27,16 @@ exports.handler = async ({event, body, headers }) => {
       const { region = "Anon" } = event.queryStringParameters;
       const { qt = "Anon" } = event.queryStringParameters;
     
-      console.log(name,instagram,youtube,twitch,reddit,twitter,region,qt);
+      console.log(`
+      Hello, ${name},
+      yt, ${youtube},
+      tw, ${twitch},
+      ig, ${instagram},
+      red, ${reddit},
+      tw, ${twitter},
+      reg, ${region}
+      quant, ${qt}
+      `);
       // function newTime(){
       //   let a = new Date();
       //   return a.getTime();
