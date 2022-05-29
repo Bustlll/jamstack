@@ -47,7 +47,7 @@ exports.handler = async ({event, body, headers }) => {
     
         return obj;
     };
-      console.log(parseParams("name"));
+      console.log(parseParams(location.search));
 //       const data = queryString.split(" ")
 //       const lolly = {
 //         data: data
