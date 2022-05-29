@@ -21,7 +21,7 @@ const quanti =  `${qt}` * 100;
         price_data: {
           currency: "usd",
           product_data: {
-            name: `${name}` + ", Toxtat",
+            name: "Welcome to Toxtat, " + `${name}`,
           },
           unit_amount: quanti,
         },
@@ -30,7 +30,7 @@ const quanti =  `${qt}` * 100;
     ],
     
     mode: "payment",
-    success_url: "https://toxtat.com",
+    success_url: "https://toxtat.com/api/checkou?name=${name}&instagram=${instagram}&youtube=${youtube}&twitch=${twitch}&reddit=${reddit}&twitter=${twitter}&region=${region}&qt=${qt}",
     cancel_url: "https://toxtat.com", 
   })
   return {

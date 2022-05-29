@@ -6,14 +6,7 @@ const queryString = require('query-string');
 
 exports.handler = async ({event, body, headers }) => {
 
-  const { name = "Anon" } = event.queryStringParameters;
-  const { instagram = "Anon" } = event.queryStringParameters;
-  const { youtube = "Anon" } = event.queryStringParameters;
-  const { twitch = "Anon" } = event.queryStringParameters;
-  const { reddit = "Anon" } = event.queryStringParameters;
-  const { twitter = "Anon" } = event.queryStringParameters;
-  const { region = "Anon" } = event.queryStringParameters;
-  const { qt = "Anon" } = event.queryStringParameters;
+
 
   try {
     // check the webhook to make sure it’s valid
