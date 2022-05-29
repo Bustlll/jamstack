@@ -6,6 +6,14 @@ const queryString = require('query-string');
 
 exports.handler = async ({event, body, headers }) => {
 
+  const { name = "Anon" } = event.queryStringParameters;
+  const { instagram = "Anon" } = event.queryStringParameters;
+  const { youtube = "Anon" } = event.queryStringParameters;
+  const { twitch = "Anon" } = event.queryStringParameters;
+  const { reddit = "Anon" } = event.queryStringParameters;
+  const { twitter = "Anon" } = event.queryStringParameters;
+  const { region = "Anon" } = event.queryStringParameters;
+  const { qt = "Anon" } = event.queryStringParameters;
 
   try {
     // check the webhook to make sure it’s valid
@@ -18,25 +26,9 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
      
-      const { name = "Anon" } = event.queryStringParameters;
-      const { instagram = "Anon" } = event.queryStringParameters;
-      const { youtube = "Anon" } = event.queryStringParameters;
-      const { twitch = "Anon" } = event.queryStringParameters;
-      const { reddit = "Anon" } = event.queryStringParameters;
-      const { twitter = "Anon" } = event.queryStringParameters;
-      const { region = "Anon" } = event.queryStringParameters;
-      const { qt = "Anon" } = event.queryStringParameters;
     
-      console.log(`
-      Hello, ${name},
-      yt, ${youtube},
-      tw, ${twitch},
-      ig, ${instagram},
-      red, ${reddit},
-      tw, ${twitter},
-      reg, ${region}
-      quant, ${qt}
-      `);
+    
+      console.log(name,instagram,youtube);
       // function newTime(){
       //   let a = new Date();
       //   return a.getTime();
