@@ -5,14 +5,7 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY
 const queryString = require('query-string');
 
 exports.handler = async ({event, body, headers }) => {
-  const { name = "Anon" } = event.queryStringParameters;
-  const { instagram = "Anon" } = event.queryStringParameters;
-  const { youtube = "Anon" } = event.queryStringParameters;
-  const { twitch = "Anon" } = event.queryStringParameters;
-  const { reddit = "Anon" } = event.queryStringParameters;
-  const { twitter = "Anon" } = event.queryStringParameters;
-  const { region = "Anon" } = event.queryStringParameters;
-  const { qt = "Anon" } = event.queryStringParameters;
+
 
   try {
     // check the webhook to make sure it’s valid
@@ -25,29 +18,37 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
      
-
+      const { name = "Anon" } = event.queryStringParameters;
+      const { instagram = "Anon" } = event.queryStringParameters;
+      const { youtube = "Anon" } = event.queryStringParameters;
+      const { twitch = "Anon" } = event.queryStringParameters;
+      const { reddit = "Anon" } = event.queryStringParameters;
+      const { twitter = "Anon" } = event.queryStringParameters;
+      const { region = "Anon" } = event.queryStringParameters;
+      const { qt = "Anon" } = event.queryStringParameters;
     
-      function newTime(){
-        let a = new Date();
-        return a.getTime();
-      }
+      console.log(name,instagram,youtube,twitch,reddit,twitter,region,qt);
+      // function newTime(){
+      //   let a = new Date();
+      //   return a.getTime();
+      // }
     
 
-        const { data, error } = await supabase
-            .from('users')
-            .insert([
-             {
-                cash: `${qt}`,
-                name:  `${name}`,
-                instagram: `${instagram}`,
-                youtube: `${youtube}`,
-                twitch: `${twitch}`,
-                reddit: `${reddit}`,
-                twitter: `${twitter}`,
-                region: `${region}`,
-                Date: newTime(),
-             }
-            ]);
+      //   const { data, error } = await supabase
+      //       .from('users')
+      //       .insert([
+      //        {
+      //           cash: `${qt}`,
+      //           name:  `${name}`,
+      //           instagram: `${instagram}`,
+      //           youtube: `${youtube}`,
+      //           twitch: `${twitch}`,
+      //           reddit: `${reddit}`,
+      //           twitter: `${twitter}`,
+      //           region: `${region}`,
+      //           Date: newTime(),
+      //        }
+      //       ]);
 
 // const { data: genre_data, error: genre_error } = await supabase
 // .from('users')
