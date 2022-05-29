@@ -37,26 +37,33 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      const url = new URL('https://toxtat.com/?name='+`${name}`+'&instagram='`${instagram}`+'&youtube='+`${youtube}`+'&twitch='+`${twitch}`+'&reddit='+`${reddit}`+'&twitter='+`${twitter}`+'&region='+`${region}`+'&qt='+`${qt}`);
-      const parseParams = (querystring) => {
 
-        // parse query string
-        const params = new URLSearchParams(queryString);
+     
+
+      if (event.queryStringParameters && event.queryStringParameters.name) {
+        console.log("Received name: " + event.queryStringParameters.name);
+        name = event.queryStringParameters.name;}
+
+    //   const url = new URL('https://toxtat.com/?name='+`${name}`+'&instagram='`${instagram}`+'&youtube='+`${youtube}`+'&twitch='+`${twitch}`+'&reddit='+`${reddit}`+'&twitter='+`${twitter}`+'&region='+`${region}`+'&qt='+`${qt}`);
+    //   const parseParams = (querystring) => {
+
+    //     // parse query string
+    //     const params = new URLSearchParams(queryString);
     
-        const obj = {};
+    //     const obj = {};
     
-        // iterate over all keys
-        for (const key of params.keys()) {
-            if (params.getAll(key).length > 1) {
-                obj[key] = params.getAll(key);
-            } else {
-                obj[key] = params.get(key);
-            }
-        }
+    //     // iterate over all keys
+    //     for (const key of params.keys()) {
+    //         if (params.getAll(key).length > 1) {
+    //             obj[key] = params.getAll(key);
+    //         } else {
+    //             obj[key] = params.get(key);
+    //         }
+    //     }
     
-        return obj;
-    };
-    console.log(parseParams(url.search));
+    //     return obj;
+    // };
+    // console.log(parseParams(url.search));
 //       const data = queryString.split(" ")
 //       const lolly = {
 //         data: data
