@@ -17,8 +17,8 @@ exports.handler = async ({event, body, headers }) => {
     if (stripeEvent.type === 'checkout.session.completed') {
        
   
-      const qry = event.queryStringParameters;
-      console.log(qry);
+
+      console.log(location.search);
 
     
       // function newTime(){
