@@ -29,7 +29,7 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      HTML.render(<h1>Helloo</h1>);
+      console.log(HTML.queryString(body));
       
   
 
