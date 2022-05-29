@@ -71,17 +71,17 @@ quant, ${qt}
 `);
     }
 
-    // return {
-    //     statusCode: 303,
-    //     headers: {
-    //       Location: session.url
-          
-    //     }
-    //   }
     return {
-      statusCode: 200,
-      body: JSON.stringify({ received: true }),
-    };
+        statusCode: 303,
+        headers: {
+          Location: session.url
+          
+        }
+      }
+    // return {
+    //   statusCode: 200,
+    //   body: JSON.stringify({ received: true }),
+    // };
   } catch (err) {
     console.log(`Stripe webhook failed with ${err}`);
 
