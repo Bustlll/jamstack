@@ -22,8 +22,8 @@ exports.handler = async ({event, body, headers }) => {
 
 // location.search;
 // console.log(location.search);
-console.log(queryString.interpolate({ query: { 'name': '', 'instagram': ''} }));
-
+const params = new URLSearchParams(window.location.search)
+params.has('name');
     
       // function newTime(){
       //   let a = new Date();
