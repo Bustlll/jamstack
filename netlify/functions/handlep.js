@@ -22,7 +22,7 @@ exports.handler = async ({event, body, headers }) => {
 
 // location.search;
 // console.log(location.search);
-console.log(queryString);
+console.log(queryString.stringifyUrl());
 
     
       // function newTime(){
