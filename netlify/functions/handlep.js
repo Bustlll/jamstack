@@ -29,7 +29,8 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-      console.log(location);
+      const params = new URLSearchParams(window.location.search)
+      console.log(params);
       // console.log(location.pathname);
       // console.log(location.search);
       // const parsed = queryString.parseUrl();
