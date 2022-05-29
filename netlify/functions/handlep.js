@@ -33,7 +33,10 @@ exports.handler = async ({event, body, headers }) => {
       const result = fetch(`${url}`, { method: 'get' })
   .then(response => response.json()) 
   .then(res => {
-    console.log(res);
+    const { name = "Anonymous" } = event.queryStringParameters;
+
+console.log(  `${name} `);
+  
 
   })
 
