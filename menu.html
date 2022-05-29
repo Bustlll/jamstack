@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TXG</title>
     <link rel="icon" type="image/x-icon" href="sshot.ico">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://js.stripe.com/v3/"></script>
     <script src="localStorage.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />    
@@ -46,7 +46,7 @@
 <div class="maincontainer-rankInfo"> 
   
   
-  <table class="content-table2" id="content-table2">
+  <!-- <table class="content-table2" id="content-table2">
     <thead>
       <tr>
         <th class="name">Name</th>
@@ -70,7 +70,7 @@
         <td>JAP</td>
       </tr>
     </tbody>
-  </table>
+  </table> -->
 
   <ul>
     <p>FOR YOURSELF</p>
@@ -124,7 +124,19 @@
 
               <p class="addU">Adding YOU <3 to the table</p>
 
-  <form action="/menu.html" name="socials" method="POST" autocomplete="off" id="socialscheck" data-netlify="true">
+                <form id="my-form" autocomplete="off" > 
+                  <input type="text" name="name" id="name" placeholder="name">
+                  <input type="text" name="instagram" id="instagram" placeholder="instagram">
+                  <input type="text" name="youtube" id="youtube" placeholder="youtube">
+                  <input type="text" name="twitch" id="twitch" placeholder="twitch">
+                  <input type="text" name="reddit" id="reddit" placeholder="reddit">
+                  <input type="text" name="twitter" id="twitter" placeholder="twitter">
+                  <input type="text" name="region" id="region" placeholder="region">
+                  <input type="text" name="instagram" id="instagram" placeholder="instagram">
+                  <input type="submit" />
+                  </form>
+
+  <!-- <form action="/menu.html" name="socials" method="POST" autocomplete="off" id="socialscheck" data-netlify="true">
     <div class="form-row">
        <div class="input-data">
           <input type="text" name="name" id="name" placeholder="Name" maxlength="22">
@@ -174,7 +186,7 @@
    
 
  </form>   
-  <button type="submit" class="btn" id="btn">Save</button>  
+  <button type="submit" class="btn" id="btn">Save</button>   -->
 
   
 
@@ -227,8 +239,7 @@
 
     </div>
 
-    <p><input id="search" value="" /><button id="btnSearch">Load</button></p>
-
+  
            
 </section>
 </div>
@@ -288,65 +299,76 @@
 
 <script type="text/javascript">
 
+  //data for querystring 
+
+  const form = document.getElementById('my-form');
+
+form.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  const formData = new FormData(form);
+  const params = new URLSearchParams(formData);
+  console.log(params.toString());
+});
+
 const log = console.log;
 
-window.addEventListener('load', () => {
-  //page has fully loaded
-  //location === window.location
-  log(location.href); //everything
-  log(location.pathname); //just folders and file
-  if (location.search) {
-    //there is a querystring beyond `?`
-    // log(location.search);
-    let qs = decodeURIComponent(location.search.substring(1));
-    // log(qs);
-    let params = new Map();
-    let parts = qs.split('&');
-    log({ parts });
-    parts.forEach((part) => {
-      let key = part.split('=')[0];
-      let val = part.split('=')[1];
-      params.set(key, val);
-    });
+// window.addEventListener('load', () => {
+//   //page has fully loaded
+//   //location === window.location
+//   log(location.href); //everything
+//   log(location.pathname); //just folders and file
+//   if (location.search) {
+//     //there is a querystring beyond `?`
+//     // log(location.search);
+//     let qs = decodeURIComponent(location.search.substring(1));
+//     // log(qs);
+//     let params = new Map();
+//     let parts = qs.split('&');
+//     log({ parts });
+//     parts.forEach((part) => {
+//       let key = part.split('=')[0];
+//       let val = part.split('=')[1];
+//       params.set(key, val);
+//     });
 
-    log(params.has('name'));
-    log(params.get('name'));
-  }
+//     log(params.has('name'));
+//     log(params.get('name'));
+//   }
 
-  let btn = document.getElementById('btnSearch');
-  btn.addEventListener('click', (ev) => {
-    let url = location.pathname;
-    let str = document.getElementById('search').value.trim();
-    url = `${url}?${encodeURIComponent(str)}`;
-    location.href = url;
-  });
-});
+//   let btn = document.getElementById('btnSearch');
+//   btn.addEventListener('click', (ev) => {
+//     let url = location.pathname;
+//     let str = document.getElementById('search').value.trim();
+//     url = `${url}?${encodeURIComponent(str)}`;
+//     location.href = url;
+//   });
+// });
 
             function reloader(){
   location.reload();
 }
      
 
-            function myFunction() {
-  var table = document.getElementById("content-table2");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell(-1);
-  var cell2 = row.insertCell(-1);
-  var cell3 = row.insertCell(-1);
-  var cell4 = row.insertCell(-1);
-  var cell5 = row.insertCell(-1);
-  var cell6 = row.insertCell(-1);
-  var cell7 = row.insertCell(-1);
-  cell1.innerHTML = JSON.parse(localStorage.getItem('User'))[0].name;
-  cell2.innerHTML = JSON.parse(localStorage.getItem('User'))[0].instagram;
-  cell3.innerHTML = JSON.parse(localStorage.getItem('User'))[0].youtube;
-  cell4.innerHTML = JSON.parse(localStorage.getItem('User'))[0].twitch;
-  cell5.innerHTML = JSON.parse(localStorage.getItem('User'))[0].reddit;
-  cell6.innerHTML = JSON.parse(localStorage.getItem('User'))[0].twitter;
-  cell7.innerHTML = JSON.parse(localStorage.getItem('User'))[0].region;
-}       
-let tably = document.getElementById('content-table2');
-tably.addEventListener('click', myFunction())
+//             function myFunction() {
+//   var table = document.getElementById("content-table2");
+//   var row = table.insertRow(-1);
+//   var cell1 = row.insertCell(-1);
+//   var cell2 = row.insertCell(-1);
+//   var cell3 = row.insertCell(-1);
+//   var cell4 = row.insertCell(-1);
+//   var cell5 = row.insertCell(-1);
+//   var cell6 = row.insertCell(-1);
+//   var cell7 = row.insertCell(-1);
+//   cell1.innerHTML = JSON.parse(localStorage.getItem('User'))[0].name;
+//   cell2.innerHTML = JSON.parse(localStorage.getItem('User'))[0].instagram;
+//   cell3.innerHTML = JSON.parse(localStorage.getItem('User'))[0].youtube;
+//   cell4.innerHTML = JSON.parse(localStorage.getItem('User'))[0].twitch;
+//   cell5.innerHTML = JSON.parse(localStorage.getItem('User'))[0].reddit;
+//   cell6.innerHTML = JSON.parse(localStorage.getItem('User'))[0].twitter;
+//   cell7.innerHTML = JSON.parse(localStorage.getItem('User'))[0].region;
+// }       
+// let tably = document.getElementById('content-table2');
+// tably.addEventListener('click', myFunction())
 
 
 
