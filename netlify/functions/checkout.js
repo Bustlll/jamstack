@@ -5,6 +5,13 @@ const stripe = require("stripe")(apiKey)
 
 
 exports.handler = async function(event, context){
+  const { name = "Anonymous" } = event.queryStringParameters;
+  const { instagram = "Anonymous" } = event.queryStringParameters;
+  const { youtube = "Anonymous" } = event.queryStringParameters;
+  const { twitch = "Anonymous" } = event.queryStringParameters;
+  const { reddit = "Anonymous" } = event.queryStringParameters;
+  const { twitter = "Anonymous" } = event.queryStringParameters;
+  const { region = "Anonymous" } = event.queryStringParameters;
   const { qt = "Anonymous" } = event.queryStringParameters;
 const quanti =  `${qt}` * 100;
   // const referer = event.handler.referer
