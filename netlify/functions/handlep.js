@@ -40,7 +40,7 @@ exports.handler = async ({event, body, headers }) => {
 
      
 
-console.log(name);
+console.log(event.queryStringParameters);
 
     //   const url = new URL('https://toxtat.com/?name='+`${name}`+'&instagram='`${instagram}`+'&youtube='+`${youtube}`+'&twitch='+`${twitch}`+'&reddit='+`${reddit}`+'&twitter='+`${twitter}`+'&region='+`${region}`+'&qt='+`${qt}`);
     //   const parseParams = (querystring) => {
