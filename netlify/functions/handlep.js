@@ -16,10 +16,12 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
        
-  
+      let params = new URLSearchParams(location.search);
+      let name = params.get("name"); // is the string "Jonathan"
+      console.log(name);
 
-    let a = formData.get("name");
-    console.log(a);
+location.search;
+console.log(location.search);
 
     
       // function newTime(){

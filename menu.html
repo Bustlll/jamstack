@@ -300,7 +300,7 @@
 
   //data for querystring 
 
-  const form = document.getElementById('my-form');
+   
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
@@ -311,37 +311,37 @@ form.addEventListener('submit', (evt) => {
 
 const log = console.log;
 
-// window.addEventListener('load', () => {
-//   //page has fully loaded
-//   //location === window.location
-//   log(location.href); //everything
-//   log(location.pathname); //just folders and file
-//   if (location.search) {
-//     //there is a querystring beyond `?`
-//     // log(location.search);
-//     let qs = decodeURIComponent(location.search.substring(1));
-//     // log(qs);
-//     let params = new Map();
-//     let parts = qs.split('&');
-//     log({ parts });
-//     parts.forEach((part) => {
-//       let key = part.split('=')[0];
-//       let val = part.split('=')[1];
-//       params.set(key, val);
-//     });
+window.addEventListener('load', () => {
+  //page has fully loaded
+  //location === window.location
+  log(location.href); //everything
+  log(location.pathname); //just folders and file
+  if (location.search) {
+    //there is a querystring beyond `?`
+    // log(location.search);
+    let qs = decodeURIComponent(location.search.substring(1));
+    // log(qs);
+    let params = new Map();
+    let parts = qs.split('&');
+    log({ parts });
+    parts.forEach((part) => {
+      let key = part.split('=')[0];
+      let val = part.split('=')[1];
+      params.set(key, val);
+    });
 
-//     log(params.has('name'));
-//     log(params.get('name'));
-//   }
+    log(params.has('name'));
+    log(params.get('name'));
+  }
 
-//   let btn = document.getElementById('btnSearch');
-//   btn.addEventListener('click', (ev) => {
-//     let url = location.pathname;
-//     let str = document.getElementById('search').value.trim();
-//     url = `${url}?${encodeURIComponent(str)}`;
-//     location.href = url;
-//   });
-// });
+  let btn = document.getElementById('btnSearch');
+  btn.addEventListener('click', (ev) => {
+    let url = location.pathname;
+    let str = document.getElementById('search').value.trim();
+    url = `${url}?${encodeURIComponent(str)}`;
+    location.href = url;
+  });
+});
 
             function reloader(){
   location.reload();
