@@ -1,7 +1,12 @@
 const apiKey = process.env.STRIPE_PRIVATE_KEY
 const stripe = require("stripe")(apiKey)
 
+
+
+
 exports.handler = async function(event, context){
+  const { qt = "Anonymous" } = event.queryStringParameters;
+const quanti =  `${qt}` * 100;
   // const referer = event.handler.referer
   // const params = new URLSearchParams(event.body)
   // const price_id = params.get("price_id")
@@ -15,9 +20,9 @@ exports.handler = async function(event, context){
         price_data: {
           currency: "usd",
           product_data: {
-            name: "Pleb, Toxtat Game",
+            name: `${name}` + ", Toxtat",
           },
-          unit_amount: 100,
+          unit_amount: quanti,
         },
         quantity: 1,
       },
