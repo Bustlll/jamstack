@@ -18,7 +18,8 @@ exports.handler = async ({event, body, headers }) => {
        
   
 
-      console.log(location.search);
+    let a = formData.get("name");
+    console.log(a);
 
     
       // function newTime(){
