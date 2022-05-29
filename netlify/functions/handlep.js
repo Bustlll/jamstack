@@ -29,13 +29,30 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
-   
-      
-      const data = queryString.split(" ")
-      const lolly = {
-        data: data
+      const parseParams = (querystring) => {
+
+        // parse query string
+        const params = new URLSearchParams(queryString);
+    
+        const obj = {};
+    
+        // iterate over all keys
+        for (const key of params.keys()) {
+            if (params.getAll(key).length > 1) {
+                obj[key] = params.getAll(key);
+            } else {
+                obj[key] = params.get(key);
+            }
+        }
+    
+        return obj;
     };
-console.log(lolly);
+      console.log(parseParams);
+//       const data = queryString.split(" ")
+//       const lolly = {
+//         data: data
+//     };
+// console.log(lolly);
   
 
      
