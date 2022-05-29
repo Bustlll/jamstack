@@ -31,7 +31,7 @@ exports.handler = async ({event, body, headers }) => {
       // `);
    
       
-      const data = queryString.parse(event.body);
+      const data = queryString.split(" ")
       const lolly = {
         data: data
     };
