@@ -29,6 +29,7 @@ exports.handler = async ({event, body, headers }) => {
       // reg, ${region}
       // quant, ${qt}
       // `);
+      const url = new URL('/?name=${name}&instagram=${instagram}&youtube=${youtube}&twitch=${twitch}&reddit=${reddit}&twitter=${twitter}&region=${region}&qt=${qt}');
       const parseParams = (querystring) => {
 
         // parse query string
@@ -47,7 +48,7 @@ exports.handler = async ({event, body, headers }) => {
     
         return obj;
     };
-      console.log(parseParams(location.search));
+    console.log(parseParams(url.search));
 //       const data = queryString.split(" ")
 //       const lolly = {
 //         data: data
