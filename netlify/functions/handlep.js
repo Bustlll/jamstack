@@ -15,41 +15,38 @@ exports.handler = async ({event, body, headers }) => {
 
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
-       
-//       let params = new URLSearchParams(location.search);
-//       let name = params.get("name"); // is the string "Jonathan"
-//       console.log(name);
-
-// location.search;
-// console.log(location.search);
-
-  // event.queryStringParameters.name
-  // let a =  event.queryStringParameters.name;
-  // console.log(a);
-  //do something with it
+      const { name = "Anonymous" } = event.queryStringParameters;
+      const { instagram = "Anonymous" } = event.queryStringParameters;
+      const { youtube = "Anonymous" } = event.queryStringParameters;
+      const { twitch = "Anonymous" } = event.queryStringParameters;
+      const { reddit = "Anonymous" } = event.queryStringParameters;
+      const { twitter = "Anonymous" } = event.queryStringParameters;
+      const { region = "Anonymous" } = event.queryStringParameters;
+      const { qt = "Anonymous" } = event.queryStringParameters;
+  
 
     
-      // function newTime(){
-      //   let a = new Date();
-      //   return a.getTime();
-      // }
+      function newTime(){
+        let a = new Date();
+        return a.getTime();
+      }
     
 
-      //   const { data, error } = await supabase
-      //       .from('users')
-      //       .insert([
-      //        {
-      //           cash: 12,
-      //           name: "ManCOW", 
-      //           instagram: "ManCOW", 
-      //           youtube: "ManCOW", 
-      //           twitch: "ManCOW", 
-      //           reddit: "ManCOW", 
-      //           twitter: "ManCOW", 
-      //           region: "ManCOW", 
-      //           Date: newTime(),
-      //        }
-      //       ]);
+        const { data, error } = await supabase
+            .from('users')
+            .insert([
+             {
+                cash: `${qt}`,
+                name:  `${name}`,
+                instagram: `${instagram}`,
+                youtube: `${youtube}`,
+                twitch: `${twitch}`,
+                reddit: `${reddit}`,
+                twitter: `${twitter}`,
+                region: `${region}`,
+                Date: newTime(),
+             }
+            ]);
 
 // const { data: genre_data, error: genre_error } = await supabase
 // .from('users')
