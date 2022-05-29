@@ -4,7 +4,7 @@ const { createClient } = require('@supabase/supabase-js');
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 const queryString = require('query-string');
 
-exports.handler = async ({event, body, headers }) => {
+exports.handler = async ({ body, headers }) => {
   try {
     // check the webhook to make sure it’s valid
     const stripeEvent = stripe.webhooks.constructEvent(
@@ -22,8 +22,12 @@ exports.handler = async ({event, body, headers }) => {
 
 // location.search;
 // console.log(location.search);
-const params = new URLSearchParams(window.location.search)
-params.has('name');
+exports.handler = (event, context, callback) => {
+  event.queryStringParameters.name
+  let a =  event.queryStringParameters.name;
+  console.log(a);
+  //do something with it
+}
     
       // function newTime(){
       //   let a = new Date();
