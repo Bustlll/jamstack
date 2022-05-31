@@ -10,7 +10,7 @@
 
 // // Connect to our database 
 // const { createClient } = require('@supabase/supabase-js');
-// const supabase = createClient(DATABASE_URL, SUPABASE_SERVICE_API_KEY);
+// const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_API_KEY);
 
 // Our standard serverless handler function
 
@@ -60,7 +60,7 @@ quant, ${qt}
     //     ]);
   
   // Did it work?
-  console.log(data, error);
+
   return {
     statusCode: 200,
   }
