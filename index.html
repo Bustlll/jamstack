@@ -548,7 +548,7 @@ for (var i = 0; i < confetti.length; i++) {
 // })
 
 
-const url = '/api/loadtable';
+const url = '/wreckthisbeach/myman';
 const result = fetch(`${url}`, { method: 'get' })
   .then(response => response.json()) 
   .then(res => {
@@ -564,7 +564,7 @@ const result = fetch(`${url}`, { method: 'get' })
         }
 
         var xhReq = new XMLHttpRequest();
-        xhReq.open("GET", "https://toxtat.com/api/loadtable", false,);
+        xhReq.open("GET", "https://toxtat.com/wreckthisbeach/myman", false,);
         xhReq.send(null);
 
         const data1 = JSON.parse(xhReq.responseText); 
