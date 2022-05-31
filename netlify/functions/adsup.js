@@ -24,16 +24,6 @@ const { reddit = "Anonymous" } = event.queryStringParameters;
 const { twitter = "Anonymous" } = event.queryStringParameters;
 const { region = "Anonymous" } = event.queryStringParameters;
 const { qt = "Anonymous" } = event.queryStringParameters;
-console.log(`
-Hello, ${name},
-yt, ${youtube},
-tw, ${twitch},
-ig, ${instagram},
-red, ${reddit},
-tw, ${twitter},
-reg, ${region}
-quant, ${qt}
-`);
 
 
   // function newTime(){
@@ -63,5 +53,15 @@ quant, ${qt}
 
   return {
     statusCode: 200,
+    body: `
+      Hello, ${name},
+      yt, ${youtube},
+      tw, ${twitch},
+      ig, ${instagram},
+      red, ${reddit},
+      tw, ${twitter},
+      reg, ${region}
+      quant, ${qt}
+      `
   }
 }
