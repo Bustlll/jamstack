@@ -55,24 +55,25 @@ async function webhooks(){
         // only do stuff if this is a successful Stripe Checkout purchase
         if (stripeEvent.type === 'checkout.session.completed') {
           
-          const { name = "Anonymous" } = event.queryStringParameters;
-          const { instagram = "Anonymous" } = event.queryStringParameters;
-          const { youtube = "Anonymous" } = event.queryStringParameters;
-          const { twitch = "Anonymous" } = event.queryStringParameters;
-          const { reddit = "Anonymous" } = event.queryStringParameters;
-          const { twitter = "Anonymous" } = event.queryStringParameters;
-          const { region = "Anonymous" } = event.queryStringParameters;
-          const { qt = "Anonymous" } = event.queryStringParameters;
-   console.log( `
-   Hello, ${name},
-   yt, ${youtube},
-   tw, ${twitch},
-   ig, ${instagram},
-   red, ${reddit},
-   tw, ${twitter},
-   reg, ${region}
-   quant, ${qt}
-   `);
+//           const { name = "Anonymous" } = event.queryStringParameters;
+//           const { instagram = "Anonymous" } = event.queryStringParameters;
+//           const { youtube = "Anonymous" } = event.queryStringParameters;
+//           const { twitch = "Anonymous" } = event.queryStringParameters;
+//           const { reddit = "Anonymous" } = event.queryStringParameters;
+//           const { twitter = "Anonymous" } = event.queryStringParameters;
+//           const { region = "Anonymous" } = event.queryStringParameters;
+//           const { qt = "Anonymous" } = event.queryStringParameters;
+//    console.log( `
+//    Hello, ${name},
+//    yt, ${youtube},
+//    tw, ${twitch},
+//    ig, ${instagram},
+//    red, ${reddit},
+//    tw, ${twitter},
+//    reg, ${region}
+//    quant, ${qt}
+//    `);
+console.log("lol");
         }
     
         return {
