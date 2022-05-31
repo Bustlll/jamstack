@@ -395,6 +395,12 @@ for (var i = 0; i < confetti.length; i++) {
 }
 }
 
+const url88 = '/api/loadtable';
+const result88 = fetch(`${url}`, { method: 'get' })
+  .then(response => response.json()) 
+  .then(res => {console.log(res);})
+      
+
 
 const url = '/api/alert';
 const result = fetch(`${url}`, { method: 'get' })
