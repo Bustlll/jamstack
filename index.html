@@ -564,7 +564,7 @@ const result = fetch(`${url}`, { method: 'get' })
         }
 
         var xhReq = new XMLHttpRequest();
-        xhReq.open("GET", "https://toxtat.com/wreckthisbeach/myman", false,);
+        xhReq.open("GET",`${url}`, false,);
         xhReq.send(null);
 
         const data1 = JSON.parse(xhReq.responseText); 
