@@ -408,8 +408,8 @@ const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
         localStorage.ID = a;
     }
 
-    const data = JSON.stringify(res.responseText);
-    const data2 = JSON.stringify(res);
+    
+    const data2 = JSON.stringify(res[0]);
 
 
     // initialization
