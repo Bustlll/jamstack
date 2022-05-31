@@ -389,7 +389,7 @@ for (var i = 0; i < confetti.length; i++) {
         box.children[i].style.transform = "rotate("+ size*[i] +"deg)";
 }
 }
-
+let a   
 const url = '/wreckthisbeach/myman';
 const result = fetch(`${url}`, { method: 'get' })
   .then(response => response.json()) 
@@ -552,8 +552,7 @@ leaderboards(data1);
 })
 
 //2 table
-
-const result2 = fetch(`${url}`, { method: 'get' })
+if(result.isFulfilled() == true){const result2 = fetch(`${url}`, { method: 'get' })
   .then(response => response.json()) 
   .then(res => {
 
@@ -714,7 +713,8 @@ leaderboards(data1);
         resetBoard();
 
 
-})
+})}
+
 
 //3 table 
 
