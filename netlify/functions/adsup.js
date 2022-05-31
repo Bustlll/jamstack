@@ -1,18 +1,18 @@
 
-// const {
-//     DATABASE_URL,
-//     SUPABASE_SERVICE_API_KEY
-// } = process.env;
+const {
+  SUPABASE_URL,
+  SUPABASE_KEY
+} = process.env;
 
 
 
 
 
-// // Connect to our database 
-// const { createClient } = require('@supabase/supabase-js');
-// const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_API_KEY);
 
-// Our standard serverless handler function
+const { createClient } = require('@supabase/supabase-js');
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+
 
 exports.handler = async event => {
 
@@ -26,42 +26,33 @@ const { region = "Anonymous" } = event.queryStringParameters;
 const { qt = "Anonymous" } = event.queryStringParameters;
 
 
-  // function newTime(){
-  //   let a = new Date();
-  //   return a.getTime();
-  // }
+  function newTime(){
+    let a = new Date();
+    return a.getTime();
+  }
 
 
-  // Insert a row
-    // const { data, error } = await supabase
-    //     .from('users')
-    //     .insert([
-    //      {
-    //         cash: 12,
-    //         name: "ManCOW", 
-    //         instagram: "ManCOW", 
-    //         youtube: "ManCOW", 
-    //         twitch: "ManCOW", 
-    //         reddit: "ManCOW", 
-    //         twitter: "ManCOW", 
-    //         region: "ManCOW", 
-    //         Date: newTime(),
-    //      }
-    //     ]);
+
+    const { data, error } = await supabase
+        .from('users')
+        .insert([
+         {
+            cash:  `${qt}`,
+            name: `${name}`, 
+            instagram:  `${instagram}`, 
+            youtube:  `${youtube}`, 
+            twitch: `${twitch}`, 
+            reddit: `${reddit}`, 
+            twitter:  `${twitter}`, 
+            region: `${region}`, 
+            Date: newTime(),
+         }
+        ]);
   
   // Did it work?
+  console.log(data);
 
   return {
     statusCode: 200,
-    body: `
-      Hello, ${name},
-      yt, ${youtube},
-      tw, ${twitch},
-      ig, ${instagram},
-      red, ${reddit},
-      tw, ${twitter},
-      reg, ${region}
-      quant, ${qt}
-      `
   }
 }
