@@ -408,10 +408,9 @@ const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
         localStorage.ID = a;
     }
 
-    const data1 = JSON.parse(res.responseText); 
-    const data2 = JSON.parse(res);
-    const data = JSON.stringify(data1);
-    const data3 = JSON.stringify(data2);
+    const data = JSON.stringify(res.responseText);
+    const data2 = JSON.stringify(res);
+
 
     // initialization
     var cryptocurrencies;
@@ -422,10 +421,9 @@ const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
     let indexPos = [];
     let ids;
     
-console.log(data1);
-console.log(data2);
 console.log(data);
-console.log(data3);
+console.log(data2);
+
 
 
 
