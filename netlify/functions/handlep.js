@@ -19,10 +19,11 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
       
-  <form>
-    <input placeholder="instagram"></input>
-    <input type="submit" />
-  </form>
+      var tag = document.createElement("p");
+      var text = document.createTextNode("Tutorix is the best e-learning platform");
+      tag.appendChild(text);
+      var element = document.getElementById("new");
+      element.appendChild(tag);
     }
 
     return {
