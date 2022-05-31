@@ -395,8 +395,8 @@ for (var i = 0; i < confetti.length; i++) {
 }
 }
 
-const url88 = '/api/loadtable';
-const result88 = fetch(`${url}`, { method: 'get' })
+
+const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
   .then(response => response.json()) 
   .then(res => {console.log(res);})
   
