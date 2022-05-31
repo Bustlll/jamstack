@@ -397,8 +397,39 @@ for (var i = 0; i < confetti.length; i++) {
 
 
 const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
-  .then(response => response.json()) 
-  .then(res => {console.log(res);})
+.then(response => response.json()) 
+.then(res => {
+    function getRowPositions(element) {
+        var rowJavascript = element.parentNode.parentNode;
+        var rowjQuery = $(element).closest("tr");
+        let a = rowJavascript.rowIndex -1;
+        indexPos.push(a);
+        localStorage.setItem('ID', a);
+        localStorage.ID = a;
+    }
+
+    const data1 = JSON.parse(res.responseText); 
+    const data2 = JSON.parse(res);
+    const data = JSON.stringify(data1);
+    const data3 = JSON.stringify(data2);
+
+    // initialization
+    var cryptocurrencies;
+    var timerId;
+    var updateInterval = 2000000;
+
+    let rowPos;
+    let indexPos = [];
+    let ids;
+    
+console.log(data1);
+console.log(data2);
+console.log(data);
+console.log(data3);
+
+
+
+})
   
 //   async function getProm(){
 //       console.log(result88);
