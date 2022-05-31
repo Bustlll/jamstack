@@ -395,7 +395,6 @@ for (var i = 0; i < confetti.length; i++) {
 }
 }
 
-
 const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
 .then(response => response.json()) 
 .then(res => {
@@ -407,7 +406,9 @@ const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
         localStorage.setItem('ID', a);
         localStorage.ID = a;
     }
+    const data1 = (res.text())
     const data = JSON.stringify(res);
+    console.log(data, data1);
 
     var cryptocurrencies;
     var timerId;
@@ -445,12 +446,15 @@ const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
           
 
         function getNewData(){
+
+        
             // get the new data for each coin and change to their new values
             fetch('https://toxtat.com/api/loadtable', { method: 'get' })
             .then(response => response.json()) 
             .then(res => {
            
-            var newData = res
+                var newData1 = JSON.parse(res.text()); 
+                var newData = JSON.stringify(newData1);
 
 
             updateRanks(cryptocurrencies);
@@ -462,7 +466,7 @@ const result88 = fetch('https://toxtat.com/api/loadtable', { method: 'get' })
         function leaderboards(users) {
   return users.sort((a, b) => b.cash-a.cash);
 }
-leaderboards(data);
+leaderboards(data1);
 
     
         function resetBoard() {
@@ -477,7 +481,7 @@ leaderboards(data);
             for(let i = 0;i < 11;i++){
     //function for comparing dates from server as the old time and client as the new time
                 function compareData(){
-                    let parsed1 = data[i].Date; 
+                    let parsed1 = data1[i].Date; 
                     let newTime = new Date();
                     let newTfact = newTime.getTime();
                     let diferenceTime = newTfact - parsed1;
@@ -487,16 +491,16 @@ leaderboards(data);
                 
                 cryptocurrencies.push(
                     {
-                        name : data[i].name,
-                        instagram: data[i].instagram,
-                        youtube: data[i].youtube,
-                        twitch: data[i].twitch,
-                        reddit: data[i].reddit,
-                        twitter: data[i].twitter,
-                        alive: data[i].alive,
-                        region: data[i].region,
+                        name : data1[i].name,
+                        instagram: data1[i].instagram,
+                        youtube: data1[i].youtube,
+                        twitch: data1[i].twitch,
+                        reddit: data1[i].reddit,
+                        twitter: data1[i].twitter,
+                        alive: data1[i].alive,
+                        region: data1[i].region,
                         alive: compareData(),
-                        percent_change_24h: data[i].cash,
+                        percent_change_24h: data1[i].cash,
 
                     }
                 )
@@ -542,7 +546,6 @@ leaderboards(data);
         resetBoard();
 
 })
-      
 
 
 const url = '/api/alert';
