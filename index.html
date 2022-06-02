@@ -24,12 +24,10 @@
    <!-- navbar space -->
     <nav>
        
-        <label for="check">
-            <i class="hidden-menu" id="hmenu">Menu</i>
-        </label>
+       
         <a href="#" class="logo">TOXTAT</a>
         <ul>
-            <li><a accesskey="a" href="/index.html">Home</a></li>
+           
         <li><a accesskey="q" href="/menu.html">Menu</a></li>
             
         </ul>
@@ -295,7 +293,7 @@
     </div>
    
  
-    <!-- <style>
+  <style>
 
 table { 
   width: 95%; 
@@ -303,19 +301,19 @@ table {
   border-collapse: collapse; 
 }
 
-tr:nth-of-type(odd) { 
+/* tr:nth-of-type(odd) { 
   background: #eee; 
-}
-th { 
+} */
+/* th { 
   background: rgba(12, 14, 12, 0.849); 
   color: white; 
   font-weight: bold; 
-}
-td, th { 
+} */
+/* td, th { 
   padding: 6px; 
   border: 1px solid #ccc; 
   text-align: left; 
-}
+} */
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -347,7 +345,7 @@ only screen and (max-width: 760px),
 	}
 	
 }
-    </style> -->
+    </style> 
     <script>
 // I'm using the result const to show that you can continue to extend the chain from the returned promise
 
@@ -552,7 +550,7 @@ leaderboards(data1);
 })
 
 //2 table
-if(result.isFulfilled() == true){const result2 = fetch(`${url}`, { method: 'get' })
+if(result.isFulfilled()){const result2 = fetch(`${url}`, { method: 'get' })
   .then(response => response.json()) 
   .then(res => {
 
