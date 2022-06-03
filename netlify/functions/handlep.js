@@ -29,40 +29,6 @@ exports.handler = async ({event, body, headers }) => {
       //         statusCode: 200,
       //         body: JSON.stringify(data)}})
 
-
-
-  function newTime(){
-    let a = new Date();
-    return a.getTime();
-  }
-
-
-
-    const { data, error } = await supabase
-        .from('users')
-        .insert([
-         {
-           
-                cash:  "tai",
-                name: "tai",
-                instagram:  "tai",
-                youtube:  "tai",
-                twitch: "tai",
-                reddit: "tai",
-                twitter:  "tai",
-                region: "tai",
-                Date: newTime(),
-         }
-        ]);
-  
-  // Did it work?
-  console.log(data);
-
-  return {
-    statusCode: 200,
-  }
-
-
     
 
     }
