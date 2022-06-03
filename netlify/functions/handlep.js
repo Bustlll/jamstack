@@ -29,11 +29,8 @@ exports.handler = async ({event, body, headers }) => {
       //         statusCode: 200,
       //         body: JSON.stringify(data)}})
 
-              const BASE_URL = "https://toxtat.com/wreckthisbeach/hello"
-              return fetch(`${BASE_URL}`)
-                  .then(data => {  return {
-                      statusCode: 200,
-                      body: data}})
+             fetch("https://toxtat.com/wreckthisbeach/hello");
+             
              
      
 
