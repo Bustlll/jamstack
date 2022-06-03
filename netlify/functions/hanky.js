@@ -10,7 +10,7 @@ const stripe = require("stripe")(apiKey)
 
 
 
-exports.handler = async function(event, body, headers, context){
+exports.handler = async function(event, context){
     
     const { name = "Anonymous" } = event.queryStringParameters;
     const { qt = "Anonymous" } = event.queryStringParameters;
@@ -42,49 +42,39 @@ exports.handler = async function(event, body, headers, context){
       cancel_url: "https://www.toxtat.com/menu.html", 
     })
 
-  await session; 
-    try {
-        // check the webhook to make sure it’s valid
-        const stripeEvent = stripe.webhooks.constructEvent(
-          body,
-          headers['stripe-signature'],
-          process.env.STRIPE_WEBHOOK_SECRET
-        );
-    
-        // only do stuff if this is a successful Stripe Checkout purchase
-        if (stripeEvent.type === 'checkout.session.completed') {
-          
-         console.log("sssda");
-         console.log(`U made it, ${name}`);
-    
-        }
-    
-        return {
-          statusCode: 303,
-          headers: {
-            Location: session.url
-            
-          },
-          body: JSON.stringify({ received: true }),
-        };
-      } catch (err) {
-        console.log(`Stripe webhook failed with ${err}`);
-    
-        return {
-          statusCode: 400,
-          body: `Webhook Error: ${err.message}`,
-        };
-      }
+    exports.handler = async ({event, body, headers }) => {
 
-    // return {
-    //   statusCode: 303,
-    //   body: JSON.stringify({ received: true }),
-    //   headers: {
-    //     Location: session.url
-        
-    //   }
+
+
+        try {
+          // check the webhook to make sure it’s valid
+          const stripeEvent = stripe.webhooks.constructEvent(
+            body,
+            headers['stripe-signature'],
+            process.env.STRIPE_WEBHOOK_SECRET
+          );
       
-    // }
+          // only do stuff if this is a successful Stripe Checkout purchase
+          if (stripeEvent.type === 'checkout.session.completed') {
+            
+           console.log("made it");
+           console.log( "Hello "+`${name}` );
+      
+          }
+      
+          return {
+            statusCode: 200,
+            body: JSON.stringify({ received: true }),
+          };
+        } catch (err) {
+          console.log(`Stripe webhook failed with ${err}`);
+      
+          return {
+            statusCode: 400,
+            body: `Webhook Error: ${err.message}`,
+          };
+        }
+      };
     
   }
 
