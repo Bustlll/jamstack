@@ -30,14 +30,14 @@ exports.handler = async ({event, body, headers }) => {
       //         body: JSON.stringify(data)}})
 
         
-      const { name = "Anonymous" } = event.queryStringParameters;
-      const { instagram = "Anonymous" } = event.queryStringParameters;
-      const { youtube = "Anonymous" } = event.queryStringParameters;
-      const { twitch = "Anonymous" } = event.queryStringParameters;
-      const { reddit = "Anonymous" } = event.queryStringParameters;
-      const { twitter = "Anonymous" } = event.queryStringParameters;
-      const { region = "Anonymous" } = event.queryStringParameters;
-      const { qt = "Anonymous" } = event.queryStringParameters;
+      // const { name = "Anonymous" } = event.queryStringParameters;
+      // const { instagram = "Anonymous" } = event.queryStringParameters;
+      // const { youtube = "Anonymous" } = event.queryStringParameters;
+      // const { twitch = "Anonymous" } = event.queryStringParameters;
+      // const { reddit = "Anonymous" } = event.queryStringParameters;
+      // const { twitter = "Anonymous" } = event.queryStringParameters;
+      // const { region = "Anonymous" } = event.queryStringParameters;
+      // const { qt = "Anonymous" } = event.queryStringParameters;
       
       
         function newTime(){
@@ -51,14 +51,14 @@ exports.handler = async ({event, body, headers }) => {
               .from('users')
               .insert([
                {
-                  cash:  `${qt}`,
-                  name: `${name}`, 
-                  instagram:  `${instagram}`, 
-                  youtube:  `${youtube}`, 
-                  twitch: `${twitch}`, 
-                  reddit: `${reddit}`, 
-                  twitter:  `${twitter}`, 
-                  region: `${region}`, 
+                  cash:  "tai",
+                  name: "tai",
+                  instagram:  "tai",
+                  youtube:  "tai",
+                  twitch: "tai",
+                  reddit: "tai",
+                  twitter:  "tai",
+                  region: "tai",
                   Date: newTime(),
                }
               ]);
