@@ -10,7 +10,7 @@ const stripe = require("stripe")(apiKey)
 
 
 
-exports.handler = async function(event, context, body, headers){
+exports.handler = async function(event, body, headers, context){
     
     const { name = "Anonymous" } = event.queryStringParameters;
     const { qt = "Anonymous" } = event.queryStringParameters;
@@ -42,7 +42,7 @@ exports.handler = async function(event, context, body, headers){
       cancel_url: "https://www.toxtat.com/menu.html", 
     })
 
-  
+  await session; 
     try {
         // check the webhook to make sure it’s valid
         const stripeEvent = stripe.webhooks.constructEvent(
