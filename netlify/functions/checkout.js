@@ -5,7 +5,25 @@ const stripe = require("stripe")(apiKey)
 exports.handler = async function(event, context){
   const { name = "Anonymous" } = event.queryStringParameters;
   const { qt = "Anonymous" } = event.queryStringParameters;
+
+  const { instagram = "Anonymous" } = event.queryStringParameters;
+  const { youtube = "Anonymous" } = event.queryStringParameters;
+  const { twitch = "Anonymous" } = event.queryStringParameters;
+  const { reddit = "Anonymous" } = event.queryStringParameters;
+  const { twitter = "Anonymous" } = event.queryStringParameters;
+  const { region = "Anonymous" } = event.queryStringParameters;
+
 const quanti =  `${qt}` * 100;
+
+
+
+
+
+
+
+
+
+
 
 //aqui funcionan los event querystring, son reacheables porque vienen de url con event, body
 
@@ -23,6 +41,7 @@ const quanti =  `${qt}` * 100;
           unit_amount: quanti,
         },
         quantity: 1,
+        metadata: {cash: `${qt}`,name:`${name}`,instagram:`${instagram}`,youtube:`${youtube}`,twitch:`${twitch}`,reddit:`${reddit}`,twitter:`${twitter}`,region:`${region}`,Date: newTime(),},
       },
     ],
     

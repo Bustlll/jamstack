@@ -28,7 +28,13 @@ exports.handler = async ({event, body, headers }) => {
       //       .then(data => {  return {
       //         statusCode: 200,
       //         body: JSON.stringify(data)}})
+      const session = event.data.object;
 
+      const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
+  
+      const items = lineItems.data;
+  
+      alert(items,session);
     
 
     }
