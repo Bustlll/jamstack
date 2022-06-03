@@ -13,11 +13,7 @@ exports.handler = async function(event, context, body, headers){
     const { name = "Anonymous" } = event.queryStringParameters;
     const { qt = "Anonymous" } = event.queryStringParameters;
   const quanti =  `${qt}` * 100;
-  const stripeEvent = stripe.webhooks.constructEvent(
-    body,
-    headers['stripe-signature'],
-    process.env.STRIPE_WEBHOOK_SECRET
-  );
+
 
   
   //aqui funcionan los event querystring, son reacheables porque vienen de url con event, body
@@ -43,6 +39,12 @@ exports.handler = async function(event, context, body, headers){
       success_url: "https://www.toxtat.com",
       cancel_url: "https://www.toxtat.com/menu.html", 
     })
+    
+    const stripeEvent = stripe.webhooks.constructEvent(
+        body,
+        headers['stripe-signature'],
+        process.env.STRIPE_WEBHOOK_SECRET
+      );
 
       
     if (stripeEvent.type === 'checkout.session.completed') {
