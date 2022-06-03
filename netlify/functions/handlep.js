@@ -25,7 +25,9 @@ exports.handler = async ({ headers, body }) => {
 
     const items = lineItems.data;
 
-    console.log(session, lineItems);
+    console.log(session.metadata);
+    console.log(session.metadata.name);
+
 
     return {
       statusCode: 200,
