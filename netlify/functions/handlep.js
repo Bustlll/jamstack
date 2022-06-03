@@ -36,7 +36,7 @@ exports.handler = async ({ headers, body }) => {
         .from('users')
         .insert([
          {
-            cash:  session.metadata.qt, 
+            cash:  session.metadata.cash, 
             name: session.metadata.name, 
             instagram:  session.metadata.instagram, 
             youtube:  session.metadata.youtube, 
