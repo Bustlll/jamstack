@@ -42,42 +42,49 @@ exports.handler = async function(event, context, body, headers){
       cancel_url: "https://www.toxtat.com/menu.html", 
     })
 
-    const stripeEvent = stripe.webhooks.constructEvent(
-        body,
-        headers['stripe-signature'],
-        process.env.STRIPE_WEBHOOK_SECRET
-      );
-
-      
-    if (stripeEvent.type === 'checkout.session.completed') {
-        console.log("hwlo");
-      
-        // const BASE_URL = "https://toxtat.com/wreckthisbeach/adsup"
   
-        // const {date} = JSON.parse(event.body)
-  
-        // return fetch(`${BASE_URL}&date=${date}`)
-        // .then(response => {if (!response.ok) 
-        //   {throw new Error('Network response was not ok');}
-        //       return response.json()}) 
-        //       .then(data => {  return {
-        //         statusCode: 200,
-        //         body: JSON.stringify(data)}})
-              //   .catch(error => { return {
-              //     statusCode: 500, 
-              //     body: JSON.stringify({error})}})}
-  
+    try {
+        // check the webhook to make sure it’s valid
+        const stripeEvent = stripe.webhooks.constructEvent(
+          body,
+          headers['stripe-signature'],
+          process.env.STRIPE_WEBHOOK_SECRET
+        );
+    
+        // only do stuff if this is a successful Stripe Checkout purchase
+        if (stripeEvent.type === 'checkout.session.completed') {
+          
+         console.log("sssda");
+         console.log(`U made it, ${name}`);
+    
+        }
+    
+        return {
+          statusCode: 303,
+          headers: {
+            Location: session.url
+            
+          },
+          body: JSON.stringify({ received: true }),
+        };
+      } catch (err) {
+        console.log(`Stripe webhook failed with ${err}`);
+    
+        return {
+          statusCode: 400,
+          body: `Webhook Error: ${err.message}`,
+        };
       }
 
-    return {
-      statusCode: 303,
-      body: JSON.stringify({ received: true }),
-      headers: {
-        Location: session.url
+    // return {
+    //   statusCode: 303,
+    //   body: JSON.stringify({ received: true }),
+    //   headers: {
+    //     Location: session.url
         
-      }
+    //   }
       
-    }
+    // }
     
   }
 
