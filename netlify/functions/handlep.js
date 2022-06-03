@@ -31,12 +31,9 @@ exports.handler = async ({event, body, headers }) => {
 
               const BASE_URL = "https://toxtat.com/wreckthisbeach/hello"
               return fetch(`${BASE_URL}`)
-              .then(response => {if (!response.ok) 
-                {throw new Error('Network response was not ok');}
-                    return response.json()}) 
-                    .then(data => {  return {
+                  .then(data => {  return {
                       statusCode: 200,
-                      body: JSON.stringify(data)}})
+                      body: data}})
              
      
 
