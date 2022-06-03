@@ -1,9 +1,10 @@
-const fetch = require('node-fetch')
+// const fetch = require('node-fetch')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const { createClient } = require('@supabase/supabase-js');
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-const queryString = require('query-string');
-const apiKey = process.env.STRIPE_PRIVATE_KEY
+// const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+// const queryString = require('query-string');
+
+
 
 
 
@@ -39,7 +40,7 @@ exports.handler = async function(event, context, body, headers){
       success_url: "https://www.toxtat.com",
       cancel_url: "https://www.toxtat.com/menu.html", 
     })
-    
+
     const stripeEvent = stripe.webhooks.constructEvent(
         body,
         headers['stripe-signature'],
