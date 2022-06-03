@@ -27,8 +27,8 @@ const quanti =  `${qt}` * 100;
     ],
     
     mode: "payment",
-    success_url: "https://www.toxtat.com",
-    cancel_url: "https://www.toxtat.com/menu.html", 
+    success_url: "https://toxtat.com",
+    cancel_url: "https://toxtat.com/menu.html", 
   })
   return {
     statusCode: 303,
