@@ -9,11 +9,11 @@ function parseMultipartForm(event) {
     const fields = {};
 
     // let's instantiate our busboy instance!
-    const busboy = Busboy({headers: event.headers})
-    const headers = Object.keys(headers).reduce((newHeaders, key) => {
+    const busboy = Busboy({headers: Object.keys(headers).reduce((newHeaders, key) => {
         newHeaders[key.toLowerCase()] = headers[key];
         return newHeaders;
-    }, {});
+    }, {})})
+
 
     // before parsing anything, we need to set up some handlers.
     // whenever busboy comes across a file ...
