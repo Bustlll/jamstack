@@ -1,8 +1,8 @@
-const fetch = require('node-fetch')
+// const fetch = require('node-fetch')
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
 const { createClient } = require('@supabase/supabase-js');
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-const queryString = require('query-string');
+// const queryString = require('query-string');
 
 
 
@@ -18,15 +18,36 @@ exports.handler = async ({ headers, body }) => {
     if (event.type !== 'checkout.session.completed') {
       return;
     }
-
+    function newTime(){
+      let a = new Date();
+      return a.getTime();
+    }
     const session = event.data.object;
 
     const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
 
-    const items = lineItems.data;
+    // const items = lineItems.data;
 
-    console.log(session.metadata);
-    console.log(session.metadata.name);
+    // console.log(session.metadata);
+    // console.log(session.metadata.name);
+
+
+    const { data, error } = await supabase
+        .from('users')
+        .insert([
+         {
+            cash:  session.metadata.qt, 
+            name: session.metadata.name, 
+            instagram:  session.metadata.instagram, 
+            youtube:  session.metadata.youtube, 
+            twitch: session.metadata.twitch, 
+            reddit: session.metadata.reddit, 
+            twitter:  session.metadata.twitter, 
+            region: session.metadata.region, 
+            Date: newTime(),
+         }
+        ]);
+        console.log(data);
 
 
     return {
