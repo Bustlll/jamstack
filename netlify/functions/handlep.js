@@ -29,43 +29,43 @@ exports.handler = async ({event, body, headers }) => {
       //         statusCode: 200,
       //         body: JSON.stringify(data)}})
 
-        
-      // const { name = "Anonymous" } = event.queryStringParameters;
-      // const { instagram = "Anonymous" } = event.queryStringParameters;
-      // const { youtube = "Anonymous" } = event.queryStringParameters;
-      // const { twitch = "Anonymous" } = event.queryStringParameters;
-      // const { reddit = "Anonymous" } = event.queryStringParameters;
-      // const { twitter = "Anonymous" } = event.queryStringParameters;
-      // const { region = "Anonymous" } = event.queryStringParameters;
-      // const { qt = "Anonymous" } = event.queryStringParameters;
-      
-      
-        function newTime(){
-          let a = new Date();
-          return a.getTime();
-        }
-      
-      
-      
-          const { data, error } = await supabase
-              .from('users')
-              .insert([
-               {
-                  cash:  "tai",
-                  name: "tai",
-                  instagram:  "tai",
-                  youtube:  "tai",
-                  twitch: "tai",
-                  reddit: "tai",
-                  twitter:  "tai",
-                  region: "tai",
-                  Date: newTime(),
-               }
-              ]);
-        
-        // Did it work?
-        console.log(data);
-      
+
+
+exports.handler = async event => {
+
+
+
+  function newTime(){
+    let a = new Date();
+    return a.getTime();
+  }
+
+
+
+    const { data, error } = await supabase
+        .from('users')
+        .insert([
+         {
+           
+                cash:  "tai",
+                name: "tai",
+                instagram:  "tai",
+                youtube:  "tai",
+                twitch: "tai",
+                reddit: "tai",
+                twitter:  "tai",
+                region: "tai",
+                Date: newTime(),
+         }
+        ]);
+  
+  // Did it work?
+  console.log(data);
+
+  return {
+    statusCode: 200,
+  }
+}
 
     
 
