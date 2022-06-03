@@ -1,5 +1,4 @@
-// netlify/functions/restaurantReservationEndpoint
-import * as Busboy from "busboy"
+const busboy = require('busboy');
 
 function parseMultipartForm(event) {
   return new Promise((resolve) => {
@@ -7,7 +6,7 @@ function parseMultipartForm(event) {
     const fields = {};
 
     // let's instantiate our busboy instance!
-    const busboy = new Busboy({
+    const busboy1 = new Busboy({
       // it uses request headers
       // to extract the form boundary value (the ----WebKitFormBoundary thing)
       headers: event.headers
@@ -15,7 +14,7 @@ function parseMultipartForm(event) {
 
     // before parsing anything, we need to set up some handlers.
     // whenever busboy comes across a file ...
-    busboy.on(
+    busboy1.on(
       "file",
       (fieldname, filestream, filename, transferEncoding, mimeType) => {
         // ... we take a look at the file's data ...
@@ -31,18 +30,18 @@ function parseMultipartForm(event) {
     );
 
     // whenever busboy comes across a normal field ...
-    busboy.on("field", (fieldName, value) => {
+    busboy1.on("field", (fieldName, value) => {
       // ... we write its value into `fields`.
       fields[fieldName] = value;
     });
 
     // once busboy is finished, we resolve the promise with the resulted fields.
-    busboy.on("finish", () => {
+    busboy1.on("finish", () => {
       resolve(fields)
     });
 
     // now that all handlers are set up, we can finally start processing our request!
-    busboy.write(event.body);
+    busboy1.write(event.body);
   });
 }
 
