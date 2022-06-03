@@ -41,6 +41,13 @@ exports.handler = async function(event, context){
       success_url: "https://www.toxtat.com",
       cancel_url: "https://www.toxtat.com/menu.html", 
     })
+    return {
+        statusCode: 303,
+        headers: {
+          Location: session.url
+          
+        }
+      }}
     
 
     exports.handler = async ({event, body, headers }) => {
@@ -76,15 +83,9 @@ exports.handler = async function(event, context){
           };
         }
       };
-      return {
-        statusCode: 303,
-        headers: {
-          Location: session.url
-          
-        }
-      }
     
-  }
+    
+  
 
 // exports.handler = async ({event, body, headers }) => {
 
