@@ -45,10 +45,10 @@ function newTime(){
           unit_amount: quanti,
         },
         quantity: 1,
-        metadata: {cash: `${qt}`,name:`${name}`,instagram:`${instagram}`,youtube:`${youtube}`,twitch:`${twitch}`,reddit:`${reddit}`,twitter:`${twitter}`,region:`${region}`,Date: newTime(),},
       },
     ],
-    
+    metadata: {cash: `${qt}`,name:`${name}`,instagram:`${instagram}`,youtube:`${youtube}`,twitch:`${twitch}`,reddit:`${reddit}`,twitter:`${twitter}`,region:`${region}`,Date: newTime(),},
+
     mode: "payment",
     success_url: "https://toxtat.com",
     cancel_url: "https://toxtat.com/menu.html", 
