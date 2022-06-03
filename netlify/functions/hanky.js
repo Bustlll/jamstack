@@ -59,7 +59,7 @@ exports.handler = async function(event, context){
           if (stripeEvent.type === 'checkout.session.completed') {
             
            console.log("made it");
-           console.log( "Hello "+`${name}` );
+           
       
           }
       
