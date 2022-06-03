@@ -25,7 +25,7 @@ exports.handler = async ({ headers, body }) => {
 
     const items = lineItems.data;
 
-    alert(items);
+    console.log(items);
 
     return {
       statusCode: 200,
