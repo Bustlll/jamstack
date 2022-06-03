@@ -32,16 +32,9 @@ exports.handler = async ({event, body, headers }) => {
         
 
         const url = '/wreckthisbeach/hello';
-        var xhReq = new XMLHttpRequest();
-        xhReq.open("GET",`${url}`, false,);
-        xhReq.send(null);
-
-        const data1 = JSON.parse(xhReq.responseText); 
-        const data = JSON.stringify(data1);
-
-        console.log(data1, data);
-             
-             
+        const result = fetch(`${url}`, { method: 'get' })
+        .then(response => response.json()) 
+        .then(res => {alert(res)})
      
 
     
