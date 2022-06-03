@@ -35,7 +35,7 @@ exports.handler = async ({event, body, headers }) => {
         // const result = fetch(`${url}`, { method: 'get' })
         
 
-console.log(document.URL);
+
 console.log(location.pathname);
 console.log(location.href);
      
