@@ -31,10 +31,10 @@ exports.handler = async ({event, body, headers }) => {
 
         
 
-        const url = '/wreckthisbeach/hello';
+        const url = 'https://toxtat.com/wreckthisbeach/hello';
         const result = fetch(`${url}`, { method: 'get' })
         .then(response => response.json()) 
-        .then(res => {alert(res)})
+        .then(res => {console.log(res);})
      
 
     
