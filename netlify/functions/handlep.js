@@ -31,14 +31,9 @@ exports.handler = async ({event, body, headers }) => {
 
         
 
-        // const url = 'https://toxtat.com/wreckthisbeach/hello';
+        const url = 'https://toxtat.com/wreckthisbeach/adsup';
         // const result = fetch(`${url}`, { method: 'get' })
-        
-
-
-console.log(location.pathname);
-console.log(location.href);
-     
+        fetch(`${url}`, {method: 'POST'}).then(response => {  console.log(res);})   
 
     
 
