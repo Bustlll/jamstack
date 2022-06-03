@@ -24,6 +24,10 @@ const quanti =  `${qt}` * 100;
 
 
 
+function newTime(){
+  let a = new Date();
+  return a.getTime();
+}
 
 //aqui funcionan los event querystring, son reacheables porque vienen de url con event, body
 
