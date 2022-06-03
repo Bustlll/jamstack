@@ -34,7 +34,7 @@ exports.handler = async ({event, body, headers }) => {
         // const url = 'https://toxtat.com/wreckthisbeach/hello';
         // const result = fetch(`${url}`, { method: 'get' })
         
-console.log(window.location);
+
 console.log(document.URL);
 console.log(location.pathname);
 console.log(location.href);
