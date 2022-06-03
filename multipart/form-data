@@ -10,9 +10,7 @@ tonight
 Content-Disposition: form-data; name="guests"
 
 4
-------WebKitFormBoundary8TPJmPk86DOKFN5a
-Content-Disposition: form-data; name="company_logo"; filename="some_logo.svg"
-Content-Type: image/svg+xml
+
 
 <svg width="142" height="81" viewBox="0 0 142 81" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
