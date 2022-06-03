@@ -7,12 +7,13 @@ function parseMultipartForm(event) {
   return new Promise((resolve) => {
     // we'll store all form fields inside of this
     const fields = {};
-   const headers = Object.keys(headers).reduce((newHeaders, key) => {
+
+    // let's instantiate our busboy instance!
+    const busboy = Busboy({headers: event.headers})
+    const headers = Object.keys(headers).reduce((newHeaders, key) => {
         newHeaders[key.toLowerCase()] = headers[key];
         return newHeaders;
     }, {});
-    // let's instantiate our busboy instance!
-    const busboy = Busboy({headers: headers})
 
     // before parsing anything, we need to set up some handlers.
     // whenever busboy comes across a file ...
