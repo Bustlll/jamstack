@@ -11,12 +11,9 @@ const stripe = require("stripe")(apiKey)
 
 
 exports.handler = async function(event, context){
-    
     const { name = "Anonymous" } = event.queryStringParameters;
     const { qt = "Anonymous" } = event.queryStringParameters;
   const quanti =  `${qt}` * 100;
-
-
   
   //aqui funcionan los event querystring, son reacheables porque vienen de url con event, body
   
@@ -42,48 +39,44 @@ exports.handler = async function(event, context){
       cancel_url: "https://www.toxtat.com/menu.html", 
     })
     return {
-        statusCode: 303,
-        headers: {
-          Location: session.url
-          
-        }
-      }}
-    
-
-    exports.handler = async ({event, body, headers }) => {
-
+      statusCode: 303,
+      headers: {
+        Location: session.url
+        
+      }
+    }
+  }
+  exports.handler = async ({event, body, headers }) => {
 
 
-        try {
-          // check the webhook to make sure it’s valid
-          const stripeEvent = stripe.webhooks.constructEvent(
-            body,
-            headers['stripe-signature'],
-            process.env.STRIPE_WEBHOOK_SECRET
-          );
-      
-          // only do stuff if this is a successful Stripe Checkout purchase
-          if (stripeEvent.type === 'checkout.session.completed') {
-            
-           console.log("made it");
-           
-      
-          }
-      
-          return {
-            statusCode: 200,
-            body: JSON.stringify({ received: true }),
-          };
-        } catch (err) {
-          console.log(`Stripe webhook failed with ${err}`);
-      
-          return {
-            statusCode: 400,
-            body: `Webhook Error: ${err.message}`,
-          };
-        }
+
+    try {
+      // check the webhook to make sure it’s valid
+      const stripeEvent = stripe.webhooks.constructEvent(
+        body,
+        headers['stripe-signature'],
+        process.env.STRIPE_WEBHOOK_SECRET
+      );
+  
+      // only do stuff if this is a successful Stripe Checkout purchase
+      if (stripeEvent.type === 'checkout.session.completed') {
+        console.log("made it sfae");
+  
+      }
+  
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ received: true }),
       };
-    
+    } catch (err) {
+      console.log(`Stripe webhook failed with ${err}`);
+  
+      return {
+        statusCode: 400,
+        body: `Webhook Error: ${err.message}`,
+      };
+    }
+  };
     
   
 

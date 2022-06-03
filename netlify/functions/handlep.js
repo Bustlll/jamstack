@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
 const { createClient } = require('@supabase/supabase-js');
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 const queryString = require('query-string');
@@ -18,12 +18,9 @@ exports.handler = async ({event, body, headers }) => {
 
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
-      
       const BASE_URL = "https://toxtat.com/wreckthisbeach/adsup"
-
       const {date} = JSON.parse(event.body)
-
-      return fetch(`${BASE_URL}&date=${date}`)
+      return fetch(`${BASE_URL}?api_key=${process.env.NASA_API_KEY}&date=${date}`)
       .then(response => {if (!response.ok) 
         {throw new Error('Network response was not ok');}
             return response.json()}) 
