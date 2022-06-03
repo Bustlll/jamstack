@@ -38,6 +38,16 @@ exports.handler = async function(event, context){
       success_url: "https://www.toxtat.com",
       cancel_url: "https://www.toxtat.com/menu.html", 
     })
+
+    const stripeEvent = stripe.webhooks.constructEvent(
+        body,
+        headers['stripe-signature'],
+        process.env.STRIPE_WEBHOOK_SECRET
+      );
+        if (stripeEvent.type === 'checkout.session.completed') {
+            console.log("made it sfae");
+      
+          }
     return {
       statusCode: 303,
       headers: {
@@ -46,37 +56,11 @@ exports.handler = async function(event, context){
       }
     }
   }
-  exports.handler = async ({event, body, headers }) => {
 
+     
 
+    
 
-    try {
-      // check the webhook to make sure it’s valid
-      const stripeEvent = stripe.webhooks.constructEvent(
-        body,
-        headers['stripe-signature'],
-        process.env.STRIPE_WEBHOOK_SECRET
-      );
-  
-      // only do stuff if this is a successful Stripe Checkout purchase
-      if (stripeEvent.type === 'checkout.session.completed') {
-        console.log("made it sfae");
-  
-      }
-  
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ received: true }),
-      };
-    } catch (err) {
-      console.log(`Stripe webhook failed with ${err}`);
-  
-      return {
-        statusCode: 400,
-        body: `Webhook Error: ${err.message}`,
-      };
-    }
-  };
     
   
 
