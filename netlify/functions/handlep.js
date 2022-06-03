@@ -18,18 +18,20 @@ exports.handler = async ({event, body, headers }) => {
 
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
-      const BASE_URL = "https://toxtat.com/wreckthisbeach/adsup"
-      const {date} = JSON.parse(event.body)
-      return fetch(`${BASE_URL}?api_key=${process.env.NASA_API_KEY}&date=${date}`)
-      .then(response => {if (!response.ok) 
-        {throw new Error('Network response was not ok');}
-            return response.json()}) 
-            .then(data => {  return {
-              statusCode: 200,
-              body: JSON.stringify(data)}})
-            //   .catch(error => { return {
-            //     statusCode: 500, 
-            //     body: JSON.stringify({error})}})}
+      // const BASE_URL = "https://toxtat.com/wreckthisbeach/adsup"
+      // const {date} = JSON.parse(event.body)
+      // return fetch(`${BASE_URL}?api_key=${process.env.NASA_API_KEY}&date=${date}`)
+      // .then(response => {if (!response.ok) 
+      //   {throw new Error('Network response was not ok');}
+      //       return response.json()}) 
+      //       .then(data => {  return {
+      //         statusCode: 200,
+      //         body: JSON.stringify(data)}})
+      //       //   .catch(error => { return {
+      //       //     statusCode: 500, 
+      //       //     body: JSON.stringify({error})}})}
+
+      console.log("we made it, but");
 
     }
 
