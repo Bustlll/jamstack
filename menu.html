@@ -8,8 +8,10 @@
     <link rel="icon" type="image/x-icon" href="sshot.ico">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="localStorage.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />    
+
+
+    <!-- <script src="localStorage.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     
     
@@ -21,11 +23,11 @@
  <nav>
 
     <a href="/index.html" class="logo">TOXTAT</a>
-    <ul>
-        <li><a accesskey="a" href="/index.html">Home</a></li>
+    
+       <a accesskey="a" href="/index.html">Home</a>
         
 
-    </ul>
+    
 </nav>
 
 <!-- End of navbar space -->
@@ -40,226 +42,86 @@
       
 
 <section> 
-<div class="maincontainer-rankInfo"> 
-  
-  
-  <!-- <table class="content-table2" id="content-table2">
-    <thead>
-      <tr>
-        <th class="name">Name</th>
-        <th class="instagram">Instagram</th>
-        <th class="youtube">Youtube</th>
-        <th class="twitch">Twitch</th>
-        <th class="reddit">Reddit</th>
-        <th class="twitter">Twitter</th>
-        <th class="region">REG</th>
-     
-      </tr>
-    </thead>
-    <tbody id="cryptocurrencies">
-      <tr>
-        <td>jahny</td>
-        <td>jahnty</td>
-        <td>XJohonyX</td>
-        <td>jowey</td>
-        <td>janred</td>
-        <td>socialjon</td>
-        <td>JAP</td>
-      </tr>
-    </tbody>
-  </table> -->
 
-  <ul>
-    <p>FOR YOURSELF</p>
-    <li>Enter your info and refresh</li>
-    <li>Select ammount button below</li>
-    <li>Flex in the Toxtat Leaderboard</li>
-  </ul> 
-
-  <ul>
-    <p>$END CASH</p>
-    <li>Enter your friend's table name</li>
-    <li>Flip it</li>
-    <li>Select amount in the dropdown</li>
-  </ul> 
-  <ul>
-    <p>INFO</p>
-    <li>Leaderboards show when there are 10 entries</li>
-    <li>Carefull with duplicates</li>
-    <li>100 spots avaliable!</li>
-  </ul> 
-  
- 
-
-
-  
-  <div class="check-socials">
-
-     <p id="nameCheck"></p>
-     <p id="instagramCheck"></p>
-     <p id="youtubeCheck"></p>
-     <p id="twitchCheck"></p>
-     <p id="redditCheck"></p>
-     <p id="twitterCheck"></p>
-     <p id="regionCheck"></p>
-  </div>
-</div>
 </section>
 
 </div>
- 
-<!-- <input id="textbox" type="text" value="" size="25" />
-<a class="button" id="googleLink" href="willBeChanged" 
- onclick="this.href='http://www.google.com/search?q=' + encodeURIComponent(document.getElementById('textbox').value);">
-  <span>Search</span>
-</a> -->
-
 
 <div class="subcontainer"> 
-        <section class="socials">Socials</section>
+
+        <section class="socials"></section>
     
 
-              <p class="addU">Adding YOU <3 to the table</p>
-
+        <p class="addU">Adding YOU <3 to the table</p>
                 <form action=/wreckthisbeach/checkout?name=${name}&instagram=${instagram}&youtube=${youtube}&twitch=${twitch}&reddit=${reddit}&twitter=${twitter}&region=${region}&qt=${qt}, id="my-form" autocomplete="off" > 
-                  <input type="text" name="name" id="name" placeholder="name">
-                  <input type="text" name="instagram" id="instagram" placeholder="instagram">
-                  <input type="text" name="youtube" id="youtube" placeholder="youtube">
-                  <input type="text" name="twitch" id="twitch" placeholder="twitch">
-                  <input type="text" name="reddit" id="reddit" placeholder="reddit">
-                  <input type="text" name="twitter" id="twitter" placeholder="twitter">
-                  <input type="text" name="region" id="region" placeholder="region">
-                  <input type="text" name="qt" id="qt" placeholder="qt">
-                  <input type="submit" />
+                  <input type="text" name="name" id="name" placeholder="Name">
+                  <input type="text" name="instagram" id="instagram" placeholder="Instagram">
+                  <input type="text" name="youtube" id="youtube" placeholder="Youtube">
+                  <input type="text" name="twitch" id="twitch" placeholder="Twitch">
+                  <input type="text" name="reddit" id="reddit" placeholder="Reddit">
+                  <input type="text" name="twitter" id="twitter" placeholder="Twitter">
+                  <input type="text" name="region" id="region" placeholder="Region">
+                  <input type="text" name="qt" id="qt" placeholder="$$">
+                  <button type="submit"value="Buy"class="btn">Buy</button>
                   </form >
+                  <p class="addU">For a friend</p>
+
                   <form action=/wreckthisbeach/adsup?name=${name}&instagram=${instagram}&youtube=${youtube}&twitch=${twitch}&reddit=${reddit}&twitter=${twitter}&region=${region}&qt=${qt}, id="my-form" autocomplete="off" > 
-                    <input type="text" name="name" id="name" placeholder="name">
-                    <input type="text" name="instagram" id="instagram" placeholder="instagram">
-                    <input type="text" name="youtube" id="youtube" placeholder="youtube">
-                    <input type="text" name="twitch" id="twitch" placeholder="twitch">
-                    <input type="text" name="reddit" id="reddit" placeholder="reddit">
-                    <input type="text" name="twitter" id="twitter" placeholder="twitter">
-                    <input type="text" name="region" id="region" placeholder="region">
-                    <input type="text" name="qt" id="qt" placeholder="qt">
-                    <input type="submit" />
+                    <input type="text" name="name" id="name" placeholder="Friend's Table Name">
+                    <input type="text" name="qt" id="qt" placeholder="$$">
+                    <button type="submit"value="Submit" class="btn">GO</button>
                     </form >
               
 
-  <!-- <form action="/menu.html" name="socials" method="POST" autocomplete="off" id="socialscheck" data-netlify="true">
-    <div class="form-row">
-       <div class="input-data">
-          <input type="text" name="name" id="name" placeholder="Name" maxlength="22">
-          <div class="underline"></div>
-          
-       </div>
-       
-
-       <div class="input-data">
-          <input type="text" name="instagram" id="instagram" placeholder="Instagram" maxlength="10">
-          <div class="underline"></div>
-       </div>
-
     </div>
-    <div class="form-row">
-       <div class="input-data">
-          <input type="text" name="youtube" id="youtube" placeholder="Youtube" maxlength="15">
-          <div class="underline"></div>
-       </div>
-
-       <div class="input-data">
-          <input type="text" name="twitch" id="twitch" placeholder="Twitch" maxlength="15">
-          <div class="underline"></div>
-       </div>
-    </div>
-
-     <div class="form-row">
-      <div class="input-data">
-         <input type="text" name="reddit" id="reddit" placeholder="Reddit" maxlength="15">
-         <div class="underline"></div>
-      </div>
-
-      <div class="input-data">
-         <input type="text" name="twitter" id="twitter" placeholder="Twitter" maxlength="15">
-         <div class="underline"></div>
-      </div>
-
-   </div>
-
-   <div class="form-row">
-      <div class="input-data">
-         <input type="text" name="region" id="region" placeholder="Region" maxlength="10">
-         <div class="underline"></div>
-      </div>
-   </div> 
-   
-   
-
- </form>   
-  <button type="submit" class="btn" id="btn">Save</button>   -->
-
+    <div class="maincontainer-rankInfo"> 
   
+      <li>The Tables Show with 27 entries, BUT!</li>
+      <li>The First Table with 11.</li>
+      <li>Carefull with Duplicate Names</li>
+      <li>115 spots avaliable</li>
+      <li>Flex the ranks</li>
 
-
-        
-           
-
-              
-
-                
-
-
-<!-- 
-        <section class="buyrank"> 
-          <form action="/.netlify/functions/checkout">
-            <button type="submit" class="button" id="1-button" onclick="getDateNow(); getCashy('cashy', 100), addUss()">1$</button>
-           </form>
-
-           <form action="/.netlify/functions/checkout2">
-            <button type="submit" class="button" id="2-button" onclick="getDateNow(); getCashy('cashy', 2000)">20$</button>
-           </form>
-
-           <form action="/.netlify/functions/checkout3">
-            <button type="submit" class="button" id="3-button" onclick="getDateNow(); getCashy('cashy', 5000)">50$</button>
-           </form>
-
-           <form action="/.netlify/functions/checkout4">
-            <button type="submit" class="button" id="4-button" onclick="getDateNow(); getCashy('cashy', 10000)">100$</button>
-           </form>
-
-           <form action="/.netlify/functions/checkout5">
-            <button type="submit" class="button" id="5-button" onclick="getDateNow(); getCashy('cashy', 50000)">500$</button>
-           </form>
-
-           <form action="/.netlify/functions/checkout6">
-            <button type="submit" class="button" id="6-button" onclick="getDateNow(); getCashy('cashy', 100000)">1k</button>
-           </form>
-
-           <form action="/.netlify/functions/checkout7">
-            <button type="submit" class="button" id="7-button" onclick="getDateNow(); getCashy('cashy', 1000000)">10k</button>
-           </form>
-
-           <form action="/.netlify/functions/checkout8">
-            <button type="submit" class="button" id="8-button" onclick="getDateNow(); getCashy('cashy', 10000000)">100k</button>
-           </form>
+    </ul> 
   
-         </section> -->
-      
-       
-
-    </div>
+  </div>
 
   
            
 </section>
 </div>
 <style>
-
+   .btn{
+    background: none;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    height: 35px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    margin:5px 20px;
+    margin-top: 1.25rem;
+  }
+  .btn:hover{
+    background: rgba(255, 251, 251, 0.095);
+    transition: all 0.13s;
+  }
+   form input{
+    height: 100%;
+    border: none;
+    font-size: 15px;
+    border-bottom: 2px solid rgba(0,0,0, 0.12);
+    background: transparent;
+    color: white;
+  }
   table { 
-    width: 95%; 
+    width: 100%; 
     margin: 0 auto;
     border-collapse: collapse; 
   }
-  /* Zebra striping */
   tr:nth-of-type(odd) { 
     background: #eee; 
   }
@@ -273,6 +135,65 @@
     border: 1px solid #ccc; 
     text-align: left; 
   }
+
+  /* .mainContent{
+    height:100vh;
+    width: 100vw;
+    box-sizing: border-box;
+} */
+
+nav {
+    background: rgba(85, 94, 88, 0.726);
+    
+}
+.one{
+  background: rgba(85, 94, 88, 0.726);
+  height: 100vh;
+  width: 100vw;
+}
+p {
+  
+  position: relative;
+  margin-left: 1.5vw;
+  margin-top: 0;
+}
+p.addU{
+  font-style: bold;
+  color: white;
+  position: relative;
+  margin-top: 20px;
+
+}
+input{
+  margin-bottom:10px;
+}
+div .subcontainer{
+  width: 20vw;
+ position: relative;
+ background: rgba(0, 0, 0, 0.267);
+ border-radius: 20px 20px 20px 20px;
+ padding: 35px;
+ margin-left: 43.75rem;
+}
+form#my-form {
+  position: relative;
+  margin-left: 2vw;
+}
+div.maincontainer-rankInfo{
+  background: rgba(138, 133, 133, 0.432);
+  width: 17vw;
+  height: 10vh;
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+  margin-left: 43.75rem;
+  padding: 60px;
+  list-style-type: none;
+}
+.maincontainer-rankInfo{
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-style: bold;
+}
   @media 
   only screen and (max-width: 760px),
   (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -291,93 +212,227 @@
       position: relative;
       padding-left: 50%; 
     }
-    
+/*     
     td:before { 
-      /* Now like a table header */
+    
       position: absolute;
-      /* Top/left values mimic padding */
+
       top: 6px;
       left: 6px;
       width: 45%; 
       padding-right: 10px; 
       white-space: nowrap;
-    }
+    } */
+
+	table, thead, tbody, th, td, tr, td { 
+font-size: 12px;
+	}
+   
+    nav {
+    height: 10vh;
+}
+	nav .logo {
+    position: relative;
+    margin-left: -2.5rem;
+    float: left;
+    font-size: 1rem;
+    color: white;
+    transform: uppercase;
+    font-weight: bold;
+}
+nav a {
+    position: relative;
+    margin-right: -1.785rem;
+    float: right;
+    font-size: 1rem;
+    color: white;
+    transform: uppercase;
+    font-weight: bold;
+}
     
   }
+
+
+html {
+  scroll-behavior: smooth;
+  background: rgb(136, 136, 136);
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none !important;
+    
+}
+body{
+    margin:0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 9vh;
+    padding: .75rem 2.1875rem;
+    box-sizing: border-box;
+}
+nav .logo {
+    padding: 1.1875rem 1.875rem;
+    height: 15px;
+    float: left;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    transform: uppercase;
+    font-weight: bold;
+
+}
+nav .logo:link { text-decoration: none; }
+nav .logo:visited { text-decoration: none; }
+nav .logo:hover { text-decoration: none; }
+nav .logo:active { text-decoration: none; }
+nav a{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 1.1875rem 1.875rem;
+    height: 15px;
+    font-size: 1.5rem;
+    transform: uppercase;
+    font-weight: bold;
+    float: right;
+}
+nav a:link { text-decoration: none; }
+nav a:visited { text-decoration: none; }
+nav a:hover { text-decoration: none; }
+nav a:active { text-decoration: none; }
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+ 
+	table, thead, tbody, th, td, tr, td { 
+font-size: 10px;
+	}
+
+    nav {
+    height: 10vh;
+}
+	nav .logo {
+    position: relative;
+    margin-left: -2.5rem;
+    float: left;
+    font-size: 1rem;
+    color: white;
+    transform: uppercase;
+    font-weight: bold;
+}
+nav a {
+    position: relative;
+    margin-right: -1.785rem;
+    float: right;
+    font-size: 1rem;
+    color: white;
+    transform: uppercase;
+    font-weight: bold;
+}
+div .subcontainer{
+margin-left: 25px;
+width: 70vw;
+height: 80vh;
+}
+div.maincontainer-rankInfo{
+display: none;
+}
+
+.btn{
+  width: 12vh;
+}
+}
+
+
       </style>
 
 <script type="text/javascript">
 
-  //data for querystring 
+var formData = new FormData();
+var formElement = document.getElementById("my-from");
+var request = new XMLHttpRequest();
+request.open("POST", "/wreckthisbeach/hello");
+request.send(formElement);
 
-   
 
-form.addEventListener('submit', (evt) => {
-  evt.preventDefault();
-  const formData = new FormData(form);
-  const params = new URLSearchParams(formData);
-  console.log(params.toString());
-});
 
-const log = console.log;
+// async function handleSubmit(e) {
+//     e.preventDefault() 
+//   let form = document.getElementById("my-form");
+//      const formData = new FormData(e.form)
+//      const date = formData.get("name")
 
-window.addEventListener('load', () => {
-  //page has fully loaded
-  //location === window.location
-  log(location.href); //everything
-  log(location.pathname); //just folders and file
-  if (location.search) {
-    //there is a querystring beyond `?`
-    // log(location.search);
-    let qs = decodeURIComponent(location.search.substring(1));
-    // log(qs);
-    let params = new Map();
-    let parts = qs.split('&');
-    log({ parts });
-    parts.forEach((part) => {
-      let key = part.split('=')[0];
-      let val = part.split('=')[1];
-      params.set(key, val);
-    });
+//      fetch('/wreckthisbeach/adsup', {method: "POST",body: JSON.stringify({date})})
+//       .then(response => {if (!response.ok) 
 
-    log(params.has('name'));
-    log(params.get('name'));
-  }
+//         {throw new Error('Network response was not ok');}  
 
-  let btn = document.getElementById('btnSearch');
-  btn.addEventListener('click', (ev) => {
-    let url = location.pathname;
-    let str = document.getElementById('search').value.trim();
-    url = `${url}?${encodeURIComponent(str)}`;
-    location.href = url;
-  });
-});
+//         return response.json()})   
+
+//         .then(json => {console.log(json)})
+//         .catch(error => {console.error(error)})
+//       }
+
+//     document.querySelector("#my-form").addEventListener("submit", handleSubmit)
+
+
+// form.addEventListener('submit', (evt) => {
+//   evt.preventDefault();
+//   const formData = new FormData(form);
+//   const params = new URLSearchParams(formData);
+//   console.log(params.toString());
+// });
+
+// const log = console.log;
+
+// window.addEventListener('load', () => {
+//   //page has fully loaded
+//   //location === window.location
+//   log(location.href); //everything
+//   log(location.pathname); //just folders and file
+//   if (location.search) {
+//     //there is a querystring beyond `?`
+//     // log(location.search);
+//     let qs = decodeURIComponent(location.search.substring(1));
+//     // log(qs);
+//     let params = new Map();
+//     let parts = qs.split('&');
+//     log({ parts });
+//     parts.forEach((part) => {
+//       let key = part.split('=')[0];
+//       let val = part.split('=')[1];
+//       params.set(key, val);
+//     });
+
+//     log(params.has('name'));
+//     log(params.get('name'));
+//   }
+
+//   let btn = document.getElementById('btnSearch');
+//   btn.addEventListener('click', (ev) => {
+//     let url = location.pathname;
+//     let str = document.getElementById('search').value.trim();
+//     url = `${url}?${encodeURIComponent(str)}`;
+//     location.href = url;
+//   });
+// });
 
             function reloader(){
   location.reload();
 }
      
-
-//             function myFunction() {
-//   var table = document.getElementById("content-table2");
-//   var row = table.insertRow(-1);
-//   var cell1 = row.insertCell(-1);
-//   var cell2 = row.insertCell(-1);
-//   var cell3 = row.insertCell(-1);
-//   var cell4 = row.insertCell(-1);
-//   var cell5 = row.insertCell(-1);
-//   var cell6 = row.insertCell(-1);
-//   var cell7 = row.insertCell(-1);
-//   cell1.innerHTML = JSON.parse(localStorage.getItem('User'))[0].name;
-//   cell2.innerHTML = JSON.parse(localStorage.getItem('User'))[0].instagram;
-//   cell3.innerHTML = JSON.parse(localStorage.getItem('User'))[0].youtube;
-//   cell4.innerHTML = JSON.parse(localStorage.getItem('User'))[0].twitch;
-//   cell5.innerHTML = JSON.parse(localStorage.getItem('User'))[0].reddit;
-//   cell6.innerHTML = JSON.parse(localStorage.getItem('User'))[0].twitter;
-//   cell7.innerHTML = JSON.parse(localStorage.getItem('User'))[0].region;
-// }       
-// let tably = document.getElementById('content-table2');
-// tably.addEventListener('click', myFunction())
 
 
 

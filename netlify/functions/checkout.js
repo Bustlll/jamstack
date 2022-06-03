@@ -2,15 +2,12 @@ const apiKey = process.env.STRIPE_PRIVATE_KEY
 const stripe = require("stripe")(apiKey)
 
 
-
-
 exports.handler = async function(event, context){
   const { name = "Anonymous" } = event.queryStringParameters;
   const { qt = "Anonymous" } = event.queryStringParameters;
 const quanti =  `${qt}` * 100;
-  // const referer = event.handler.referer
-  // const params = new URLSearchParams(event.body)
-  // const price_id = params.get("price_id")
+
+//aqui funcionan los event querystring, son reacheables porque vienen de url con event, body
 
   const session = await stripe.checkout.sessions.create({
 
@@ -21,7 +18,7 @@ const quanti =  `${qt}` * 100;
         price_data: {
           currency: "usd",
           product_data: {
-            name: "Hello "+`${name}` + ", Welcome to Toxtat ",
+            name: "Hello "+`${name}` + ", Welcome to TOXTAT ",
           },
           unit_amount: quanti,
         },
@@ -30,8 +27,8 @@ const quanti =  `${qt}` * 100;
     ],
     
     mode: "payment",
-    success_url: "https://toxtat.com",
-    cancel_url: "https://toxtat.com", 
+    success_url: "https://www.toxtat.com",
+    cancel_url: "https://www.toxtat.com/menu.html", 
   })
   return {
     statusCode: 303,

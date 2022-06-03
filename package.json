@@ -25,6 +25,7 @@
     "@supabase/supabase-js": "^1.35.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
+    "form-data": "^4.0.0",
     "netlify-cli": "^8.14.1",
     "node": "^17.7.2",
     "query-string": "^7.1.1",

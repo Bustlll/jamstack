@@ -19,11 +19,21 @@ exports.handler = async ({event, body, headers }) => {
     // only do stuff if this is a successful Stripe Checkout purchase
     if (stripeEvent.type === 'checkout.session.completed') {
       
-      var tag = document.createElement("p");
-      var text = document.createTextNode("Tutorix is the best e-learning platform");
-      tag.appendChild(text);
-      var element = document.getElementById("new");
-      element.appendChild(tag);
+      const BASE_URL = "https://toxtat.com/wreckthisbeach/adsup"
+
+      const {date} = JSON.parse(event.body)
+
+      return fetch(`${BASE_URL}&date=${date}`)
+      .then(response => {if (!response.ok) 
+        {throw new Error('Network response was not ok');}
+            return response.json()}) 
+            .then(data => {  return {
+              statusCode: 200,
+              body: JSON.stringify(data)}})
+            //   .catch(error => { return {
+            //     statusCode: 500, 
+            //     body: JSON.stringify({error})}})}
+
     }
 
     return {

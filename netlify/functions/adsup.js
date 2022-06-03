@@ -6,8 +6,8 @@ const {
 
 
 
-
-
+//funcion asincrona para añadir al webhook. Intentar leer querystring params ideas: 
+  //Multipart Form Data
 
 const { createClient } = require('@supabase/supabase-js');
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
