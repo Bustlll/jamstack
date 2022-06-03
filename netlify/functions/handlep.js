@@ -31,10 +31,6 @@ exports.handler = async ({event, body, headers }) => {
 
 
 
-exports.handler = async event => {
-
-
-
   function newTime(){
     let a = new Date();
     return a.getTime();
@@ -65,7 +61,7 @@ exports.handler = async event => {
   return {
     statusCode: 200,
   }
-}
+
 
     
 
