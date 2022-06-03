@@ -33,8 +33,8 @@ exports.handler = async ({event, body, headers }) => {
 
         const url = 'https://toxtat.com/wreckthisbeach/hello';
         const result = fetch(`${url}`, { method: 'get' })
-        .then(response => response.json()) 
-        .then(res => {console.log(res);})
+        
+      
      
 
     
@@ -43,7 +43,7 @@ exports.handler = async ({event, body, headers }) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ received: true }),
+      // body: JSON.stringify({ received: true }),
     };
   } catch (err) {
     console.log(`Stripe webhook failed with ${err}`);
