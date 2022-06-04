@@ -1,10 +1,7 @@
-// const fetch = require('node-fetch')
+
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
 const { createClient } = require('@supabase/supabase-js');
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-// const queryString = require('query-string');
-
-
 
 
 exports.handler = async ({ headers, body }) => {
@@ -53,7 +50,7 @@ if(count == 9){
             Date: newTime(),
          }
         ]);
-    //     console.log(data);
+   
 }
 
 // function supabase, selects name and updates cash with sumed one from stripe + supa before

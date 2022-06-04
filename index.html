@@ -17,12 +17,10 @@
 
     
     
- <!-- <h1>Deploy in production, play with it, I'm releasing the full operational version soon!</h1> -->
 
 
   
   
-    <div class="box" id="box"></div>
          
     <!-- main content space -->
     <!-- <div class="mainContent" > -->
@@ -37,6 +35,7 @@
                     
                 
             </nav>
+          
              <!-- table content space -->
             <table class="content-table" id="content-table">
                 <thead>
@@ -63,7 +62,7 @@
                
  </section> 
 
-        
+ <div class="box" id="box"></div>
 
         <section class="two">
 
@@ -88,13 +87,11 @@
               </table> 
 
          
-            <!-- <button type="button"class="btnSocials" id="callba">Add myself</button> -->
             <div class="header"></div>
 
 
             </section>
 
-            <!-- <div class="centered" id="loading"><IMG SRC="Looped.gif"></div> -->
 
            
         <section class="three">
@@ -263,9 +260,7 @@ nav a:link { text-decoration: none; }
 nav a:visited { text-decoration: none; }
 nav a:hover { text-decoration: none; }
 nav a:active { text-decoration: none; }
-/* table#content-table.content-table{
-    background: rgb(255, 0, 0);
-} */
+
 .content-table { 
 border-radius: 5px 5px 0 0;
   overflow: hidden;
@@ -276,13 +271,7 @@ border-radius: 5px 5px 0 0;
 
 }
 
-/* .mainContent{
-    height:100vh;
-    width: 100vw;
-    box-sizing: border-box;
 
-   
-} */
 .one, .two, .three, .five, .six{
   background: rgb(85, 94, 88);
   height: 100vh;
@@ -296,13 +285,7 @@ border-radius: 5px 5px 0 0;
   font-weight: bold;
   font-family: Futura;
 }
-/* .content-table {
-  background: #08d173da;
-  height: 18vh;
-} */
-/* .content-table tbody tr:nth-of-type(even) {
-  background: #f3f3f3a2;
-} */
+
 
 .content-table tbody tr:last-of-type {
   border-bottom: 2px solid #43e9c8;
@@ -316,19 +299,7 @@ border-radius: 5px 5px 0 0;
   color: #009879;
   
 }
-/* .one, .two, .three, .five, .six, .seven, .eight, .nine, .ten{
-  width: 100vw;
-  height: 107vh;
-  background:rgb(65, 77, 76);
-} */
-/* tr:nth-of-type(odd) { 
-  background: #eee; 
-} */
-/* th { 
-  background: rgba(12, 14, 12, 0.849); 
-  color: white; 
-  font-weight: bold; 
-} */
+
 td, th { 
   padding: 6px; 
   border: 0.01px solid rgba(143, 137, 137, 0.24); 
@@ -343,19 +314,7 @@ only screen and (max-width: 760px),
 	table, thead, tbody, th, td, tr, td { 
 font-size: 12px;
 	}
-   /* .mainContent{
-    width: 140vw;
-   }
-    */
-	
-	/* tr { border: 1px solid rgb(0, 0, 0); } */
-/* 	
-	td { 
-	
-		border: none;
-		position: relative;
-		padding-left: 50%;
-	} */
+
 	.content-table{
         font-size: 5px;
         padding: 0;
@@ -392,9 +351,9 @@ nav a {
     font-weight: bold;
 }
 }
+
     </style> 
     <script>
-// I'm using the result const to show that you can continue to extend the chain from the returned promise
 
 
 function redirectTimeoutId() {window.setTimeout(redirectToHomepage, 300000)}
@@ -406,34 +365,6 @@ window.onload = function(){
     redirectTimeoutId()
 }
 
-        //dark mode switch
-        
-        // const chk = document.getElementById('chk');
-        //     chk.addEventListener('change', () => {
-	    //     document.body.classList.toggle('white'); 
-
-        //     });
-
-        //Confetti
-function confet() {
-    var box = document.getElementById("box");
-    var colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink'];
-for (var i = 0; i < 1500; i++) {
-    var div = document.createElement("div");
-    div.classList.add("confetti");
-    box.appendChild(div);
-}
-var confetti = document.querySelectorAll('.confetti');
-for (var i = 0; i < confetti.length; i++) {
-        var size = Math.random() * 0.01 * [i];
-        confetti[i].style.width = 5 + size + 'px';
-        confetti[i].style.height = 16 + size + 'px';
-        confetti[i].style.left = Math.random() * innerWidth + 'px';
-        var background = colors[Math.floor(Math.random() * colors.length)];
-        confetti[i].style.backgroundColor = background;
-        box.children[i].style.transform = "rotate("+ size*[i] +"deg)";
-}
-}
 let a   
 const url = '/wreckthisbeach/myman';
 const result = fetch(`${url}`, { method: 'get' })
@@ -467,7 +398,6 @@ const result = fetch(`${url}`, { method: 'get' })
        
 
      
-        // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
 
 
@@ -567,14 +497,11 @@ leaderboards(data1);
                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-                        // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-                        //this button executes 2 functions, get the row position and the action, add cash
                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
                          
 
                     "</tr>"
-                    // + "&nbsp &nbsp" + "<button type='button' class='addmenubutt' id='addmenubuttid' onclick='getRowPositions(this),getIdsOfRow()'>add</button>"+"</td>" +
                 );
 
                 cryptocurrencies[i].$item = $item;
@@ -630,7 +557,6 @@ const result2 = fetch(`${url}`, { method: 'get' })
        
 
      
-        // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
 
 
@@ -731,14 +657,11 @@ leaderboards(data1);
                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-                        // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-                        //this button executes 2 functions, get the row position and the action, add cash
                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
                          
 
                     "</tr>"
-                    // + "&nbsp &nbsp" + "<button type='button' class='addmenubutt' id='addmenubuttid' onclick='getRowPositions(this),getIdsOfRow()'>add</button>"+"</td>" +
                 );
 
                 cryptocurrencies[i].$item = $item;
@@ -751,7 +674,6 @@ leaderboards(data1);
             updateRanks(cryptocurrencies);
             reposition();
             
-            // fetch new data for the updateInterval
             timerId = setInterval("getNewData();", updateInterval);
 
         }	
@@ -797,7 +719,6 @@ const result3 = fetch(`${url}`, { method: 'get' })
        
 
      
-        // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
 
 
@@ -828,7 +749,6 @@ const result3 = fetch(`${url}`, { method: 'get' })
           
 
         function getNewData(){
-            // get the new data for each coin and change to their new values
             var newReq = new XMLHttpRequest();
             newReq.open("GET", SUPABASE_DATABASE, false);
             newReq.send(null);
@@ -858,7 +778,6 @@ leaderboards(data1);
            
             cryptocurrencies = [];
             for(let i = 32;i < 59;i++){
-    //function for comparing dates from server as the old time and client as the new time
                 function compareData(){
                     let parsed1 = data1[i].Date; 
                     let newTime = new Date();
@@ -898,9 +817,7 @@ leaderboards(data1);
                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-                        // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-                        //this button executes 2 functions, get the row position and the action, add cash
                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
                          
 
@@ -960,7 +877,6 @@ const result4 = fetch(`${url}`, { method: 'get' })
        
 
      
-        // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
 
 
@@ -991,7 +907,6 @@ const result4 = fetch(`${url}`, { method: 'get' })
           
 
         function getNewData(){
-            // get the new data for each coin and change to their new values
             var newReq = new XMLHttpRequest();
             newReq.open("GET", SUPABASE_DATABASE, false);
             newReq.send(null);
@@ -1021,7 +936,6 @@ leaderboards(data1);
            
             cryptocurrencies = [];
             for(let i = 60;i < 87;i++){
-    //function for comparing dates from server as the old time and client as the new time
                 function compareData(){
                     let parsed1 = data1[i].Date; 
                     let newTime = new Date();
@@ -1061,9 +975,7 @@ leaderboards(data1);
                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-                        // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-                        //this button executes 2 functions, get the row position and the action, add cash
                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
                          
 
@@ -1080,7 +992,6 @@ leaderboards(data1);
             updateRanks(cryptocurrencies);
             reposition();
             
-            // fetch new data for the updateInterval
             timerId = setInterval("getNewData();", updateInterval);
 
         }	
@@ -1125,7 +1036,6 @@ const result5 = fetch(`${url}`, { method: 'get' })
        
 
      
-        // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
 
 
@@ -1156,7 +1066,6 @@ const result5 = fetch(`${url}`, { method: 'get' })
           
 
         function getNewData(){
-            // get the new data for each coin and change to their new values
             var newReq = new XMLHttpRequest();
             newReq.open("GET", SUPABASE_DATABASE, false);
             newReq.send(null);
@@ -1186,7 +1095,6 @@ leaderboards(data1);
            
             cryptocurrencies = [];
             for(let i = 88;i < 115;i++){
-    //function for comparing dates from server as the old time and client as the new time
                 function compareData(){
                     let parsed1 = data1[i].Date; 
                     let newTime = new Date();
@@ -1226,9 +1134,7 @@ leaderboards(data1);
                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-                        // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-                        //this button executes 2 functions, get the row position and the action, add cash
                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
                          
 
@@ -1245,7 +1151,6 @@ leaderboards(data1);
             updateRanks(cryptocurrencies);
             reposition();
             
-            // fetch new data for the updateInterval
             timerId = setInterval("getNewData();", updateInterval);
 
         }	
@@ -1254,827 +1159,6 @@ leaderboards(data1);
 
 })
 
-//6 table 
-
-
-// const result6 = fetch(`${url}`, { method: 'get' })
-//   .then(response => response.json()) 
-//   .then(res => {
-
-    
-
-//             function getRowPositions(element) {
-//             var rowJavascript = element.parentNode.parentNode;
-//             var rowjQuery = $(element).closest("tr");
-//             let a = rowJavascript.rowIndex -1;
-//             indexPos.push(a);
-//             localStorage.setItem('ID', a);
-//             localStorage.ID = a;
-//         }
-
-//         var xhReq = new XMLHttpRequest();
-//         xhReq.open("GET", `${url}`, false,);
-//         xhReq.send(null);
-
-//         const data1 = JSON.parse(xhReq.responseText); 
-//         const data = JSON.stringify(data1);
-//         // initialization
-//         var cryptocurrencies;
-//         var timerId;
-//         var updateInterval = 2000000;
-
-//         let rowPos;
-//         let indexPos = [];
-//         let ids;
-       
-
-     
-//         // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
-//         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
-
-
-
-//         function reposition() {
-//             var height = $("#cryptocurrencies6 .cryptocurrency").height();
-//             var y = height;
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.css("top", y + "px");
-//                 y += height;			
-//             }
-//         }  
-        
-//         function updateRanks(cryptocurrencies) {
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.find(".rank").text(i + 54);	
-//             }
-//         }
-
-//         function fetchNewData(data,attributeName,name){
-//             for(var x in data){
-//                 if((data[x].name == name) == true) {
-//                     return data[x][attributeName];
-//                 }
-//             }
-//             return null;
-//         }      
-          
-
-//         function getNewData(){
-//             // get the new data for each coin and change to their new values
-//             var newReq = new XMLHttpRequest();
-//             newReq.open("GET", SUPABASE_DATABASE, false);
-//             newReq.send(null);
-//             var newData1 = JSON.parse(newReq.responseText); 
-//             var newData = JSON.stringify(newData1);
-
-
-//             updateRanks(cryptocurrencies);
-//             reposition();
-//             console.log('Finished retrieving new data');
-            
-//         }
-
-//         function leaderboards(users) {
-//   return users.sort((a, b) => b.cash-a.cash);
-// }
-// leaderboards(data1);
-
-    
-//         function resetBoard() {
-//             var $list = $("#cryptocurrencies6");
-//             $list.find(".cryptocurrency").remove();
-//             if(timerId !== undefined) {
-//                 clearInterval(timerId);
-//             }
-
-           
-//             cryptocurrencies = [];
-//             for(let i = 54;i < 65;i++){
-//     //function for comparing dates from server as the old time and client as the new time
-//                 function compareData(){
-//                     let parsed1 = data1[i].Date; 
-//                     let newTime = new Date();
-//                     let newTfact = newTime.getTime();
-//                     let diferenceTime = newTfact - parsed1;
-//                     let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
-//                     return differenD + " days";
-//                 }
-                
-//                 cryptocurrencies.push(
-//                     {
-//                         name : data1[i].name,
-//                         instagram: data1[i].instagram,
-//                         youtube: data1[i].youtube,
-//                         twitch: data1[i].twitch,
-//                         reddit: data1[i].reddit,
-//                         twitter: data1[i].twitter,
-//                         alive: data1[i].alive,
-//                         region: data1[i].region,
-//                         alive: compareData(),
-//                         percent_change_24h: data1[i].cash,
-
-//                     }
-//                 )
-//             }
-      
-           
-            
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-
-//                 var $item = $(
-//                     "<tr class='cryptocurrency'>" + 
-//                         "<th class='rank'>" + (i + 1) + "</th>" + 
-//                         "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
-//                         "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
-//                         "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
-//                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
-//                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
-//                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-//                         // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
-//                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-//                         //this button executes 2 functions, get the row position and the action, add cash
-//                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
-                         
-
-//                     "</tr>"
-//                 );
-
-//                 cryptocurrencies[i].$item = $item;
-//                 $list.append($item);
-
-          
-             
-//             }
-//             cryptocurrencies.sort(descending);
-//             updateRanks(cryptocurrencies);
-//             reposition();
-            
-//             // fetch new data for the updateInterval
-//             timerId = setInterval("getNewData();", updateInterval);
-
-//         }	
-//         resetBoard();
-
-
-// })
-
-// //7 table 
-
-
-// const result7 = fetch(`${url}`, { method: 'get' })
-//   .then(response => response.json()) 
-//   .then(res => {
-
-    
-
-//             function getRowPositions(element) {
-//             var rowJavascript = element.parentNode.parentNode;
-//             var rowjQuery = $(element).closest("tr");
-//             let a = rowJavascript.rowIndex -1;
-//             indexPos.push(a);
-//             localStorage.setItem('ID', a);
-//             localStorage.ID = a;
-//         }
-
-//         var xhReq = new XMLHttpRequest();
-//         xhReq.open("GET", `${url}`, false,);
-//         xhReq.send(null);
-
-//         const data1 = JSON.parse(xhReq.responseText); 
-//         const data = JSON.stringify(data1);
-//         // initialization
-//         var cryptocurrencies;
-//         var timerId;
-//         var updateInterval = 2000000;
-
-//         let rowPos;
-//         let indexPos = [];
-//         let ids;
-       
-
-     
-//         // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
-//         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
-
-
-
-//         function reposition() {
-//             var height = $("#cryptocurrencies7 .cryptocurrency").height();
-//             var y = height;
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.css("top", y + "px");
-//                 y += height;			
-//             }
-//         }  
-        
-//         function updateRanks(cryptocurrencies) {
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.find(".rank").text(i + 65);	
-//             }
-//         }
-
-//         function fetchNewData(data,attributeName,name){
-//             for(var x in data){
-//                 if((data[x].name == name) == true) {
-//                     return data[x][attributeName];
-//                 }
-//             }
-//             return null;
-//         }      
-          
-
-//         function getNewData(){
-//             // get the new data for each coin and change to their new values
-//             var newReq = new XMLHttpRequest();
-//             newReq.open("GET", SUPABASE_DATABASE, false);
-//             newReq.send(null);
-//             var newData1 = JSON.parse(newReq.responseText); 
-//             var newData = JSON.stringify(newData1);
-
-
-//             updateRanks(cryptocurrencies);
-//             reposition();
-//             console.log('Finished retrieving new data');
-            
-//         }
-
-//         function leaderboards(users) {
-//   return users.sort((a, b) => b.cash-a.cash);
-// }
-// leaderboards(data1);
-
-    
-//         function resetBoard() {
-//             var $list = $("#cryptocurrencies7");
-//             $list.find(".cryptocurrency").remove();
-//             if(timerId !== undefined) {
-//                 clearInterval(timerId);
-//             }
-
-           
-//             cryptocurrencies = [];
-//             for(let i = 65;i < 76;i++){
-//     //function for comparing dates from server as the old time and client as the new time
-//                 function compareData(){
-//                     let parsed1 = data1[i].Date; 
-//                     let newTime = new Date();
-//                     let newTfact = newTime.getTime();
-//                     let diferenceTime = newTfact - parsed1;
-//                     let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
-//                     return differenD + " days";
-//                 }
-                
-//                 cryptocurrencies.push(
-//                     {
-//                         name : data1[i].name,
-//                         instagram: data1[i].instagram,
-//                         youtube: data1[i].youtube,
-//                         twitch: data1[i].twitch,
-//                         reddit: data1[i].reddit,
-//                         twitter: data1[i].twitter,
-//                         alive: data1[i].alive,
-//                         region: data1[i].region,
-//                         alive: compareData(),
-//                         percent_change_24h: data1[i].cash,
-
-//                     }
-//                 )
-//             }
-      
-           
-            
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-
-//                 var $item = $(
-//                     "<tr class='cryptocurrency'>" + 
-//                         "<th class='rank'>" + (i + 1) + "</th>" + 
-//                         "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
-//                         "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
-//                         "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
-//                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
-//                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
-//                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-//                         // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
-//                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-//                         //this button executes 2 functions, get the row position and the action, add cash
-//                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
-                         
-
-//                     "</tr>"
-//                 );
-
-//                 cryptocurrencies[i].$item = $item;
-//                 $list.append($item);
-
-          
-             
-//             }
-//             cryptocurrencies.sort(descending);
-//             updateRanks(cryptocurrencies);
-//             reposition();
-            
-//             // fetch new data for the updateInterval
-//             timerId = setInterval("getNewData();", updateInterval);
-
-//         }	
-//         resetBoard();
-
-
-// })
-
-// //8 table 
-
-
-// const result8 = fetch(`${url}`, { method: 'get' })
-//   .then(response => response.json()) 
-//   .then(res => {
-
-
-
-//             function getRowPositions(element) {
-//             var rowJavascript = element.parentNode.parentNode;
-//             var rowjQuery = $(element).closest("tr");
-//             let a = rowJavascript.rowIndex -1;
-//             indexPos.push(a);
-//             localStorage.setItem('ID', a);
-//             localStorage.ID = a;
-//         }
-
-//         var xhReq = new XMLHttpRequest();
-//         xhReq.open("GET", `${url}`, false,);
-//         xhReq.send(null);
-
-//         const data1 = JSON.parse(xhReq.responseText); 
-//         const data = JSON.stringify(data1);
-//         // initialization
-//         var cryptocurrencies;
-//         var timerId;
-//         var updateInterval = 2000000;
-
-//         let rowPos;
-//         let indexPos = [];
-//         let ids;
-       
-
-     
-//         // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
-//         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
-
-
-
-//         function reposition() {
-//             var height = $("#cryptocurrencies8 .cryptocurrency").height();
-//             var y = height;
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.css("top", y + "px");
-//                 y += height;			
-//             }
-//         }  
-        
-//         function updateRanks(cryptocurrencies) {
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.find(".rank").text(i + 76);	
-//             }
-//         }
-
-//         function fetchNewData(data,attributeName,name){
-//             for(var x in data){
-//                 if((data[x].name == name) == true) {
-//                     return data[x][attributeName];
-//                 }
-//             }
-//             return null;
-//         }      
-          
-
-//         function getNewData(){
-//             // get the new data for each coin and change to their new values
-//             var newReq = new XMLHttpRequest();
-//             newReq.open("GET", SUPABASE_DATABASE, false);
-//             newReq.send(null);
-//             var newData1 = JSON.parse(newReq.responseText); 
-//             var newData = JSON.stringify(newData1);
-
-
-//             updateRanks(cryptocurrencies);
-//             reposition();
-//             console.log('Finished retrieving new data');
-            
-//         }
-
-//         function leaderboards(users) {
-//   return users.sort((a, b) => b.cash-a.cash);
-// }
-// leaderboards(data1);
-
-    
-//         function resetBoard() {
-//             var $list = $("#cryptocurrencies8");
-//             $list.find(".cryptocurrency").remove();
-//             if(timerId !== undefined) {
-//                 clearInterval(timerId);
-//             }
-
-           
-//             cryptocurrencies = [];
-//             for(let i = 76;i < 87;i++){
-//     //function for comparing dates from server as the old time and client as the new time
-//                 function compareData(){
-//                     let parsed1 = data1[i].Date; 
-//                     let newTime = new Date();
-//                     let newTfact = newTime.getTime();
-//                     let diferenceTime = newTfact - parsed1;
-//                     let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
-//                     return differenD + " days";
-//                 }
-                
-//                 cryptocurrencies.push(
-//                     {
-//                         name : data1[i].name,
-//                         instagram: data1[i].instagram,
-//                         youtube: data1[i].youtube,
-//                         twitch: data1[i].twitch,
-//                         reddit: data1[i].reddit,
-//                         twitter: data1[i].twitter,
-//                         alive: data1[i].alive,
-//                         region: data1[i].region,
-//                         alive: compareData(),
-//                         percent_change_24h: data1[i].cash,
-
-//                     }
-//                 )
-//             }
-      
-           
-            
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-
-//                 var $item = $(
-//                     "<tr class='cryptocurrency'>" + 
-//                         "<th class='rank'>" + (i + 1) + "</th>" + 
-//                         "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
-//                         "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
-//                         "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
-//                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
-//                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
-//                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-//                         // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
-//                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-//                         //this button executes 2 functions, get the row position and the action, add cash
-//                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
-                         
-
-//                     "</tr>"
-//                 );
-
-//                 cryptocurrencies[i].$item = $item;
-//                 $list.append($item);
-
-          
-             
-//             }
-//             cryptocurrencies.sort(descending);
-//             updateRanks(cryptocurrencies);
-//             reposition();
-            
-//             // fetch new data for the updateInterval
-//             timerId = setInterval("getNewData();", updateInterval);
-
-//         }	
-//         resetBoard();
-
-
-// })
-
-// //9 table 
-
-
-// const result9 = fetch(`${url}`, { method: 'get' })
-//   .then(response => response.json()) 
-//   .then(res => {
-
-
-
-
-//             function getRowPositions(element) {
-//             var rowJavascript = element.parentNode.parentNode;
-//             var rowjQuery = $(element).closest("tr");
-//             let a = rowJavascript.rowIndex -1;
-//             indexPos.push(a);
-//             localStorage.setItem('ID', a);
-//             localStorage.ID = a;
-//         }
-
-//         var xhReq = new XMLHttpRequest();
-//         xhReq.open("GET", `${url}`, false,);
-//         xhReq.send(null);
-
-//         const data1 = JSON.parse(xhReq.responseText); 
-//         const data = JSON.stringify(data1);
-//         // initialization
-//         var cryptocurrencies;
-//         var timerId;
-//         var updateInterval = 2000000;
-
-//         let rowPos;
-//         let indexPos = [];
-//         let ids;
-       
-
-     
-//         // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
-//         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
-
-
-
-//         function reposition() {
-//             var height = $("#cryptocurrencies9 .cryptocurrency").height();
-//             var y = height;
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.css("top", y + "px");
-//                 y += height;			
-//             }
-//         }  
-        
-//         function updateRanks(cryptocurrencies) {
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.find(".rank").text(i + 87);	
-//             }
-//         }
-
-//         function fetchNewData(data,attributeName,name){
-//             for(var x in data){
-//                 if((data[x].name == name) == true) {
-//                     return data[x][attributeName];
-//                 }
-//             }
-//             return null;
-//         }      
-          
-
-//         function getNewData(){
-//             // get the new data for each coin and change to their new values
-//             var newReq = new XMLHttpRequest();
-//             newReq.open("GET", SUPABASE_DATABASE, false);
-//             newReq.send(null);
-//             var newData1 = JSON.parse(newReq.responseText); 
-//             var newData = JSON.stringify(newData1);
-
-
-//             updateRanks(cryptocurrencies);
-//             reposition();
-//             console.log('Finished retrieving new data');
-            
-//         }
-
-//         function leaderboards(users) {
-//   return users.sort((a, b) => b.cash-a.cash);
-// }
-// leaderboards(data1);
-
-    
-//         function resetBoard() {
-//             var $list = $("#cryptocurrencies9");
-//             $list.find(".cryptocurrency").remove();
-//             if(timerId !== undefined) {
-//                 clearInterval(timerId);
-//             }
-
-           
-//             cryptocurrencies = [];
-//             for(let i = 87;i < 98;i++){
-//     //function for comparing dates from server as the old time and client as the new time
-//                 function compareData(){
-//                     let parsed1 = data1[i].Date; 
-//                     let newTime = new Date();
-//                     let newTfact = newTime.getTime();
-//                     let diferenceTime = newTfact - parsed1;
-//                     let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
-//                     return differenD + " days";
-//                 }
-                
-//                 cryptocurrencies.push(
-//                     {
-//                         name : data1[i].name,
-//                         instagram: data1[i].instagram,
-//                         youtube: data1[i].youtube,
-//                         twitch: data1[i].twitch,
-//                         reddit: data1[i].reddit,
-//                         twitter: data1[i].twitter,
-//                         alive: data1[i].alive,
-//                         region: data1[i].region,
-//                         alive: compareData(),
-//                         percent_change_24h: data1[i].cash,
-
-//                     }
-//                 )
-//             }
-      
-           
-            
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-
-//                 var $item = $(
-//                     "<tr class='cryptocurrency'>" + 
-//                         "<th class='rank'>" + (i + 1) + "</th>" + 
-//                         "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
-//                         "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
-//                         "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
-//                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
-//                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
-//                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-//                         // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
-//                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-//                         //this button executes 2 functions, get the row position and the action, add cash
-//                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
-                         
-
-//                     "</tr>"
-//                 );
-
-//                 cryptocurrencies[i].$item = $item;
-//                 $list.append($item);
-
-          
-             
-//             }
-//             cryptocurrencies.sort(descending);
-//             updateRanks(cryptocurrencies);
-//             reposition();
-            
-//             // fetch new data for the updateInterval
-//             timerId = setInterval("getNewData();", updateInterval);
-
-//         }	
-//         resetBoard();
-
-
-// })
-
-// //10 table 
-
-
-// const result10 = fetch(`${url}`, { method: 'get' })
-//   .then(response => response.json()) 
-//   .then(res => {
-
-    
-   
-
-//             function getRowPositions(element) {
-//             var rowJavascript = element.parentNode.parentNode;
-//             var rowjQuery = $(element).closest("tr");
-//             let a = rowJavascript.rowIndex -1;
-//             indexPos.push(a);
-//             localStorage.setItem('ID', a);
-//             localStorage.ID = a;
-//         }
-
-//         var xhReq = new XMLHttpRequest();
-//         xhReq.open("GET", `${url}`, false,);
-//         xhReq.send(null);
-
-//         const data1 = JSON.parse(xhReq.responseText); 
-//         const data = JSON.stringify(data1);
-//         // initialization
-//         var cryptocurrencies;
-//         var timerId;
-//         var updateInterval = 2000000;
-
-//         let rowPos;
-//         let indexPos = [];
-//         let ids;
-       
-
-     
-//         // function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
-//         function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
-
-
-
-//         function reposition() {
-//             var height = $("#cryptocurrencies10 .cryptocurrency").height();
-//             var y = height;
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.css("top", y + "px");
-//                 y += height;			
-//             }
-//         }  
-        
-//         function updateRanks(cryptocurrencies) {
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-//                 cryptocurrencies[i].$item.find(".rank").text(i + 97);	
-//             }
-//         }
-
-//         function fetchNewData(data,attributeName,name){
-//             for(var x in data){
-//                 if((data[x].name == name) == true) {
-//                     return data[x][attributeName];
-//                 }
-//             }
-//             return null;
-//         }      
-          
-
-//         function getNewData(){
-//             // get the new data for each coin and change to their new values
-//             var newReq = new XMLHttpRequest();
-//             newReq.open("GET", SUPABASE_DATABASE, false);
-//             newReq.send(null);
-//             var newData1 = JSON.parse(newReq.responseText); 
-//             var newData = JSON.stringify(newData1);
-
-
-//             updateRanks(cryptocurrencies);
-//             reposition();
-//             console.log('Finished retrieving new data');
-            
-//         }
-
-//         function leaderboards(users) {
-//   return users.sort((a, b) => b.cash-a.cash);
-// }
-// leaderboards(data1);
-
-    
-//         function resetBoard() {
-//             var $list = $("#cryptocurrencies10");
-//             $list.find(".cryptocurrency").remove();
-//             if(timerId !== undefined) {
-//                 clearInterval(timerId);
-//             }
-
-           
-//             cryptocurrencies = [];
-//             for(let i = 97;i < 101;i++){
-//     //function for comparing dates from server as the old time and client as the new time
-//                 function compareData(){
-//                     let parsed1 = data1[i].Date; 
-//                     let newTime = new Date();
-//                     let newTfact = newTime.getTime();
-//                     let diferenceTime = newTfact - parsed1;
-//                     let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
-//                     return differenD + " days";
-//                 }
-                
-//                 cryptocurrencies.push(
-//                     {
-//                         name : data1[i].name,
-//                         instagram: data1[i].instagram,
-//                         youtube: data1[i].youtube,
-//                         twitch: data1[i].twitch,
-//                         reddit: data1[i].reddit,
-//                         twitter: data1[i].twitter,
-//                         alive: data1[i].alive,
-//                         region: data1[i].region,
-//                         alive: compareData(),
-//                         percent_change_24h: data1[i].cash,
-
-//                     }
-//                 )
-//             }
-      
-           
-            
-//             for(var i = 0; i < cryptocurrencies.length; i++) {
-
-//                 var $item = $(
-//                     "<tr class='cryptocurrency'>" + 
-//                         "<th class='rank'>" + (i + 1) + "</th>" + 
-//                         "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
-//                         "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
-//                         "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
-//                         "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
-//                         "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
-//                         "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
-//                         // "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
-//                         "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
-//                         //this button executes 2 functions, get the row position and the action, add cash
-//                         "<td class='region'>" + cryptocurrencies[i].region + "</td>" +
-                         
-
-//                     "</tr>"
-//                 );
-
-//                 cryptocurrencies[i].$item = $item;
-//                 $list.append($item);
-
-          
-             
-//             }
-//             cryptocurrencies.sort(descending);
-//             updateRanks(cryptocurrencies);
-//             reposition();
-            
-//             // fetch new data for the updateInterval
-//             timerId = setInterval("getNewData();", updateInterval);
-
-//         }	
-//         resetBoard();
-
-
-// })
 
 
     </script>
