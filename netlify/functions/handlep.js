@@ -50,20 +50,22 @@ exports.handler = async ({ headers, body }) => {
 
    
 // function supabase, selects name and updates cash with sumed one from stripe + supa before
-const cash = items[0].amount_subtotal/100;
- const { data: genre_data, error: genre_error } = await supabase
- .from('users')
- .select()
- .eq("name", session.metadata.name)
-    const genre_id = genre_data[0].cash;
+
+
+// const cash = items[0].amount_subtotal/100;
+//  const { data: genre_data, error: genre_error } = await supabase
+//  .from('users')
+//  .select()
+//  .eq("name", session.metadata.name)
+//     const genre_id = genre_data[0].cash;
    
 
-    let summed = Number(cash) + Number(genre_id);
+//     let summed = Number(cash) + Number(genre_id);
 
-    const { data: book_data, error: book_error } = await supabase
-         .from('users')
-      .update({ cash: summed})
-      .eq('name', session.metadata.name)
+//     const { data: book_data, error: book_error } = await supabase
+//          .from('users')
+//       .update({ cash: summed})
+//       .eq('name', session.metadata.name)
 
 
     return {
