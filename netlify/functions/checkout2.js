@@ -46,18 +46,21 @@ function newTime(){
     mode: "payment",
     success_url: "https://toxtat.com",
     cancel_url: "https://toxtat.com/menu.html", 
-  })
-  try {
-    const event = stripe.webhooks.constructEvent(
-      body,
-      headers['stripe-signature'],
-      process.env.STRIPE_WEBHOOK_SECRET,
-    );
-
-    if (event.type !== 'checkout.session.completed') {
-      return;
-    }
-const cash = items[0].amount_subtotal/100;
+  }).then(function(result) {
+    if (result.error) {
+        // Show error to your customer (e.g., insufficient funds)
+        console.log(result.error.message);
+    } else {
+      const event = stripe.webhooks.constructEvent(
+        body,
+        headers['stripe-signature'],
+        process.env.STRIPE_WEBHOOK_SECRET,
+      );
+        // The payment has been processed!
+        if (event.type !== 'checkout.session.completed') {
+          return;
+        }
+        const cash = items[0].amount_subtotal/100;
  const { data: genre_data, error: genre_error } = await supabase
  .from('users')
  .select()
@@ -72,23 +75,11 @@ const cash = items[0].amount_subtotal/100;
       .update({ cash: summed})
       .eq('name', session.metadata.name)
 
-      return {
-        statusCode: 303,
-        headers: {
-          Location: session.url
-          
-        },
-        body: JSON.stringify({ received: true }),
-      };
-    } catch (error) {
-      console.error(error);
-      return {
-        statusCode: 400,
-        body: `WebHook error: ${error.message}`,
-      };
     }
-  
-  }
+});
+}
+ 
+
 //   return {
 //     statusCode: 303,
 //     headers: {
