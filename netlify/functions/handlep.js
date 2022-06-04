@@ -47,7 +47,7 @@ exports.handler = async ({ headers, body }) => {
             Date: newTime(),
          }
         ]);
-        console.log(data);
+        // console.log(data);
 
 
     return {
