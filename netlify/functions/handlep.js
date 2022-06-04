@@ -28,30 +28,24 @@ exports.handler = async ({ headers, body }) => {
 
     const items = lineItems.data;
 
-    console.log(session.metadata);
-    console.log(session.metadata[0]);
-
-    var myObject = session.metadata
-
-    var count = Object.keys(myObject).length;
-    console.log(count);
+ 
 
 
-    const { data, error } = await supabase
-        .from('users')
-        .insert([
-         {
-            cash:  session.metadata.cash, 
-            name: session.metadata.name, 
-            instagram:  session.metadata.instagram, 
-            youtube:  session.metadata.youtube, 
-            twitch: session.metadata.twitch, 
-            reddit: session.metadata.reddit, 
-            twitter:  session.metadata.twitter, 
-            region: session.metadata.region, 
-            Date: newTime(),
-         }
-        ]);
+    // const { data, error } = await supabase
+    //     .from('users')
+    //     .insert([
+    //      {
+    //         cash:  session.metadata.cash, 
+    //         name: session.metadata.name, 
+    //         instagram:  session.metadata.instagram, 
+    //         youtube:  session.metadata.youtube, 
+    //         twitch: session.metadata.twitch, 
+    //         reddit: session.metadata.reddit, 
+    //         twitter:  session.metadata.twitter, 
+    //         region: session.metadata.region, 
+    //         Date: newTime(),
+    //      }
+    //     ]);
     //     console.log(data);
 
 
@@ -60,21 +54,27 @@ exports.handler = async ({ headers, body }) => {
 // function supabase, selects name and updates cash with sumed one from stripe + supa before
 
 
-// const cash = items[0].amount_subtotal/100;
-//  const { data: genre_data, error: genre_error } = await supabase
-//  .from('users')
-//  .select()
-//  .eq("name", session.metadata.name)
-//     const genre_id = genre_data[0].cash;
+const cash = items[0].amount_subtotal/100;
+ const { data: genre_data, error: genre_error } = await supabase
+ .from('users')
+ .select()
+ .eq("name", session.metadata.name)
+    const genre_id = genre_data[0].cash;
    
 
-//     let summed = Number(cash) + Number(genre_id);
+    let summed = Number(cash) + Number(genre_id);
 
-//     const { data: book_data, error: book_error } = await supabase
-//          .from('users')
-//       .update({ cash: summed})
-//       .eq('name', session.metadata.name)
+    const { data: book_data, error: book_error } = await supabase
+         .from('users')
+      .update({ cash: summed})
+      .eq('name', session.metadata.name)
 
+      console.log(session.metadata);
+
+      var myObject = session.metadata
+  
+      var count = Object.keys(myObject).length;
+      console.log(count);
 
     return {
       statusCode: 200,
