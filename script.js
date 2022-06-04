@@ -1,5 +1,5 @@
 
-const url = '/wreckthisbeach/myman';
+const url = process.env.MYMAN;
 const result = fetch(`${url}`, { method: 'get' })
   .then(response => response.json()) 
   .then(res => {
