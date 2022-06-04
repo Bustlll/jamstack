@@ -28,7 +28,10 @@ exports.handler = async ({ headers, body }) => {
 
     const items = lineItems.data;
 console.log(items);
-    console.log(items.price.amount_subtotal);
+console.log(items.amount_subtotal);
+console.log(items.amount_total);
+
+ 
 
     // console.log(session.metadata);
     // console.log(session.metadata.name);
