@@ -53,26 +53,27 @@ exports.handler = async ({ headers, body }) => {
     //     console.log(data);
 
     const cash = items[0].amount_subtotal/100;
-    console.log(cash);
+    // console.log(cash);
     console.log(session.metadata);
-    console.log(session.metadata.cash);
+    // console.log(session.metadata.cash);
 
 
  const { data: genre_data, error: genre_error } = await supabase
  .from('users')
  .select()
  .eq("name", session.metadata.name)
-    const genre_id = genre_data[0];
-    console.log(genre_id);
+    const genre_id = genre_data[0].cash;
+   
 
-    // let summed = Number(cash) + Number(genre_id);
+    let summed = Number(cash) + Number(genre_id);
 
-    // console.log(summed);
+    console.log(summed);
 
-    // const { data: book_data, error: book_error } = await supabase
-    //      .from('users')
-    //   .update({ cash: summed})
-    //   .eq('name', session.metadata.name)
+    const { data: book_data, error: book_error } = await supabase
+         .from('users')
+      .update({ cash: summed})
+      .eq('name', session.metadata.name)
+      console.log(book_data);
 
 
 
