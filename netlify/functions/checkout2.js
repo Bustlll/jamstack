@@ -77,17 +77,18 @@ function newTime(){
 
     }
 });
+
+return {
+  statusCode: 303,
+  headers: {
+    Location: session.url
+    
+  }
+}
 }
  
 
-//   return {
-//     statusCode: 303,
-//     headers: {
-//       Location: session.url
-      
-//     }
-//   }
-// }
+
 
 
 //func handlef
