@@ -27,15 +27,12 @@ exports.handler = async ({ headers, body }) => {
     const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
 
     const items = lineItems.data;
-console.log(items);
-console.log(items[0].amount_subtotal);
-console.log(session.metadata.cash);
+// console.log(items);
+// console.log(items[0].amount_subtotal);
+// console.log(session.metadata.cash);
 
 
- 
 
-    // console.log(session.metadata);
-    // console.log(session.metadata.name);
 
 
     // const { data, error } = await supabase
@@ -53,28 +50,30 @@ console.log(session.metadata.cash);
     //         Date: newTime(),
     //      }
     //     ]);
-        // console.log(data);
+    //     console.log(data);
 
-//     const cash = items.cash;
-// console.log(cash);
+    const cash = items[0].amount_subtotal;
+    console.log(cash);
+    console.log(session.metadata.cash);
 
 
-//  const { data: genre_data, error: genre_error } = await supabase
-//       .from('users')
-//       .select([
-//         { name: session.metadata.name }
-//       ]);
-//     const genre_id = genre_data[0];
-//     console.log(genre_id);
 
-//     let summed = Number(cash) + Number(genre_id);
+ const { data: genre_data, error: genre_error } = await supabase
+      .from('users')
+      .select([
+        { name: session.metadata.name }
+      ]);
+    const genre_id = genre_data[0];
+    console.log(genre_id);
 
-//     console.log(summed);
+    // let summed = Number(cash) + Number(genre_id);
 
-//     const { data: book_data, error: book_error } = await supabase
-//          .from('users')
-//       .update({ cash: summed})
-//       .eq('name', session.metadata.name)
+    // console.log(summed);
+
+    // const { data: book_data, error: book_error } = await supabase
+    //      .from('users')
+    //   .update({ cash: summed})
+    //   .eq('name', session.metadata.name)
 
 
 
