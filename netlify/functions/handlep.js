@@ -29,7 +29,13 @@ exports.handler = async ({ headers, body }) => {
     const items = lineItems.data;
 
     console.log(session.metadata);
-    console.log(session.metadata[0].length);
+    console.log(session.metadata[0]);
+
+    var myObject = session.metadata
+
+    var count = Object.keys(myObject).length;
+    console.log(count);
+
 
     const { data, error } = await supabase
         .from('users')
