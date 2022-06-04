@@ -22,29 +22,23 @@ exports.handler = async ({ headers, body }) => {
 
     const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
 
-    const items = lineItems.data;
+    const items = lineItems.data;   
 
-    // console.log(items.cash); //actual cash; new value/old value = supabase old
-
-    // let summed = Number(items.cash) + Number(genre_id);
+console.log(session.metadata.length);
+const cash = items[0].amount_subtotal/100;
+ const { data: genre_data, error: genre_error } = await supabase
+ .from('users')
+ .select()
+ .eq("name", session.metadata.name)
+    const genre_id = genre_data[0].cash;
    
 
- const { data: genre_data, error: genre_error } = await supabase
-      .from('users')
-      .select([
-        { name: session.metadata.name }
-      ]);
-    const genre_id = genre_data[0].cash;
-    console.log(genre_id);
+    let summed = Number(cash) + Number(genre_id);
 
-    // const { data: book_data, error: book_error } = await supabase
-    //      .from('users')
-    //   .update({ cash: summed})
-    //   .eq('name', session.metadata.name)
-
-
-
-
+    const { data: book_data, error: book_error } = await supabase
+         .from('users')
+      .update({ cash: summed})
+      .eq('name', session.metadata.name)
 
 
     return {
