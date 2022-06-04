@@ -26,30 +26,30 @@ exports.handler = async ({ headers, body }) => {
 
     const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
 
-    // const items = lineItems.data;
+    const items = lineItems.data;
 
     // console.log(session.metadata);
     // console.log(session.metadata.name);
 
 
-    const { data, error } = await supabase
-        .from('users')
-        .insert([
-         {
-            cash:  session.metadata.cash, 
-            name: session.metadata.name, 
-            instagram:  session.metadata.instagram, 
-            youtube:  session.metadata.youtube, 
-            twitch: session.metadata.twitch, 
-            reddit: session.metadata.reddit, 
-            twitter:  session.metadata.twitter, 
-            region: session.metadata.region, 
-            Date: newTime(),
-         }
-        ]);
+    // const { data, error } = await supabase
+    //     .from('users')
+    //     .insert([
+    //      {
+    //         cash:  session.metadata.cash, 
+    //         name: session.metadata.name, 
+    //         instagram:  session.metadata.instagram, 
+    //         youtube:  session.metadata.youtube, 
+    //         twitch: session.metadata.twitch, 
+    //         reddit: session.metadata.reddit, 
+    //         twitter:  session.metadata.twitter, 
+    //         region: session.metadata.region, 
+    //         Date: newTime(),
+    //      }
+    //     ]);
         // console.log(data);
 
-    const cash = lineItems.data.cash;
+    const cash = items.cash;
 console.log(cash);
 
 
@@ -58,17 +58,17 @@ console.log(cash);
       .select([
         { name: session.metadata.name }
       ]);
-    const genre_id = genre_data[0].cash;
+    const genre_id = genre_data[0];
     console.log(genre_id);
 
     let summed = Number(cash) + Number(genre_id);
 
     console.log(summed);
 
-    // const { data: book_data, error: book_error } = await supabase
-    //      .from('users')
-    //   .update({ cash: summed})
-    //   .eq('name', session.metadata.name)
+    const { data: book_data, error: book_error } = await supabase
+         .from('users')
+      .update({ cash: summed})
+      .eq('name', session.metadata.name)
 
 
 
