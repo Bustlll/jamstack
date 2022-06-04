@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/aperkaz/serverless-payments.git"
   },
-  "type": "module",
+
   "author": "Alain Perkaz",
   "license": "MIT",
   "bugs": {

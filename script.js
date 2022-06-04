@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const url = process.env.MYMAN;
 const result = fetch(`${url}`, { method: 'get' })
   .then(response => response.json()) 
