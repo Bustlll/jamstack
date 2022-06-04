@@ -27,8 +27,8 @@ exports.handler = async ({ headers, body }) => {
     const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
 
     const items = lineItems.data;
-
-    console.log(items.amount_subtotal);
+console.log(items);
+    console.log(items.price.amount_subtotal);
 
     // console.log(session.metadata);
     // console.log(session.metadata.name);
