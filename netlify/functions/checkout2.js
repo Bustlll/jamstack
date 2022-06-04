@@ -18,12 +18,6 @@ const quanti =  `${qt}` * 100;
 
 
 
-
-
-
-
-
-
 function newTime(){
   let a = new Date();
   return a.getTime();
@@ -40,14 +34,14 @@ function newTime(){
         price_data: {
           currency: "usd",
           product_data: {
-            name: "Hello "+`${name}` + ", Welcome to TOXTAT ",
+            name: "Give "+`${name}` + " "`${qt}` + ", Bucks",
           },
           unit_amount: quanti,
         },
         quantity: 1,
       },
     ],
-    metadata: {cash: `${qt}`,name:`${name}`,instagram:`${instagram}`,youtube:`${youtube}`,twitch:`${twitch}`,reddit:`${reddit}`,twitter:`${twitter}`,region:`${region}`,Date: newTime(),},
+    metadata: {cash: `${qt}`,name:`${name}`},
 
     mode: "payment",
     success_url: "https://toxtat.com",
