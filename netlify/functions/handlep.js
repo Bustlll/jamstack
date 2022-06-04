@@ -28,7 +28,8 @@ exports.handler = async ({ headers, body }) => {
 
     const items = lineItems.data;
 
-    console.log(session.metadata.length);
+    console.log(session.metadata);
+    console.log(session.metadata[0].length);
 
     const { data, error } = await supabase
         .from('users')
