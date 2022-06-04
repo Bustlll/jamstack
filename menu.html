@@ -80,7 +80,8 @@
     <div class="maincontainer-rankInfo"> 
   
       <li>The Tables Show with 27 entries, BUT!</li>
-      <li>The First Table with 11.</li>
+      <li>The First Table with 11</li>
+      <br>
       <li>Carefull with Duplicate Names</li>
       <li>115 spots avaliable</li>
       <li>Flex the ranks</li>
@@ -173,7 +174,7 @@ input{
 div .subcontainer{
   width: 20vw;
  position: relative;
- background: rgba(0, 0, 0, 0.267);
+ background: rgba(64, 153, 212, 0.95);
  border-radius: 20px 20px 20px 20px;
  padding: 35px;
  margin-left: 43.75rem;
@@ -183,16 +184,18 @@ form#my-form {
   margin-left: 2vw;
 }
 div.maincontainer-rankInfo{
-  background: rgba(138, 133, 133, 0.432);
+  background: rgb(0, 0, 0);
   width: 17vw;
-  height: 10vh;
+  height: 14vh;
   border-radius: 20px 20px 20px 20px;
   position: relative;
   margin-left: 43.75rem;
   padding: 60px;
   list-style-type: none;
+  color:white;
 }
 .maincontainer-rankInfo{
+  position: relative;
   color: rgb(0, 0, 0);
   font-size: 17px;
   font-style: bold;
@@ -389,67 +392,6 @@ function fetchl(){
 
 
 
-// async function handleSubmit(e) {
-//     e.preventDefault() 
-//   let form = document.getElementById("my-form");
-//      const formData = new FormData(e.form)
-//      const date = formData.get("name")
-
-//      fetch('/wreckthisbeach/adsup', {method: "POST",body: JSON.stringify({date})})
-//       .then(response => {if (!response.ok) 
-
-//         {throw new Error('Network response was not ok');}  
-
-//         return response.json()})   
-
-//         .then(json => {console.log(json)})
-//         .catch(error => {console.error(error)})
-//       }
-
-//     document.querySelector("#my-form").addEventListener("submit", handleSubmit)
-
-
-// form.addEventListener('submit', (evt) => {
-//   evt.preventDefault();
-//   const formData = new FormData(form);
-//   const params = new URLSearchParams(formData);
-//   console.log(params.toString());
-// });
-
-// const log = console.log;
-
-// window.addEventListener('load', () => {
-//   //page has fully loaded
-//   //location === window.location
-//   log(location.href); //everything
-//   log(location.pathname); //just folders and file
-//   if (location.search) {
-//     //there is a querystring beyond `?`
-//     // log(location.search);
-//     let qs = decodeURIComponent(location.search.substring(1));
-//     // log(qs);
-//     let params = new Map();
-//     let parts = qs.split('&');
-//     log({ parts });
-//     parts.forEach((part) => {
-//       let key = part.split('=')[0];
-//       let val = part.split('=')[1];
-//       params.set(key, val);
-//     });
-
-//     log(params.has('name'));
-//     log(params.get('name'));
-//   }
-
-//   let btn = document.getElementById('btnSearch');
-//   btn.addEventListener('click', (ev) => {
-//     let url = location.pathname;
-//     let str = document.getElementById('search').value.trim();
-//     url = `${url}?${encodeURIComponent(str)}`;
-//     location.href = url;
-//   });
-// });
-
             function reloader(){
   location.reload();
 }
@@ -462,13 +404,13 @@ function fetchl(){
 }
 
   
-function getCashy(cashy, input) {
-  localStorage.setItem("cashy", input)};
+// function getCashy(cashy, input) {
+//   localStorage.setItem("cashy", input)};
 
 
 
-function setLsUs(us, input) {
-  localStorage.setItem("us", inputCash.value)};
+// function setLsUs(us, input) {
+//   localStorage.setItem("us", inputCash.value)};
  
                     
 async function handleSubmit(event) {
@@ -489,10 +431,10 @@ async function handleSubmit(event) {
         }
       }
 
-      function addUss(){
-        let val = document.getElementById('inputCash').value;
-        localStorage.setItem("sendcashto", val)
-      }
+      // function addUss(){
+      //   let val = document.getElementById('inputCash').value;
+      //   localStorage.setItem("sendcashto", val)
+      // }
 
 
   
