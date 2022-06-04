@@ -52,17 +52,16 @@ exports.handler = async ({ headers, body }) => {
     //     ]);
     //     console.log(data);
 
-    const cash = items[0].amount_subtotal;
+    const cash = items[0].amount_subtotal/100;
     console.log(cash);
+    console.log(session.metadata);
     console.log(session.metadata.cash);
 
 
-
  const { data: genre_data, error: genre_error } = await supabase
-      .from('users')
-      .select([
-        { name: session.metadata.name }
-      ]);
+ .from('users')
+ .select()
+ .eq("name", session.metadata.name)
     const genre_id = genre_data[0];
     console.log(genre_id);
 
