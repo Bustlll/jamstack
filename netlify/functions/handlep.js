@@ -51,8 +51,8 @@ exports.handler = async ({ headers, body }) => {
     //     ]);
         // console.log(data);
 
-    const cash = items.cash;
-console.log(cash);
+//     const cash = items.cash;
+// console.log(cash);
 
 
 //  const { data: genre_data, error: genre_error } = await supabase
