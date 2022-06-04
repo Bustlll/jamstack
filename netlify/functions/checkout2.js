@@ -34,7 +34,7 @@ function newTime(){
         price_data: {
           currency: "usd",
           product_data: {
-            name: "Give "+`${name}` +`${qt}` + " Bucks",
+            name: "Give "+`${name}` +` ${qt}` + " Bucks",
           },
           unit_amount: quanti,
         },

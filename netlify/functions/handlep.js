@@ -28,13 +28,13 @@ exports.handler = async ({ headers, body }) => {
 
     const items = lineItems.data;
 
-    console.log(session.metadata);
+
 
     var myObject = session.metadata
 
     var count = Object.keys(myObject).length;
 
-    console.log(count);
+ 
 
  
 if(count == 9){
