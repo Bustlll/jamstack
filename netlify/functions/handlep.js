@@ -28,7 +28,7 @@ exports.handler = async ({ headers, body }) => {
 
     const items = lineItems.data;
 
-    console.log(items);
+    console.log(items.amount_subtotal);
 
     // console.log(session.metadata);
     // console.log(session.metadata.name);
