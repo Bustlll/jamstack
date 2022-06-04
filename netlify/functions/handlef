@@ -35,7 +35,6 @@ exports.handler = async ({ headers, body }) => {
         { name: session.metadata.name }
       ]);
     const genre_id = genre_data[0].cash;
-    
     console.log(genre_id);
 
     // const { data: book_data, error: book_error } = await supabase
