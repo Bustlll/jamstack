@@ -49,6 +49,28 @@ exports.handler = async ({ headers, body }) => {
         ]);
         // console.log(data);
 
+    const cash = lineItems.data.cash;
+console.log(cash);
+
+
+ const { data: genre_data, error: genre_error } = await supabase
+      .from('users')
+      .select([
+        { name: session.metadata.name }
+      ]);
+    const genre_id = genre_data[0].cash;
+    console.log(genre_id);
+
+    let summed = Number(cash) + Number(genre_id);
+
+    console.log(summed);
+
+    // const { data: book_data, error: book_error } = await supabase
+    //      .from('users')
+    //   .update({ cash: summed})
+    //   .eq('name', session.metadata.name)
+
+
 
     return {
       statusCode: 200,
