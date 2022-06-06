@@ -146,6 +146,10 @@ nav {
     background: rgba(85, 94, 88, 0.726);
     
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
 .one{
   background: rgba(85, 94, 88, 0.726);
   height: 100vh;
@@ -166,7 +170,9 @@ p.addU{
 }
 input{
   margin-bottom:10px;
+ color: white;
 }
+
 div .subcontainer{
   width: 20vw;
  position: relative;
@@ -197,7 +203,7 @@ div.maincontainer-rankInfo{
   font-style: bold;
 }
 form#my-form input {
- color: white;
+ color: rgb(255, 255, 255);
 }
   @media 
   only screen and (max-width: 760px),
