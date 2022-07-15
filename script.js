@@ -1,1 +1,782 @@
-var _0x4f2535=_0x3bd6;(function(_0x402a8c,_0x376c44){var _0x43bfb7=_0x3bd6,_0x15d227=_0x402a8c();while(!![]){try{var _0x2f56f4=-parseInt(_0x43bfb7(0x1e0))/0x1*(parseInt(_0x43bfb7(0x220))/0x2)+parseInt(_0x43bfb7(0x213))/0x3*(-parseInt(_0x43bfb7(0x208))/0x4)+-parseInt(_0x43bfb7(0x1ec))/0x5*(parseInt(_0x43bfb7(0x229))/0x6)+-parseInt(_0x43bfb7(0x21b))/0x7*(parseInt(_0x43bfb7(0x20e))/0x8)+parseInt(_0x43bfb7(0x202))/0x9*(-parseInt(_0x43bfb7(0x1e4))/0xa)+-parseInt(_0x43bfb7(0x21d))/0xb+parseInt(_0x43bfb7(0x219))/0xc*(parseInt(_0x43bfb7(0x1e3))/0xd);if(_0x2f56f4===_0x376c44)break;else _0x15d227['push'](_0x15d227['shift']());}catch(_0x1b82c4){_0x15d227['push'](_0x15d227['shift']());}}}(_0x240e,0xf418b));function _0x3bd6(_0x3891c7,_0x16b3d5){var _0x240ed1=_0x240e();return _0x3bd6=function(_0x3bd655,_0x2458c3){_0x3bd655=_0x3bd655-0x1df;var _0x28adf8=_0x240ed1[_0x3bd655];return _0x28adf8;},_0x3bd6(_0x3891c7,_0x16b3d5);}function _0x240e(){var _0x418f48=['top','getTime','sort','1066587izuIsM','open','<tr\x20class=\x27cryptocurrency\x27>','responseText','Date','stringify','37932276CyXOjR','</th>','4292239pjZuCa','text','11000429RkDKkj','#cryptocurrencies','</td>','2fsYVuP','GET','find','getNewData();','Finished\x20retrieving\x20new\x20data','twitch','<td\x20class=\x27name\x27>','#cryptocurrencies3\x20.cryptocurrency','append','3879978YsNywt','.cryptocurrency','#cryptocurrencies5\x20.cryptocurrency','752436JieXTm','#cryptocurrencies\x20.cryptocurrency','$item','26PiuObh','4200RHOeEo','push','height','json','<td\x20class=\x27twitch\x27>','name','instagram','send','15EfaRdT','region','<td\x20class=\x27youtube\x27>','<td\x20class=\x27instagram\x27>','#cryptocurrencies5','remove','parse','parentNode','<td\x20class=\x27ailve\x27>','rowIndex','log','cash','youtube','<td\x20class=\x27region\x27>','alive','<th\x20class=\x27rank\x27>','setItem','twitter','#cryptocurrencies2','floor','reddit','<td\x20class=\x27reddit\x27>','1026WWmENj','css','percent_change_24h','#cryptocurrencies3','get','then','4lepECt','</tr>','<td\x20class=\x27twitter\x27>','.rank','\x20days','length','16VKlnmg','closest'];_0x240e=function(){return _0x418f48;};return _0x240e();}const url='/wreckthisbeach/myman',result=fetch(''+url,{'method':_0x4f2535(0x206)})['then'](_0xb808dc=>_0xb808dc[_0x4f2535(0x1e7)]())[_0x4f2535(0x207)](_0x4c98de=>{var _0x8397ea=_0x4f2535;function _0x4d823f(_0x27dfd4){var _0x54831a=_0x3bd6,_0x303c09=_0x27dfd4['parentNode']['parentNode'],_0xcacd34=$(_0x27dfd4)['closest']('tr');let _0x47b6f5=_0x303c09['rowIndex']-0x1;_0x30044a[_0x54831a(0x1e5)](_0x47b6f5),localStorage[_0x54831a(0x1fc)]('ID',_0x47b6f5),localStorage['ID']=_0x47b6f5;}var _0x1e53ed=new XMLHttpRequest();_0x1e53ed['open'](_0x8397ea(0x221),''+url,![]),_0x1e53ed[_0x8397ea(0x1eb)](null);const _0x45a966=JSON['parse'](_0x1e53ed[_0x8397ea(0x216)]),_0x4bea5c=JSON[_0x8397ea(0x218)](_0x45a966);var _0x43d9f9,_0x3839ec,_0x380e5f=0x1e8480;let _0x4e71b9,_0x30044a=[],_0x2cd7e3;function _0x1a0551(_0x357835,_0x126a68){var _0xd0508d=_0x8397ea;return _0x357835[_0xd0508d(0x204)]<_0x126a68[_0xd0508d(0x204)]?0x1:-0x1;}function _0x13224a(){var _0x2526da=_0x8397ea,_0x2c867a=$(_0x2526da(0x1e1))[_0x2526da(0x1e6)](),_0xa8ad64=_0x2c867a;for(var _0x27b523=0x0;_0x27b523<_0x43d9f9['length'];_0x27b523++){_0x43d9f9[_0x27b523]['$item']['css'](_0x2526da(0x210),_0xa8ad64+'px'),_0xa8ad64+=_0x2c867a;}}function _0x5a63a2(_0x5ef566){var _0x38b37f=_0x8397ea;for(var _0x54663c=0x0;_0x54663c<_0x5ef566[_0x38b37f(0x20d)];_0x54663c++){_0x5ef566[_0x54663c][_0x38b37f(0x1e2)][_0x38b37f(0x222)](_0x38b37f(0x20b))[_0x38b37f(0x21c)](_0x54663c+0x1);}}function _0x5e6163(_0x7e83de,_0x9f3d7b,_0x3f5a8f){for(var _0x4e44c4 in _0x7e83de){if(_0x7e83de[_0x4e44c4]['name']==_0x3f5a8f==!![])return _0x7e83de[_0x4e44c4][_0x9f3d7b];}return null;}function _0x560549(){var _0x5aaea5=_0x8397ea,_0xd2f393=new XMLHttpRequest();_0xd2f393['open'](_0x5aaea5(0x221),SUPABASE_DATABASE,![]),_0xd2f393[_0x5aaea5(0x1eb)](null);var _0x25e552=JSON[_0x5aaea5(0x1f2)](_0xd2f393['responseText']),_0xb051cc=JSON['stringify'](_0x25e552);_0x5a63a2(_0x43d9f9),_0x13224a(),console[_0x5aaea5(0x1f6)](_0x5aaea5(0x224));}function _0x25dafe(_0x3c1f78){var _0x5389a7=_0x8397ea;return _0x3c1f78[_0x5389a7(0x212)]((_0x320099,_0x75b057)=>_0x75b057[_0x5389a7(0x1f7)]-_0x320099[_0x5389a7(0x1f7)]);}_0x25dafe(_0x45a966);function _0x27c4df(){var _0x3e8737=_0x8397ea,_0x5600f9=$(_0x3e8737(0x21e));_0x5600f9[_0x3e8737(0x222)](_0x3e8737(0x22a))[_0x3e8737(0x1f1)]();_0x3839ec!==undefined&&clearInterval(_0x3839ec);_0x43d9f9=[];for(let _0x4ca9a2=0x0;_0x4ca9a2<0xb;_0x4ca9a2++){function _0xac2a88(){var _0x55a652=_0x3e8737;let _0x5ea7f6=_0x45a966[_0x4ca9a2]['Date'],_0x3e949e=new Date(),_0x4a7468=_0x3e949e[_0x55a652(0x211)](),_0xaec6a3=_0x4a7468-_0x5ea7f6,_0x14c920=Math[_0x55a652(0x1ff)](_0xaec6a3/(0x3e8*0xe10*0x17));return _0x14c920+_0x55a652(0x20c);}_0x43d9f9[_0x3e8737(0x1e5)]({'name':_0x45a966[_0x4ca9a2]['name'],'instagram':_0x45a966[_0x4ca9a2]['instagram'],'youtube':_0x45a966[_0x4ca9a2]['youtube'],'twitch':_0x45a966[_0x4ca9a2][_0x3e8737(0x225)],'reddit':_0x45a966[_0x4ca9a2][_0x3e8737(0x200)],'twitter':_0x45a966[_0x4ca9a2][_0x3e8737(0x1fd)],'alive':_0x45a966[_0x4ca9a2][_0x3e8737(0x1fa)],'region':_0x45a966[_0x4ca9a2][_0x3e8737(0x1ed)],'alive':_0xac2a88(),'percent_change_24h':_0x45a966[_0x4ca9a2][_0x3e8737(0x1f7)]});}for(var _0x16efbb=0x0;_0x16efbb<_0x43d9f9[_0x3e8737(0x20d)];_0x16efbb++){var _0x520df6=$(_0x3e8737(0x215)+_0x3e8737(0x1fb)+(_0x16efbb+0x1)+_0x3e8737(0x21a)+'<td\x20class=\x27name\x27>'+_0x43d9f9[_0x16efbb][_0x3e8737(0x1e9)]+_0x3e8737(0x21f)+_0x3e8737(0x1ef)+_0x43d9f9[_0x16efbb][_0x3e8737(0x1ea)]+_0x3e8737(0x21f)+_0x3e8737(0x1ee)+_0x43d9f9[_0x16efbb][_0x3e8737(0x1f8)]+'</td>'+_0x3e8737(0x1e8)+_0x43d9f9[_0x16efbb][_0x3e8737(0x225)]+_0x3e8737(0x21f)+_0x3e8737(0x201)+_0x43d9f9[_0x16efbb][_0x3e8737(0x200)]+'</td>'+_0x3e8737(0x20a)+_0x43d9f9[_0x16efbb][_0x3e8737(0x1fd)]+_0x3e8737(0x21f)+_0x3e8737(0x1f4)+_0x43d9f9[_0x16efbb][_0x3e8737(0x1fa)]+'</td>'+_0x3e8737(0x1f9)+_0x43d9f9[_0x16efbb]['region']+_0x3e8737(0x21f)+'</tr>');_0x43d9f9[_0x16efbb]['$item']=_0x520df6,_0x5600f9[_0x3e8737(0x228)](_0x520df6);}_0x43d9f9['sort'](_0x1a0551),_0x5a63a2(_0x43d9f9),_0x13224a(),_0x3839ec=setInterval(_0x3e8737(0x223),_0x380e5f);}_0x27c4df();}),result2=fetch(''+url,{'method':_0x4f2535(0x206)})[_0x4f2535(0x207)](_0x203e94=>_0x203e94[_0x4f2535(0x1e7)]())[_0x4f2535(0x207)](_0x5a94be=>{var _0x295873=_0x4f2535;function _0x4bef49(_0x2ef620){var _0x44aa9a=_0x3bd6,_0x22b470=_0x2ef620[_0x44aa9a(0x1f3)]['parentNode'],_0x2b9104=$(_0x2ef620)[_0x44aa9a(0x20f)]('tr');let _0x38ae50=_0x22b470[_0x44aa9a(0x1f5)]-0x1;_0x9f6c94[_0x44aa9a(0x1e5)](_0x38ae50),localStorage[_0x44aa9a(0x1fc)]('ID',_0x38ae50),localStorage['ID']=_0x38ae50;}var _0x5cf667=new XMLHttpRequest();_0x5cf667[_0x295873(0x214)](_0x295873(0x221),''+url,![]),_0x5cf667[_0x295873(0x1eb)](null);const _0x5f29ca=JSON[_0x295873(0x1f2)](_0x5cf667['responseText']),_0x35cfdc=JSON[_0x295873(0x218)](_0x5f29ca);var _0x2b831b,_0x54c1f1,_0x51778b=0x1e8480;let _0x123432,_0x9f6c94=[],_0x49d6b1;function _0x2a33e0(_0xed409c,_0x366f98){return _0xed409c['percent_change_24h']<_0x366f98['percent_change_24h']?0x1:-0x1;}function _0x1cb473(){var _0x5605e9=_0x295873,_0x1190bf=$('#cryptocurrencies2\x20.cryptocurrency')[_0x5605e9(0x1e6)](),_0x30316b=_0x1190bf;for(var _0x59b0fe=0x0;_0x59b0fe<_0x2b831b['length'];_0x59b0fe++){_0x2b831b[_0x59b0fe][_0x5605e9(0x1e2)][_0x5605e9(0x203)]('top',_0x30316b+'px'),_0x30316b+=_0x1190bf;}}function _0x5e27a6(_0x5370f7){var _0x469305=_0x295873;for(var _0x54d47e=0x0;_0x54d47e<_0x5370f7[_0x469305(0x20d)];_0x54d47e++){_0x5370f7[_0x54d47e][_0x469305(0x1e2)]['find'](_0x469305(0x20b))[_0x469305(0x21c)](_0x54d47e+0xc);}}function _0x294c9d(_0x3cc4af,_0xb63964,_0x3f2255){var _0x49f897=_0x295873;for(var _0x635ee in _0x3cc4af){if(_0x3cc4af[_0x635ee][_0x49f897(0x1e9)]==_0x3f2255==!![])return _0x3cc4af[_0x635ee][_0xb63964];}return null;}function _0x51c356(){var _0x574144=_0x295873,_0x55f433=new XMLHttpRequest();_0x55f433[_0x574144(0x214)](_0x574144(0x221),SUPABASE_DATABASE,![]),_0x55f433[_0x574144(0x1eb)](null);var _0x2c25fb=JSON[_0x574144(0x1f2)](_0x55f433[_0x574144(0x216)]),_0x349687=JSON[_0x574144(0x218)](_0x2c25fb);_0x5e27a6(_0x2b831b),_0x1cb473(),console[_0x574144(0x1f6)](_0x574144(0x224));}function _0x16498a(_0x1d157c){var _0x13d27b=_0x295873;return _0x1d157c['sort']((_0x22c292,_0x1eb8ff)=>_0x1eb8ff[_0x13d27b(0x1f7)]-_0x22c292[_0x13d27b(0x1f7)]);}_0x16498a(_0x5f29ca);function _0x21ae4d(){var _0x17284c=_0x295873,_0x2663a4=$(_0x17284c(0x1fe));_0x2663a4[_0x17284c(0x222)](_0x17284c(0x22a))[_0x17284c(0x1f1)]();_0x54c1f1!==undefined&&clearInterval(_0x54c1f1);_0x2b831b=[];for(let _0xbd3ff7=0xc;_0xbd3ff7<0x1f;_0xbd3ff7++){function _0x5c8046(){var _0x4fd201=_0x17284c;let _0xa94145=_0x5f29ca[_0xbd3ff7]['Date'],_0x122e13=new Date(),_0xa75893=_0x122e13['getTime'](),_0x303c1d=_0xa75893-_0xa94145,_0xb2fdd9=Math['floor'](_0x303c1d/(0x3e8*0xe10*0x18));return _0xb2fdd9+_0x4fd201(0x20c);}_0x2b831b[_0x17284c(0x1e5)]({'name':_0x5f29ca[_0xbd3ff7][_0x17284c(0x1e9)],'instagram':_0x5f29ca[_0xbd3ff7][_0x17284c(0x1ea)],'youtube':_0x5f29ca[_0xbd3ff7][_0x17284c(0x1f8)],'twitch':_0x5f29ca[_0xbd3ff7]['twitch'],'reddit':_0x5f29ca[_0xbd3ff7][_0x17284c(0x200)],'twitter':_0x5f29ca[_0xbd3ff7][_0x17284c(0x1fd)],'alive':_0x5f29ca[_0xbd3ff7][_0x17284c(0x1fa)],'region':_0x5f29ca[_0xbd3ff7][_0x17284c(0x1ed)],'alive':_0x5c8046(),'percent_change_24h':_0x5f29ca[_0xbd3ff7][_0x17284c(0x1f7)]});}for(var _0x25c6de=0x0;_0x25c6de<_0x2b831b[_0x17284c(0x20d)];_0x25c6de++){var _0x4eb589=$(_0x17284c(0x215)+_0x17284c(0x1fb)+(_0x25c6de+0x1)+_0x17284c(0x21a)+_0x17284c(0x226)+_0x2b831b[_0x25c6de][_0x17284c(0x1e9)]+_0x17284c(0x21f)+_0x17284c(0x1ef)+_0x2b831b[_0x25c6de][_0x17284c(0x1ea)]+_0x17284c(0x21f)+_0x17284c(0x1ee)+_0x2b831b[_0x25c6de][_0x17284c(0x1f8)]+_0x17284c(0x21f)+_0x17284c(0x1e8)+_0x2b831b[_0x25c6de][_0x17284c(0x225)]+_0x17284c(0x21f)+_0x17284c(0x201)+_0x2b831b[_0x25c6de]['reddit']+_0x17284c(0x21f)+'<td\x20class=\x27twitter\x27>'+_0x2b831b[_0x25c6de][_0x17284c(0x1fd)]+_0x17284c(0x21f)+_0x17284c(0x1f4)+_0x2b831b[_0x25c6de]['alive']+'</td>'+_0x17284c(0x1f9)+_0x2b831b[_0x25c6de]['region']+_0x17284c(0x21f)+_0x17284c(0x209));_0x2b831b[_0x25c6de]['$item']=_0x4eb589,_0x2663a4['append'](_0x4eb589);}_0x2b831b['sort'](_0x2a33e0),_0x5e27a6(_0x2b831b),_0x1cb473(),_0x54c1f1=setInterval('getNewData();',_0x51778b);}_0x21ae4d();}),result3=fetch(''+url,{'method':_0x4f2535(0x206)})[_0x4f2535(0x207)](_0x3b04bf=>_0x3b04bf[_0x4f2535(0x1e7)]())[_0x4f2535(0x207)](_0x26ff05=>{var _0x44ab88=_0x4f2535;function _0x158036(_0x18c5a6){var _0x4dd5e6=_0x3bd6,_0x1a2442=_0x18c5a6['parentNode'][_0x4dd5e6(0x1f3)],_0x3187f4=$(_0x18c5a6)[_0x4dd5e6(0x20f)]('tr');let _0x780709=_0x1a2442['rowIndex']-0x1;_0x12c093[_0x4dd5e6(0x1e5)](_0x780709),localStorage['setItem']('ID',_0x780709),localStorage['ID']=_0x780709;}var _0x12ab87=new XMLHttpRequest();_0x12ab87[_0x44ab88(0x214)](_0x44ab88(0x221),''+url,![]),_0x12ab87[_0x44ab88(0x1eb)](null);const _0x28fa28=JSON[_0x44ab88(0x1f2)](_0x12ab87[_0x44ab88(0x216)]),_0x147c09=JSON[_0x44ab88(0x218)](_0x28fa28);var _0x5f359d,_0x1ee509,_0x16ed81=0x1e8480;let _0x42ef14,_0x12c093=[],_0x57cd28;function _0x2191fe(_0x225a67,_0x372480){var _0x59295f=_0x44ab88;return _0x225a67[_0x59295f(0x204)]<_0x372480['percent_change_24h']?0x1:-0x1;}function _0x3b3815(){var _0x1718f=_0x44ab88,_0x5b67ac=$(_0x1718f(0x227))[_0x1718f(0x1e6)](),_0xfd56fd=_0x5b67ac;for(var _0x44b79b=0x0;_0x44b79b<_0x5f359d['length'];_0x44b79b++){_0x5f359d[_0x44b79b][_0x1718f(0x1e2)]['css'](_0x1718f(0x210),_0xfd56fd+'px'),_0xfd56fd+=_0x5b67ac;}}function _0x34d19b(_0x5f0629){var _0x4f3b4a=_0x44ab88;for(var _0xcb0ba5=0x0;_0xcb0ba5<_0x5f0629[_0x4f3b4a(0x20d)];_0xcb0ba5++){_0x5f0629[_0xcb0ba5][_0x4f3b4a(0x1e2)][_0x4f3b4a(0x222)](_0x4f3b4a(0x20b))[_0x4f3b4a(0x21c)](_0xcb0ba5+0x17);}}function _0x165a3e(_0x234722,_0x5ab999,_0x4ad717){var _0x544d4c=_0x44ab88;for(var _0x3e2207 in _0x234722){if(_0x234722[_0x3e2207][_0x544d4c(0x1e9)]==_0x4ad717==!![])return _0x234722[_0x3e2207][_0x5ab999];}return null;}function _0x56ac2c(){var _0x3cc181=_0x44ab88,_0x2ddd06=new XMLHttpRequest();_0x2ddd06['open']('GET',SUPABASE_DATABASE,![]),_0x2ddd06[_0x3cc181(0x1eb)](null);var _0xd637f1=JSON['parse'](_0x2ddd06[_0x3cc181(0x216)]),_0x509eb1=JSON[_0x3cc181(0x218)](_0xd637f1);_0x34d19b(_0x5f359d),_0x3b3815(),console['log']('Finished\x20retrieving\x20new\x20data');}function _0x20161d(_0x196329){var _0x103a9e=_0x44ab88;return _0x196329[_0x103a9e(0x212)]((_0x370ba3,_0x3d4131)=>_0x3d4131['cash']-_0x370ba3[_0x103a9e(0x1f7)]);}_0x20161d(_0x28fa28);function _0x38eb59(){var _0x27861f=_0x44ab88,_0x37ca05=$(_0x27861f(0x205));_0x37ca05[_0x27861f(0x222)]('.cryptocurrency')[_0x27861f(0x1f1)]();_0x1ee509!==undefined&&clearInterval(_0x1ee509);_0x5f359d=[];for(let _0x1661db=0x20;_0x1661db<0x3b;_0x1661db++){function _0x69d58c(){var _0x4159d3=_0x27861f;let _0x268314=_0x28fa28[_0x1661db][_0x4159d3(0x217)],_0x26b936=new Date(),_0x34fa61=_0x26b936[_0x4159d3(0x211)](),_0x37a325=_0x34fa61-_0x268314,_0xe35dc8=Math[_0x4159d3(0x1ff)](_0x37a325/(0x3e8*0xe10*0x18));return _0xe35dc8+_0x4159d3(0x20c);}_0x5f359d[_0x27861f(0x1e5)]({'name':_0x28fa28[_0x1661db][_0x27861f(0x1e9)],'instagram':_0x28fa28[_0x1661db][_0x27861f(0x1ea)],'youtube':_0x28fa28[_0x1661db][_0x27861f(0x1f8)],'twitch':_0x28fa28[_0x1661db][_0x27861f(0x225)],'reddit':_0x28fa28[_0x1661db][_0x27861f(0x200)],'twitter':_0x28fa28[_0x1661db][_0x27861f(0x1fd)],'alive':_0x28fa28[_0x1661db]['alive'],'region':_0x28fa28[_0x1661db][_0x27861f(0x1ed)],'alive':_0x69d58c(),'percent_change_24h':_0x28fa28[_0x1661db][_0x27861f(0x1f7)]});}for(var _0x282fd5=0x0;_0x282fd5<_0x5f359d[_0x27861f(0x20d)];_0x282fd5++){var _0x562c7e=$(_0x27861f(0x215)+'<th\x20class=\x27rank\x27>'+(_0x282fd5+0x1)+_0x27861f(0x21a)+_0x27861f(0x226)+_0x5f359d[_0x282fd5][_0x27861f(0x1e9)]+'</td>'+'<td\x20class=\x27instagram\x27>'+_0x5f359d[_0x282fd5][_0x27861f(0x1ea)]+_0x27861f(0x21f)+_0x27861f(0x1ee)+_0x5f359d[_0x282fd5]['youtube']+'</td>'+_0x27861f(0x1e8)+_0x5f359d[_0x282fd5][_0x27861f(0x225)]+'</td>'+_0x27861f(0x201)+_0x5f359d[_0x282fd5]['reddit']+_0x27861f(0x21f)+'<td\x20class=\x27twitter\x27>'+_0x5f359d[_0x282fd5][_0x27861f(0x1fd)]+_0x27861f(0x21f)+_0x27861f(0x1f4)+_0x5f359d[_0x282fd5][_0x27861f(0x1fa)]+'</td>'+_0x27861f(0x1f9)+_0x5f359d[_0x282fd5][_0x27861f(0x1ed)]+_0x27861f(0x21f)+_0x27861f(0x209));_0x5f359d[_0x282fd5][_0x27861f(0x1e2)]=_0x562c7e,_0x37ca05[_0x27861f(0x228)](_0x562c7e);}_0x5f359d[_0x27861f(0x212)](_0x2191fe),_0x34d19b(_0x5f359d),_0x3b3815(),_0x1ee509=setInterval(_0x27861f(0x223),_0x16ed81);}_0x38eb59();}),result4=fetch(''+url,{'method':'get'})[_0x4f2535(0x207)](_0x2a5a38=>_0x2a5a38['json']())['then'](_0x458f14=>{var _0x52bc66=_0x4f2535;function _0x3776dd(_0x467853){var _0x22f25f=_0x3bd6,_0xdffeeb=_0x467853[_0x22f25f(0x1f3)]['parentNode'],_0x23347=$(_0x467853)['closest']('tr');let _0x2fc89e=_0xdffeeb[_0x22f25f(0x1f5)]-0x1;_0xe20e81[_0x22f25f(0x1e5)](_0x2fc89e),localStorage['setItem']('ID',_0x2fc89e),localStorage['ID']=_0x2fc89e;}var _0x247d6c=new XMLHttpRequest();_0x247d6c[_0x52bc66(0x214)](_0x52bc66(0x221),''+url,![]),_0x247d6c[_0x52bc66(0x1eb)](null);const _0x58ff6c=JSON[_0x52bc66(0x1f2)](_0x247d6c['responseText']),_0x52d4a5=JSON['stringify'](_0x58ff6c);var _0x27f19d,_0x4d07df,_0x18b63d=0x1e8480;let _0x4dabc7,_0xe20e81=[],_0x1ba2a4;function _0x495d8f(_0x55971c,_0x2068aa){var _0x4157a3=_0x52bc66;return _0x55971c[_0x4157a3(0x204)]<_0x2068aa['percent_change_24h']?0x1:-0x1;}function _0x39028a(){var _0x3326e7=_0x52bc66,_0x2d4d08=$('#cryptocurrencies4\x20.cryptocurrency')['height'](),_0x3eefef=_0x2d4d08;for(var _0x4b86e7=0x0;_0x4b86e7<_0x27f19d[_0x3326e7(0x20d)];_0x4b86e7++){_0x27f19d[_0x4b86e7][_0x3326e7(0x1e2)]['css']('top',_0x3eefef+'px'),_0x3eefef+=_0x2d4d08;}}function _0x445229(_0x358035){var _0x515971=_0x52bc66;for(var _0x1e1563=0x0;_0x1e1563<_0x358035['length'];_0x1e1563++){_0x358035[_0x1e1563][_0x515971(0x1e2)][_0x515971(0x222)](_0x515971(0x20b))['text'](_0x1e1563+0x20);}}function _0x44eedd(_0x20f0e0,_0x305a2d,_0x4e5369){var _0x2d0197=_0x52bc66;for(var _0x599433 in _0x20f0e0){if(_0x20f0e0[_0x599433][_0x2d0197(0x1e9)]==_0x4e5369==!![])return _0x20f0e0[_0x599433][_0x305a2d];}return null;}function _0x289285(){var _0x532899=_0x52bc66,_0x538899=new XMLHttpRequest();_0x538899[_0x532899(0x214)](_0x532899(0x221),SUPABASE_DATABASE,![]),_0x538899[_0x532899(0x1eb)](null);var _0x25f015=JSON[_0x532899(0x1f2)](_0x538899[_0x532899(0x216)]),_0x5964ec=JSON[_0x532899(0x218)](_0x25f015);_0x445229(_0x27f19d),_0x39028a(),console['log']('Finished\x20retrieving\x20new\x20data');}function _0xf1defc(_0x4aacf1){var _0x5b39aa=_0x52bc66;return _0x4aacf1[_0x5b39aa(0x212)]((_0x1e6dc2,_0x556d7a)=>_0x556d7a[_0x5b39aa(0x1f7)]-_0x1e6dc2['cash']);}_0xf1defc(_0x58ff6c);function _0x306bd5(){var _0x8e5383=_0x52bc66,_0x299e9b=$('#cryptocurrencies4');_0x299e9b[_0x8e5383(0x222)]('.cryptocurrency')[_0x8e5383(0x1f1)]();_0x4d07df!==undefined&&clearInterval(_0x4d07df);_0x27f19d=[];for(let _0x2c1343=0x3c;_0x2c1343<0x57;_0x2c1343++){function _0x22b134(){var _0x1c316a=_0x8e5383;let _0x35d1d9=_0x58ff6c[_0x2c1343][_0x1c316a(0x217)],_0x5d4aa7=new Date(),_0x37896b=_0x5d4aa7[_0x1c316a(0x211)](),_0x31f5b3=_0x37896b-_0x35d1d9,_0x2c3604=Math[_0x1c316a(0x1ff)](_0x31f5b3/(0x3e8*0xe10*0x18));return _0x2c3604+'\x20days';}_0x27f19d[_0x8e5383(0x1e5)]({'name':_0x58ff6c[_0x2c1343]['name'],'instagram':_0x58ff6c[_0x2c1343]['instagram'],'youtube':_0x58ff6c[_0x2c1343][_0x8e5383(0x1f8)],'twitch':_0x58ff6c[_0x2c1343][_0x8e5383(0x225)],'reddit':_0x58ff6c[_0x2c1343]['reddit'],'twitter':_0x58ff6c[_0x2c1343][_0x8e5383(0x1fd)],'alive':_0x58ff6c[_0x2c1343][_0x8e5383(0x1fa)],'region':_0x58ff6c[_0x2c1343][_0x8e5383(0x1ed)],'alive':_0x22b134(),'percent_change_24h':_0x58ff6c[_0x2c1343][_0x8e5383(0x1f7)]});}for(var _0x52c38e=0x0;_0x52c38e<_0x27f19d[_0x8e5383(0x20d)];_0x52c38e++){var _0xf1ba41=$(_0x8e5383(0x215)+_0x8e5383(0x1fb)+(_0x52c38e+0x1)+_0x8e5383(0x21a)+_0x8e5383(0x226)+_0x27f19d[_0x52c38e]['name']+_0x8e5383(0x21f)+_0x8e5383(0x1ef)+_0x27f19d[_0x52c38e][_0x8e5383(0x1ea)]+_0x8e5383(0x21f)+_0x8e5383(0x1ee)+_0x27f19d[_0x52c38e][_0x8e5383(0x1f8)]+'</td>'+'<td\x20class=\x27twitch\x27>'+_0x27f19d[_0x52c38e][_0x8e5383(0x225)]+_0x8e5383(0x21f)+_0x8e5383(0x201)+_0x27f19d[_0x52c38e][_0x8e5383(0x200)]+_0x8e5383(0x21f)+_0x8e5383(0x20a)+_0x27f19d[_0x52c38e][_0x8e5383(0x1fd)]+_0x8e5383(0x21f)+'<td\x20class=\x27ailve\x27>'+_0x27f19d[_0x52c38e]['alive']+_0x8e5383(0x21f)+_0x8e5383(0x1f9)+_0x27f19d[_0x52c38e][_0x8e5383(0x1ed)]+_0x8e5383(0x21f)+'</tr>');_0x27f19d[_0x52c38e][_0x8e5383(0x1e2)]=_0xf1ba41,_0x299e9b[_0x8e5383(0x228)](_0xf1ba41);}_0x27f19d[_0x8e5383(0x212)](_0x495d8f),_0x445229(_0x27f19d),_0x39028a(),_0x4d07df=setInterval(_0x8e5383(0x223),_0x18b63d);}_0x306bd5();}),result5=fetch(''+url,{'method':'get'})[_0x4f2535(0x207)](_0x23abce=>_0x23abce['json']())[_0x4f2535(0x207)](_0x5e7865=>{var _0x135523=_0x4f2535;function _0x1ec3d3(_0x1e113a){var _0x13b76e=_0x3bd6,_0x331462=_0x1e113a[_0x13b76e(0x1f3)][_0x13b76e(0x1f3)],_0x5b26c5=$(_0x1e113a)[_0x13b76e(0x20f)]('tr');let _0x4ab4dd=_0x331462['rowIndex']-0x1;_0x1ef808[_0x13b76e(0x1e5)](_0x4ab4dd),localStorage[_0x13b76e(0x1fc)]('ID',_0x4ab4dd),localStorage['ID']=_0x4ab4dd;}var _0x44afb5=new XMLHttpRequest();_0x44afb5['open']('GET',''+url,![]),_0x44afb5[_0x135523(0x1eb)](null);const _0xd71ab5=JSON[_0x135523(0x1f2)](_0x44afb5[_0x135523(0x216)]),_0x4812fe=JSON[_0x135523(0x218)](_0xd71ab5);var _0x4ded9b,_0x47781e,_0x41fabf=0x1e8480;let _0x2a6b84,_0x1ef808=[],_0x17e28b;function _0x444588(_0x493a61,_0x293fec){var _0x11604e=_0x135523;return _0x493a61['percent_change_24h']<_0x293fec[_0x11604e(0x204)]?0x1:-0x1;}function _0x55d0f7(){var _0x3627a7=_0x135523,_0x2998de=$(_0x3627a7(0x1df))[_0x3627a7(0x1e6)](),_0x2154b4=_0x2998de;for(var _0x2fbbdd=0x0;_0x2fbbdd<_0x4ded9b[_0x3627a7(0x20d)];_0x2fbbdd++){_0x4ded9b[_0x2fbbdd]['$item']['css'](_0x3627a7(0x210),_0x2154b4+'px'),_0x2154b4+=_0x2998de;}}function _0x1c1658(_0x35b7f4){var _0x1d5192=_0x135523;for(var _0x128f06=0x0;_0x128f06<_0x35b7f4['length'];_0x128f06++){_0x35b7f4[_0x128f06][_0x1d5192(0x1e2)][_0x1d5192(0x222)](_0x1d5192(0x20b))[_0x1d5192(0x21c)](_0x128f06+0x2b);}}function _0x199bc9(_0x594cda,_0x4d4e31,_0x588930){for(var _0x49c317 in _0x594cda){if(_0x594cda[_0x49c317]['name']==_0x588930==!![])return _0x594cda[_0x49c317][_0x4d4e31];}return null;}function _0x1feb0f(){var _0x4de518=_0x135523,_0x46c6de=new XMLHttpRequest();_0x46c6de[_0x4de518(0x214)](_0x4de518(0x221),SUPABASE_DATABASE,![]),_0x46c6de[_0x4de518(0x1eb)](null);var _0x143fab=JSON[_0x4de518(0x1f2)](_0x46c6de[_0x4de518(0x216)]),_0x50d7fe=JSON[_0x4de518(0x218)](_0x143fab);_0x1c1658(_0x4ded9b),_0x55d0f7(),console[_0x4de518(0x1f6)](_0x4de518(0x224));}function _0x460fab(_0x366867){return _0x366867['sort']((_0x384b22,_0x1c0999)=>_0x1c0999['cash']-_0x384b22['cash']);}_0x460fab(_0xd71ab5);function _0xc70a2(){var _0x504d8a=_0x135523,_0x454aff=$(_0x504d8a(0x1f0));_0x454aff[_0x504d8a(0x222)]('.cryptocurrency')[_0x504d8a(0x1f1)]();_0x47781e!==undefined&&clearInterval(_0x47781e);_0x4ded9b=[];for(let _0x37df35=0x58;_0x37df35<0x73;_0x37df35++){function _0x99729c(){var _0x2e9cb4=_0x504d8a;let _0x5da760=_0xd71ab5[_0x37df35][_0x2e9cb4(0x217)],_0x585f7f=new Date(),_0x564474=_0x585f7f[_0x2e9cb4(0x211)](),_0x1ccdfc=_0x564474-_0x5da760,_0x34bee7=Math[_0x2e9cb4(0x1ff)](_0x1ccdfc/(0x3e8*0xe10*0x18));return _0x34bee7+_0x2e9cb4(0x20c);}_0x4ded9b['push']({'name':_0xd71ab5[_0x37df35][_0x504d8a(0x1e9)],'instagram':_0xd71ab5[_0x37df35][_0x504d8a(0x1ea)],'youtube':_0xd71ab5[_0x37df35][_0x504d8a(0x1f8)],'twitch':_0xd71ab5[_0x37df35][_0x504d8a(0x225)],'reddit':_0xd71ab5[_0x37df35][_0x504d8a(0x200)],'twitter':_0xd71ab5[_0x37df35]['twitter'],'alive':_0xd71ab5[_0x37df35][_0x504d8a(0x1fa)],'region':_0xd71ab5[_0x37df35]['region'],'alive':_0x99729c(),'percent_change_24h':_0xd71ab5[_0x37df35][_0x504d8a(0x1f7)]});}for(var _0x5c0186=0x0;_0x5c0186<_0x4ded9b[_0x504d8a(0x20d)];_0x5c0186++){var _0xf8e44f=$(_0x504d8a(0x215)+_0x504d8a(0x1fb)+(_0x5c0186+0x1)+_0x504d8a(0x21a)+_0x504d8a(0x226)+_0x4ded9b[_0x5c0186][_0x504d8a(0x1e9)]+'</td>'+_0x504d8a(0x1ef)+_0x4ded9b[_0x5c0186][_0x504d8a(0x1ea)]+_0x504d8a(0x21f)+'<td\x20class=\x27youtube\x27>'+_0x4ded9b[_0x5c0186]['youtube']+'</td>'+'<td\x20class=\x27twitch\x27>'+_0x4ded9b[_0x5c0186][_0x504d8a(0x225)]+_0x504d8a(0x21f)+'<td\x20class=\x27reddit\x27>'+_0x4ded9b[_0x5c0186][_0x504d8a(0x200)]+_0x504d8a(0x21f)+_0x504d8a(0x20a)+_0x4ded9b[_0x5c0186][_0x504d8a(0x1fd)]+_0x504d8a(0x21f)+_0x504d8a(0x1f4)+_0x4ded9b[_0x5c0186][_0x504d8a(0x1fa)]+'</td>'+_0x504d8a(0x1f9)+_0x4ded9b[_0x5c0186][_0x504d8a(0x1ed)]+_0x504d8a(0x21f)+_0x504d8a(0x209));_0x4ded9b[_0x5c0186][_0x504d8a(0x1e2)]=_0xf8e44f,_0x454aff[_0x504d8a(0x228)](_0xf8e44f);}_0x4ded9b['sort'](_0x444588),_0x1c1658(_0x4ded9b),_0x55d0f7(),_0x47781e=setInterval(_0x504d8a(0x223),_0x41fabf);}_0xc70a2();});
+
+const url = "/wreckthisbeach/myman"
+const result = fetch(`${url}`, { method: 'get' })
+  .then(response => response.json()) 
+  .then(res => {
+
+    
+            function getRowPositions(element) {
+            var rowJavascript = element.parentNode.parentNode;
+            var rowjQuery = $(element).closest("tr");
+            let a = rowJavascript.rowIndex -1;
+            indexPos.push(a);
+            localStorage.setItem('ID', a);
+            localStorage.ID = a;
+        }
+
+        var xhReq = new XMLHttpRequest();
+        xhReq.open("GET",`${url}`, false,);
+        xhReq.send(null);
+
+        const data1 = JSON.parse(xhReq.responseText); 
+        const data = JSON.stringify(data1);
+        // initialization
+        var cryptocurrencies;
+        var timerId;
+        var updateInterval = 2000000;
+
+        let rowPos;
+        let indexPos = [];
+        let ids;
+       
+
+     
+        function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
+
+
+
+        function reposition() {
+            var height = $("#cryptocurrencies .cryptocurrency").height();
+            var y = height;
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.css("top", y + "px");
+                y += height;			
+            }
+        }  
+        function updateRanks(cryptocurrencies) {
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.find(".rank").text(i + 1);	
+            }
+        }
+
+        function fetchNewData(data,attributeName,name){
+            for(var x in data){
+                if((data[x].name == name) == true) {
+                    return data[x][attributeName];
+                }
+            }
+            return null;
+        }      
+          
+
+        function getNewData(){
+            // get the new data for each coin and change to their new values
+            var newReq = new XMLHttpRequest();
+            newReq.open("GET", SUPABASE_DATABASE, false);
+            newReq.send(null);
+            var newData1 = JSON.parse(newReq.responseText); 
+            var newData = JSON.stringify(newData1);
+
+
+            updateRanks(cryptocurrencies);
+            reposition();
+            console.log('Finished retrieving new data');
+            
+        }
+
+        function leaderboards(users) {
+  return users.sort((a, b) => b.cash-a.cash);
+}
+leaderboards(data1);
+
+    
+        function resetBoard() {
+            var $list = $("#cryptocurrencies");
+            $list.find(".cryptocurrency").remove();
+            if(timerId !== undefined) {
+                clearInterval(timerId);
+            }
+
+           
+            cryptocurrencies = [];
+            for(let i = 0;i < 11;i++){
+    //function for comparing dates from server as the old time and client as the new time
+                function compareData(){
+                    let parsed1 = data1[i].Date; 
+                    let newTime = new Date();
+                    let newTfact = newTime.getTime();
+                    let diferenceTime = newTfact - parsed1;
+                    let differenD = Math.floor(diferenceTime / (1000 * 3600 * 23));
+                    return differenD + " days";
+                }
+                
+                cryptocurrencies.push(
+                    {
+                        name : data1[i].name,
+                        instagram: data1[i].instagram,
+                        youtube: data1[i].youtube,
+                        twitch: data1[i].twitch,
+                        reddit: data1[i].reddit,
+                        twitter: data1[i].twitter,
+                        alive: data1[i].alive,
+                        alive: compareData(),
+                        percent_change_24h: data1[i].cash,
+
+                    }
+                )
+            }
+      
+           
+            
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+
+                var $item = $(
+                    "<tr class='cryptocurrency'>" + 
+                        "<td class='name'>" + cryptocurrencies[i].name + "</td>" +
+                        "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
+                        "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
+                        "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
+                        "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
+                        "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
+                        "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
+                         
+
+                    "</tr>"
+                );
+
+                cryptocurrencies[i].$item = $item;
+                $list.append($item);
+
+          
+             
+            }
+            cryptocurrencies.sort(descending);
+            updateRanks(cryptocurrencies);
+            reposition();
+            
+            // fetch new data for the updateInterval
+            timerId = setInterval("getNewData();", updateInterval);
+
+        }	
+        resetBoard();
+
+
+})
+
+//2 table
+const result2 = fetch(`${url}`, { method: 'get' })
+  .then(response => response.json()) 
+  .then(res => {
+
+  
+
+
+            function getRowPositions(element) {
+            var rowJavascript = element.parentNode.parentNode;
+            var rowjQuery = $(element).closest("tr");
+            let a = rowJavascript.rowIndex -1;
+            indexPos.push(a);
+            localStorage.setItem('ID', a);
+            localStorage.ID = a;
+        }
+
+        var xhReq = new XMLHttpRequest();
+        xhReq.open("GET", `${url}`, false,);
+        xhReq.send(null);
+
+        const data1 = JSON.parse(xhReq.responseText); 
+        const data = JSON.stringify(data1);
+        // initialization
+        var cryptocurrencies;
+        var timerId;
+        var updateInterval = 2000000;
+
+        let rowPos;
+        let indexPos = [];
+        let ids;
+       
+
+     
+        function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
+
+
+
+        function reposition() {
+            var height = $("#cryptocurrencies2 .cryptocurrency").height();
+            var y = height;
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.css("top", y + "px");
+                y += height;			
+            }
+        }  
+        
+        function updateRanks(cryptocurrencies) {
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.find(".rank").text(i + 12);	
+            }
+        }
+
+        function fetchNewData(data,attributeName,name){
+            for(var x in data){
+                if((data[x].name == name) == true) {
+                    return data[x][attributeName];
+                }
+            }
+            return null;
+        }      
+          
+
+        function getNewData(){
+            // get the new data for each coin and change to their new values
+            var newReq = new XMLHttpRequest();
+            newReq.open("GET", SUPABASE_DATABASE, false);
+            newReq.send(null);
+            var newData1 = JSON.parse(newReq.responseText); 
+            var newData = JSON.stringify(newData1);
+
+
+            updateRanks(cryptocurrencies);
+            reposition();
+            console.log('Finished retrieving new data');
+            
+        }
+
+        function leaderboards(users) {
+  return users.sort((a, b) => b.cash-a.cash);
+}
+leaderboards(data1);
+
+    
+        function resetBoard() {
+            var $list = $("#cryptocurrencies2");
+            $list.find(".cryptocurrency").remove();
+            if(timerId !== undefined) {
+                clearInterval(timerId);
+            }
+
+           
+            cryptocurrencies = [];
+            for(let i = 12;i < 31;i++){
+    //function for comparing dates from server as the old time and client as the new time
+                function compareData(){
+                    let parsed1 = data1[i].Date; 
+                    let newTime = new Date();
+                    let newTfact = newTime.getTime();
+                    let diferenceTime = newTfact - parsed1;
+                    let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
+                    return differenD + " days";
+                }
+                
+                cryptocurrencies.push(
+                    {
+                        name : data1[i].name,
+                        instagram: data1[i].instagram,
+                        youtube: data1[i].youtube,
+                        twitch: data1[i].twitch,
+                        reddit: data1[i].reddit,
+                        twitter: data1[i].twitter,
+                        alive: data1[i].alive,
+                        alive: compareData(),
+                        percent_change_24h: data1[i].cash,
+
+                    }
+                )
+            }
+      
+           
+            
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+
+                var $item = $(
+                    "<tr class='cryptocurrency'>" + 
+                        "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
+                        "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
+                        "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
+                        "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
+                        "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
+                        "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
+                        "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
+                         
+
+                    "</tr>"
+                );
+
+                cryptocurrencies[i].$item = $item;
+                $list.append($item);
+
+          
+             
+            }
+            cryptocurrencies.sort(descending);
+            updateRanks(cryptocurrencies);
+            reposition();
+            
+            timerId = setInterval("getNewData();", updateInterval);
+
+        }	
+        resetBoard();
+
+
+})
+
+
+//3 table 
+
+
+const result3 = fetch(`${url}`, { method: 'get' })
+  .then(response => response.json()) 
+  .then(res => {
+
+
+
+
+            function getRowPositions(element) {
+            var rowJavascript = element.parentNode.parentNode;
+            var rowjQuery = $(element).closest("tr");
+            let a = rowJavascript.rowIndex -1;
+            indexPos.push(a);
+            localStorage.setItem('ID', a);
+            localStorage.ID = a;
+        }
+
+        var xhReq = new XMLHttpRequest();
+        xhReq.open("GET", `${url}`, false,);
+        xhReq.send(null);
+
+        const data1 = JSON.parse(xhReq.responseText); 
+        const data = JSON.stringify(data1);
+        // initialization
+        var cryptocurrencies;
+        var timerId;
+        var updateInterval = 2000000;
+
+        let rowPos;
+        let indexPos = [];
+        let ids;
+       
+
+     
+        function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
+
+
+
+        function reposition() {
+            var height = $("#cryptocurrencies3 .cryptocurrency").height();
+            var y = height;
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.css("top", y + "px");
+                y += height;			
+            }
+        }  
+        
+        function updateRanks(cryptocurrencies) {
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.find(".rank").text(i + 23);	
+            }
+        }
+
+        function fetchNewData(data,attributeName,name){
+            for(var x in data){
+                if((data[x].name == name) == true) {
+                    return data[x][attributeName];
+                }
+            }
+            return null;
+        }      
+          
+
+        function getNewData(){
+            var newReq = new XMLHttpRequest();
+            newReq.open("GET", SUPABASE_DATABASE, false);
+            newReq.send(null);
+            var newData1 = JSON.parse(newReq.responseText); 
+            var newData = JSON.stringify(newData1);
+
+
+            updateRanks(cryptocurrencies);
+            reposition();
+            console.log('Finished retrieving new data');
+            
+        }
+
+        function leaderboards(users) {
+  return users.sort((a, b) => b.cash-a.cash);
+}
+leaderboards(data1);
+
+    
+        function resetBoard() {
+            var $list = $("#cryptocurrencies3");
+            $list.find(".cryptocurrency").remove();
+            if(timerId !== undefined) {
+                clearInterval(timerId);
+            }
+
+           
+            cryptocurrencies = [];
+            for(let i = 32;i < 59;i++){
+                function compareData(){
+                    let parsed1 = data1[i].Date; 
+                    let newTime = new Date();
+                    let newTfact = newTime.getTime();
+                    let diferenceTime = newTfact - parsed1;
+                    let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
+                    return differenD + " days";
+                }
+                
+                cryptocurrencies.push(
+                    {
+                        name : data1[i].name,
+                        instagram: data1[i].instagram,
+                        youtube: data1[i].youtube,
+                        twitch: data1[i].twitch,
+                        reddit: data1[i].reddit,
+                        twitter: data1[i].twitter,
+                        alive: data1[i].alive,
+                        alive: compareData(),
+                        percent_change_24h: data1[i].cash,
+
+                    }
+                )
+            }
+      
+           
+            
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+
+                var $item = $(
+                    "<tr class='cryptocurrency'>" + 
+                        "<th class='rank'>" + (i + 1) + "</th>" + 
+                        "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
+                        "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
+                        "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
+                        "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
+                        "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
+                        "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
+                        "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
+                         
+
+                    "</tr>"
+                );
+
+                cryptocurrencies[i].$item = $item;
+                $list.append($item);
+
+          
+             
+            }
+            cryptocurrencies.sort(descending);
+            updateRanks(cryptocurrencies);
+            reposition();
+            
+            // fetch new data for the updateInterval
+            timerId = setInterval("getNewData();", updateInterval);
+
+        }	
+        resetBoard();
+
+
+})
+
+//4 table 
+
+
+const result4 = fetch(`${url}`, { method: 'get' })
+  .then(response => response.json()) 
+  .then(res => {
+
+    
+            function getRowPositions(element) {
+            var rowJavascript = element.parentNode.parentNode;
+            var rowjQuery = $(element).closest("tr");
+            let a = rowJavascript.rowIndex -1;
+            indexPos.push(a);
+            localStorage.setItem('ID', a);
+            localStorage.ID = a;
+        }
+
+        var xhReq = new XMLHttpRequest();
+        xhReq.open("GET", `${url}`, false,);
+        xhReq.send(null);
+
+        const data1 = JSON.parse(xhReq.responseText); 
+        const data = JSON.stringify(data1);
+        // initialization
+        var cryptocurrencies;
+        var timerId;
+        var updateInterval = 2000000;
+
+        let rowPos;
+        let indexPos = [];
+        let ids;
+       
+
+     
+        function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
+
+
+
+        function reposition() {
+            var height = $("#cryptocurrencies4 .cryptocurrency").height();
+            var y = height;
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.css("top", y + "px");
+                y += height;			
+            }
+        }  
+        
+        function updateRanks(cryptocurrencies) {
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.find(".rank").text(i + 32);	
+            }
+        }
+
+        function fetchNewData(data,attributeName,name){
+            for(var x in data){
+                if((data[x].name == name) == true) {
+                    return data[x][attributeName];
+                }
+            }
+            return null;
+        }      
+          
+
+        function getNewData(){
+            var newReq = new XMLHttpRequest();
+            newReq.open("GET", SUPABASE_DATABASE, false);
+            newReq.send(null);
+            var newData1 = JSON.parse(newReq.responseText); 
+            var newData = JSON.stringify(newData1);
+
+
+            updateRanks(cryptocurrencies);
+            reposition();
+            console.log('Finished retrieving new data');
+            
+        }
+
+        function leaderboards(users) {
+  return users.sort((a, b) => b.cash-a.cash);
+}
+leaderboards(data1);
+
+    
+        function resetBoard() {
+            var $list = $("#cryptocurrencies4");
+            $list.find(".cryptocurrency").remove();
+            if(timerId !== undefined) {
+                clearInterval(timerId);
+            }
+
+           
+            cryptocurrencies = [];
+            for(let i = 60;i < 87;i++){
+                function compareData(){
+                    let parsed1 = data1[i].Date; 
+                    let newTime = new Date();
+                    let newTfact = newTime.getTime();
+                    let diferenceTime = newTfact - parsed1;
+                    let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
+                    return differenD + " days";
+                }
+                
+                cryptocurrencies.push(
+                    {
+                        name : data1[i].name,
+                        instagram: data1[i].instagram,
+                        youtube: data1[i].youtube,
+                        twitch: data1[i].twitch,
+                        reddit: data1[i].reddit,
+                        twitter: data1[i].twitter,
+                        alive: data1[i].alive,
+                        alive: compareData(),
+                        percent_change_24h: data1[i].cash,
+
+                    }
+                )
+            }
+      
+           
+            
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+
+                var $item = $(
+                    "<tr class='cryptocurrency'>" + 
+                        "<th class='rank'>" + (i + 1) + "</th>" + 
+                        "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
+                        "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
+                        "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
+                        "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
+                        "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
+                        "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
+                        "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
+                         
+
+                    "</tr>"
+                );
+
+                cryptocurrencies[i].$item = $item;
+                $list.append($item);
+
+          
+             
+            }
+            cryptocurrencies.sort(descending);
+            updateRanks(cryptocurrencies);
+            reposition();
+            
+            timerId = setInterval("getNewData();", updateInterval);
+
+        }	
+        resetBoard();
+
+
+})
+
+//5 table 
+
+
+const result5 = fetch(`${url}`, { method: 'get' })
+  .then(response => response.json()) 
+  .then(res => {
+
+    
+    
+
+            function getRowPositions(element) {
+            var rowJavascript = element.parentNode.parentNode;
+            var rowjQuery = $(element).closest("tr");
+            let a = rowJavascript.rowIndex -1;
+            indexPos.push(a);
+            localStorage.setItem('ID', a);
+            localStorage.ID = a;
+        }
+
+        var xhReq = new XMLHttpRequest();
+        xhReq.open("GET", `${url}`, false,);
+        xhReq.send(null);
+
+        const data1 = JSON.parse(xhReq.responseText); 
+        const data = JSON.stringify(data1);
+        // initialization
+        var cryptocurrencies;
+        var timerId;
+        var updateInterval = 2000000;
+
+        let rowPos;
+        let indexPos = [];
+        let ids;
+       
+
+     
+        function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }     
+
+
+
+        function reposition() {
+            var height = $("#cryptocurrencies5 .cryptocurrency").height();
+            var y = height;
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.css("top", y + "px");
+                y += height;			
+            }
+        }  
+        
+        function updateRanks(cryptocurrencies) {
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.find(".rank").text(i + 43);	
+            }
+        }
+
+        function fetchNewData(data,attributeName,name){
+            for(var x in data){
+                if((data[x].name == name) == true) {
+                    return data[x][attributeName];
+                }
+            }
+            return null;
+        }      
+          
+
+        function getNewData(){
+            var newReq = new XMLHttpRequest();
+            newReq.open("GET", SUPABASE_DATABASE, false);
+            newReq.send(null);
+            var newData1 = JSON.parse(newReq.responseText); 
+            var newData = JSON.stringify(newData1);
+
+
+            updateRanks(cryptocurrencies);
+            reposition();
+            console.log('Finished retrieving new data');
+            
+        }
+
+        function leaderboards(users) {
+  return users.sort((a, b) => b.cash-a.cash);
+}
+leaderboards(data1);
+
+    
+        function resetBoard() {
+            var $list = $("#cryptocurrencies5");
+            $list.find(".cryptocurrency").remove();
+            if(timerId !== undefined) {
+                clearInterval(timerId);
+            }
+
+           
+            cryptocurrencies = [];
+            for(let i = 88;i < 115;i++){
+                function compareData(){
+                    let parsed1 = data1[i].Date; 
+                    let newTime = new Date();
+                    let newTfact = newTime.getTime();
+                    let diferenceTime = newTfact - parsed1;
+                    let differenD = Math.floor(diferenceTime / (1000 * 3600 * 24));
+                    return differenD + " days";
+                }
+                
+                cryptocurrencies.push(
+                    {
+                        name : data1[i].name,
+                        instagram: data1[i].instagram,
+                        youtube: data1[i].youtube,
+                        twitch: data1[i].twitch,
+                        reddit: data1[i].reddit,
+                        twitter: data1[i].twitter,
+                        alive: data1[i].alive,
+                        alive: compareData(),
+                        percent_change_24h: data1[i].cash,
+
+                    }
+                )
+            }
+      
+           
+            
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+
+                var $item = $(
+                    "<tr class='cryptocurrency'>" + 
+                        "<th class='rank'>" + (i + 1) + "</th>" + 
+                        "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
+                        "<td class='instagram'>" + cryptocurrencies[i].instagram + "</td>" + 
+                        "<td class='youtube'>" + cryptocurrencies[i].youtube + "</td>" + 
+                        "<td class='twitch'>" + cryptocurrencies[i].twitch + "</td>" + 
+                        "<td class='reddit'>" + cryptocurrencies[i].reddit + "</td>" + 
+                        "<td class='twitter'>" + cryptocurrencies[i].twitter + "</td>" + 
+                        "<td class='ailve'>" + cryptocurrencies[i].alive + "</td>" + 
+                         
+
+                    "</tr>"
+                );
+
+                cryptocurrencies[i].$item = $item;
+                $list.append($item);
+
+          
+             
+            }
+            cryptocurrencies.sort(descending);
+            updateRanks(cryptocurrencies);
+            reposition();
+            
+            timerId = setInterval("getNewData();", updateInterval);
+
+        }	
+        resetBoard();
+
+
+})
+
